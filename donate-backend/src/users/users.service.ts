@@ -40,14 +40,15 @@ export class UsersService {
   }
 
   // UPDATE user preferences
-  async updateUserPreferences(userID, data): Promise<User> {
-    console.log('\ndata: ', data);
+  async updateUserPreferences(userId, data): Promise<User> {
     const updatedUser = await this.userModel.findByIdAndUpdate(
-      { _id: userID, userPreferences: data },
+      userId,
+      { userPreferences: data },
       {
         new: true,
       },
     );
+    console.log('UPDATED-USER: ', updatedUser);
     return updatedUser;
   }
 }

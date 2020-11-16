@@ -44,32 +44,34 @@ export class UsersController {
     return res.status(HttpStatus.OK).json(user);
   }
 
-  // @UseGuards(AuthGuard())
-  // @Put(':userID')
-  // async updateUser(
-  //   @Res() res,
-  //   @Param('userID') userID,
-  //   @Body() createUserDto: UserDto,
-  // ) {
-  //   const user = await this.userService.updateUser(userID, createUserDto);
-  //   if (!user) {
-  //     throw new NotFoundException('User does not exist!');
-  //   }
-  //   return res.status(HttpStatus.OK).json({
-  //     msg: 'User has been successfully updated',
-  //     user,
-  //   });
-  // }
-
   @UseGuards(AuthGuard())
   @Put(':userID')
+  async updateUser(
+    @Res() res,
+    @Param('userID') userID,
+    @Body() createUserDto: UserDto,
+  ) {
+    const user = await this.userService.updateUser(userID, createUserDto);
+    if (!user) {
+      throw new NotFoundException('User does not exist!');
+    }
+    return res.status(HttpStatus.OK).json({
+      msg: 'User has been successfully updated',
+      user,
+    });
+  }
+
+  @UseGuards(AuthGuard())
+  @Put('preferences/:userID')
   async updateUserPreferences(
     @Res() res,
     @Param('userID') userID,
     @Body() userPreferencesDto: UserPreferencesDto,
   ) {
-    console.log('userPreferencesDTO: ', userPreferencesDto);
-    const user = await this.userService.updateUser(userID, userPreferencesDto);
+    const user = await this.userService.updateUserPreferences(
+      userID,
+      userPreferencesDto,
+    );
     if (!user) {
       throw new NotFoundException('User does not exist!');
     }

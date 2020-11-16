@@ -91,9 +91,8 @@ export class AuthService {
 
   updateUserPreferences(data) {
     const id = this.getUserToken().id;
-    console.log(id, data);
     return this.http
-      .put(`${environment.apiUrl}/users/${id}`, data)
+      .put(`${environment.apiUrl}/users/preferences/${id}`, data)
       .pipe(take(1));
   }
 

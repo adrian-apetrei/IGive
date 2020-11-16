@@ -48,7 +48,6 @@ export class UsersService {
         new: true,
       },
     );
-    console.log('UPDATED-USER: ', updatedUser);
     return updatedUser;
   }
 }

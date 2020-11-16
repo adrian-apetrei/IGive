@@ -67,13 +67,14 @@ export class UserPreferencesPage implements OnInit {
         delete topic.isSelected;
         return topic;
       });
-    this.authService.updateUserPreferences({
-      selectedTopics,
-      goLocal: this.goLocal,
-      optimizeDonation: this.optimizeDonation,
-      taxReturns: this.taxReturns,
-    });
-
+    this.authService
+      .updateUserPreferences({
+        selectedTopics,
+        goLocal: this.goLocal,
+        optimizeDonations: this.optimizeDonation,
+        taxReturns: this.taxReturns,
+      })
+      .subscribe();
     // this.router.navigateByUrl(`/payment/${name.replace(" ", "")}`);
   }
 }

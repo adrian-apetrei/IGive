@@ -1,0 +1,73 @@
+<ion-content>
+  <ion-slides #preferencesSlides pager="false" [options]="slideOpts" (ionSlideDidChange)="updateSlideIndex()">
+    <ion-slide fxLayout="column" fxLayoutAlign="start center">
+      <h3 class="slide-title">First, choose the causes you want to support</h3>
+      <div fxLayout="row wrap" fxLayoutAlign="center start">
+        <ion-card fxFlex="35" *ngFor="let topic of topics" [class.selected]="topic.isSelected"
+          (click)="selectTopic(topic.name)">
+          <ion-card-content>
+            <img class="topic-icon" [alt]="topic.icon" [src]="'./../../../assets/svg/'+ topic.icon +'.svg'" />
+            <h3 class="topic-title">{{ topic.name }}</h3>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-slide>
+    <ion-slide fxLayout="column" fxLayoutAlign="start center">
+      <h3 class="slide-title">Next, set some preferences</h3>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-label>Go Local<br>
+          <h6 class="subtitle">Prioritize charities and causes that are close to me</h6>
+          </ion-label>
+          <ion-toggle ></ion-toggle>
+        </ion-item>
+      
+        <ion-item lines="none">
+          <ion-label>Optimize My Donation<br>
+          <h6 class="subtitle">Priotitize charities and causes that make my money go further through matching ($1 donated means the charity gets $2)</h6>
+          </ion-label>
+          <ion-toggle ></ion-toggle>
+        </ion-item>
+      
+        <ion-item lines="none">
+          <ion-label>Get Those Tax Returns<br>
+          <h6 class="subtitle">Only show charities and causes that will provide a proof of donation for tax purposes</h6></ion-label>
+          <ion-toggle></ion-toggle>
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+    <ion-slide fxLayout="column" fxLayoutAlign="start center">
+      <h3 class="slide-title">Choose your payment method</h3>
+      <ion-card class="payment-card" *ngFor="let method of paymentMethod" [class.selected]="method.isSelected"
+        (click)="selectPaymentMethod(method.name)">
+        <ion-card-content>
+          <img class="topic-icon" [alt]="method.icon" [src]="'./../../../assets/svg/'+ method.icon +'.svg'" />
+          <h3 class="topic-title">{{ method.name }}</h3>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+<ion-footer fxLayout="row" fxLayoutAlign="space-between center">
+  <div fxFlex="30" fxLayoutAlign="start center">
+    <ion-item lines="none">
+      <ion-button *ngIf="slideIndex !== 0" (click)="swipeBack()">
+        Back
+      </ion-button>
+    </ion-item>
+  </div>
+  <div fxFlex="40" fxLayoutAlign="center center">
+    <ion-item lines="none">
+      <span class="bullet" [class.active]="slideIndex===0"></span>
+      <span class="bullet" [class.active]="slideIndex===1"></span>
+      <span class="bullet" [class.active]="slideIndex===2"></span>
+    </ion-item>
+  </div>
+  <div fxFlex="30" fxLayoutAlign="end center">
+    <ion-item lines="none">
+      <ion-button *ngIf="slideIndex !== 2" (click)="swipeNext()">
+        Next
+      </ion-button>
+    </ion-item>
+  </div>
+</ion-footer>

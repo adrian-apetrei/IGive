@@ -1,0 +1,25 @@
+<ion-content>
+  <div class="register-page-content" fxLayout="column" fxLayoutAlign="center center">
+    <ion-avatar>
+      <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y">
+    </ion-avatar>
+    <h3>App name</h3>
+    <h1>Create account</h1>
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input #email type="email" inputmode="email" [(ngModel)]="credentials.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="credentials.password"></ion-input>
+    </ion-item>
+    <ion-item lines="none" class="mt-5">
+      <ion-button (click)="login()">
+        Register
+      </ion-button>
+    </ion-item>
+    <a class="mt-3" [routerLink]="['/register']" routerLinkActive="active">Don't have an account? Register</a>
+    <span class="fill-remaining-space"></span>
+    <a class="mb-6">About App</a>
+  </div>
+</ion-content>

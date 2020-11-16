@@ -7,11 +7,11 @@
     <h1>Create account</h1>
       <ion-item>
         <ion-label position="stacked">Email</ion-label>
-        <ion-input #email type="email" inputmode="email"></ion-input>
+        <ion-input #email type="email" inputmode="email" [(ngModel)]="credentials.email"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" [(ngModel)]="credentials.password"></ion-input>
       </ion-item>
       <ion-item lines="none" class="mt-5">
         <ion-button (click)="register()">

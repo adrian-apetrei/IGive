@@ -34,7 +34,7 @@ export class UserPreferencesPage implements OnInit {
       { name: 'Bank Account', icon: 'graduate-cap', isSelected: false },
       { name: 'PayPal', icon: 'graduate-cap', isSelected: false },
       { name: 'Other', icon: 'graduate-cap', isSelected: false }
-    ]
+    ];
   }
 
   updateSlideIndex() {

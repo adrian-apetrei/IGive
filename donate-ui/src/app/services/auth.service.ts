@@ -1,25 +1,30 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { JwtHelperService } from '@auth0/angular-jwt';
-import { Platform } from '@ionic/angular';
-import { Storage } from '@ionic/storage';
-import { BehaviorSubject, from, Observable } from 'rxjs';
-import { map, switchMap, take } from 'rxjs/operators';
-import { Credentials, User } from '../data/models';
-import { environment } from './../../environments/environment';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
+import { JwtHelperService } from "@auth0/angular-jwt";
+import { Platform } from "@ionic/angular";
+import { Storage } from "@ionic/storage";
+import { BehaviorSubject, from, Observable } from "rxjs";
+import { map, switchMap, take } from "rxjs/operators";
+import { Credentials, User } from "../data/models";
+import { environment } from "./../../environments/environment";
 
 const helper = new JwtHelperService();
-export const TOKEN = 'jwt-token';
+export const TOKEN = "jwt-token";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class AuthService {
   public user: Observable<any>;
   private userData = new BehaviorSubject(null);
 
-  constructor(private storage: Storage, private http: HttpClient, private plt: Platform, private router: Router) {
+  constructor(
+    private storage: Storage,
+    private http: HttpClient,
+    private plt: Platform,
+    private router: Router
+  ) {
     this.loadStoredToken();
   }
 
@@ -30,7 +35,7 @@ export class AuthService {
       switchMap(() => {
         return from(this.storage.get(TOKEN));
       }),
-      map(token => {
+      map((token) => {
         if (token) {
           const decoded = helper.decodeToken(token);
           this.userData.next(decoded);
@@ -42,13 +47,13 @@ export class AuthService {
     );
   }
 
-  login(credentials: Credentials ) {
+  login(credentials: Credentials) {
     return this.http.post(`${environment.apiUrl}/auth`, credentials).pipe(
       take(1),
       map((res: any) => {
         return res.token;
       }),
-      switchMap(token => {
+      switchMap((token) => {
         const decoded = helper.decodeToken(token);
         this.userData.next(decoded);
 
@@ -61,8 +66,7 @@ export class AuthService {
   register(credentials: Credentials) {
     return this.http.post(`${environment.apiUrl}/users`, credentials).pipe(
       take(1),
-      switchMap(res => {
-        console.log('result: ', res);
+      switchMap((res) => {
         return this.login(credentials);
       })
     );
@@ -74,26 +78,31 @@ export class AuthService {
 
   getUserData() {
     const id = this.getUserToken().id;
-    return this.http.get<User>(`${environment.apiUrl}/users/${id}`).pipe(
-      take(1)
-    );
+    return this.http
+      .get<User>(`${environment.apiUrl}/users/${id}`)
+      .pipe(take(1));
   }
 
   updateUser(id, data) {
-    return this.http.put(`${environment.apiUrl}/users/${id}`, data).pipe(
-      take(1)
-    );
+    return this.http
+      .put(`${environment.apiUrl}/users/${id}`, data)
+      .pipe(take(1));
+  }
+
+  updateUserPreferences(data) {
+    const id = this.getUserToken().id;
+    return this.http
+      .put(`${environment.apiUrl}/users/preferences/${id}`, data)
+      .pipe(take(1));
   }
 
   removeUser(id) {
-    return this.http.delete(`${environment.apiUrl}/users/${id}`).pipe(
-      take(1)
-    );
+    return this.http.delete(`${environment.apiUrl}/users/${id}`).pipe(take(1));
   }
 
   logout() {
     this.storage.remove(TOKEN).then(() => {
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl("/");
       this.userData.next(null);
     });
   }

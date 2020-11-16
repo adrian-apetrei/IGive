@@ -1,28 +1,28 @@
 export class CharityOrganization {
-    topic: string;
-    regionFocus: string;
-    country: string;
-    name: string;
-    websiteURL: string;
+  topic: string;
+  regionFocus: string;
+  country: string;
+  name: string;
+  websiteUrl: string;
 }
 
 export interface Topic {
-    id: string;
-    name: string;
+  name: string;
+  icon: string;
 }
 
 export interface Credentials {
-    email: string;
-    password: string;
+  email: string;
+  password: string;
 }
 
 export interface User {
-    firstName: string;
-    lastName: string;
-    email: string;
-    avatar: string;
-    bio: string;
-    createdAt: string;
-    id: string;
-    firstLogin: boolean;
-  }
+  firstName: string;
+  lastName: string;
+  email: string;
+  avatar: string;
+  bio: string;
+  createdAt: string;
+  id: string;
+  firstLogin: boolean;
+}

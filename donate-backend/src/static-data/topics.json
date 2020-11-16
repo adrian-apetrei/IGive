@@ -1,0 +1,12 @@
+[
+  { "name": "Education", "icon": "graduate-cap" },
+  { "name": "Medical Aid", "icon": "ambulance-side-view" },
+  { "name": "Environment", "icon": "earth-globe" },
+  { "name": "Wildlife", "icon": "paw" },
+  { "name": "Cultural Relics", "icon": "castle" },
+  { "name": "COVID", "icon": "first-aid-kit" },
+  { "name": "Disabilities", "icon": "walking-stick" },
+  { "name": "LGBT", "icon": "lgbtq" },
+  { "name": "Women and Kids", "icon": "happy-children" },
+  { "name": "Disaster", "icon": "home-disaster" }
+]

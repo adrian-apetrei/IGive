@@ -38,4 +38,16 @@ export class UsersService {
   async findOneByEmail(email: string): Promise<User> {
     return await this.userModel.findOne({ email }, '+password');
   }
+
+  // UPDATE user preferences
+  async updateUserPreferences(userID, data): Promise<User> {
+    console.log('\ndata: ', data);
+    const updatedUser = await this.userModel.findByIdAndUpdate(
+      { _id: userID, userPreferences: data },
+      {
+        new: true,
+      },
+    );
+    return updatedUser;
+  }
 }

@@ -1,33 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    <ion-item>
-      <ion-label position="stacked">Email</ion-label>
-      <ion-input #email type="email" inputmode="email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Password</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Altceva</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
+<ion-content>
+  <div class="home-header">
+    <h2>Hi, {{currentUser.firstName}}!</h2>
+    <p>Let's change the world today.</p>
+    <h3><b>Updates</b></h3>
   </div>
 
+  <ng-container *ngFor="let charity of charities">
+    <ion-card class="charity-card">
+      <div class="image-container">
+        <img src="./../../../assets/png/x.png" class="charity-image" />
+      </div>
+      <ion-card-header>
+        <ion-card-title>$10.000 goal reached</ion-card-title>
+      </ion-card-header>
+
+      <!-- TODO: update with charity description -->
+      <ion-card-content>
+        <b>{{charity.name}}</b> <br />Lorem Ipsum is simply dummy text of the
+        printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard.
+        <br />
+        <br />
+        <p class="charity-impact">Read about the impact ></p>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
 </ion-content>

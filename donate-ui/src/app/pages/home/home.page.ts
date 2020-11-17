@@ -1,12 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Subscription } from "rxjs";
+import { AuthService } from "src/app/services/auth.service";
+import { StaticDataService } from "src/app/services/static-data.service";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: "app-home",
+  templateUrl: "home.page.html",
+  styleUrls: ["home.page.scss"],
 })
-export class HomePage {
+export class HomePage implements OnInit, OnDestroy {
+  charities;
+  currentUser: any;
+  subscriptions: Subscription[] = [];
 
-  constructor() {}
+  constructor(
+    private staticDataService: StaticDataService,
+    private authService: AuthService
+  ) {}
 
+  ngOnInit() {
+    this.subscriptions.push(
+      this.staticDataService.getCharities().subscribe((charities) => {
+        this.charities = charities;
+      }),
+      this.authService.currentUser.subscribe((user) => {
+        this.currentUser = user;
+      })
+    );
+  }
+
+  ngOnDestroy() {
+    this.subscriptions.forEach((s) => s.unsubscribe());
+  }
 }

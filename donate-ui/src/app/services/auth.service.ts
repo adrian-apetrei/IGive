@@ -18,6 +18,7 @@ export const TOKEN = "jwt-token";
 export class AuthService {
   public user: Observable<any>;
   private userData = new BehaviorSubject(null);
+  public currentUser: Observable<User>;
 
   constructor(
     private storage: Storage,
@@ -39,6 +40,7 @@ export class AuthService {
         if (token) {
           const decoded = helper.decodeToken(token);
           this.userData.next(decoded);
+          this.currentUser = this.userData.asObservable();
           return true;
         } else {
           return null;
@@ -56,8 +58,9 @@ export class AuthService {
       switchMap((token) => {
         const decoded = helper.decodeToken(token);
         this.userData.next(decoded);
+        this.currentUser = this.userData.asObservable();
 
-        const storageObs = from(this.storage.set(TOKEN, token));
+        const storageObs = from([this.storage.set(TOKEN, token)]);
         return storageObs;
       })
     );

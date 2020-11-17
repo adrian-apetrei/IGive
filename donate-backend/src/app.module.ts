@@ -7,12 +7,14 @@ import { AuthModule } from './auth/auth.module';
 import * as path from 'path';
 import { NeconfigModule } from 'neconfig';
 import { StaticDataModule } from './static-data/static-data.module';
+import { PaymentModule } from './payment/payment.module';
 
 @Module({
   imports: [
     UsersModule,
     ConfigModule,
     StaticDataModule,
+    PaymentModule,
     NeconfigModule.register({
       readers: [{ name: 'env', file: path.resolve(process.cwd(), '.env') }],
     }),

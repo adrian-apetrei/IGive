@@ -34,7 +34,7 @@ export class LoginPage implements OnInit {
       .subscribe(
         (res) => {
           if (res) {
-            this.router.navigateByUrl("/user-preferences");
+            this.router.navigateByUrl("/user-preferences/welcome");
           }
         },
         async (err) => {

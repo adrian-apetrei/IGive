@@ -30,6 +30,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/user-preferences/user-preferences.module').then( m => m.UserPreferencesPageModule),
     canActivate: [AuthGuard]
   },
+  {
+    path: 'payment',
+    loadChildren: () => import('./pages/payment/payment.module').then( m => m.PaymentPageModule)
+  },
+
 ];
 
 @NgModule({

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="bank-account" fxLayout="column" fxLayoutAlign="center center">
+    <img
+      class="topic-icon"
+      alt="bank icon"
+      [src]="'./../../../../assets/svg/bank.svg'"
+    />
+    <h3 class="topic-title">Bank Account</h3>
+   
+    <ion-item>
+      <ion-label position="stacked">Bank Name</ion-label>
+      <ion-input #email type="string" [(ngModel)]="bankDetails.bankName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Account number</ion-label>
+      <ion-input type="string" [(ngModel)]="bankDetails.accountNumber"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Access code</ion-label>
+      <ion-input type="string" [(ngModel)]="bankDetails.accessCode"></ion-input>
+    </ion-item>
+    <ion-item lines="none" class="save-btn">
+      <ion-button (click)="save()">
+        Save
+      </ion-button>
+    </ion-item>
+  </div>
+  
+</ion-content>

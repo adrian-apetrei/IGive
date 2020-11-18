@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { SharedModule } from 'src/app/modules/shared.module';
 import { UserPreferencesPageRoutingModule } from './user-preferences-routing.module';
 import { UserPreferencesPage } from './user-preferences.page';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   imports: [
@@ -12,6 +13,6 @@ import { UserPreferencesPage } from './user-preferences.page';
     IonicModule,
     UserPreferencesPageRoutingModule
   ],
-  declarations: [UserPreferencesPage]
+  declarations: [UserPreferencesPage, WelcomeComponent]
 })
 export class UserPreferencesPageModule {}

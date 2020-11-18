@@ -1,28 +1,60 @@
-<ion-content>
-  <div class="home-header">
-    <h2>Hi, {{currentUser.firstName}}!</h2>
-    <p>Let's change the world today.</p>
-    <h3><b>Updates</b></h3>
-  </div>
 
-  <ng-container *ngFor="let charity of charities">
-    <ion-card class="charity-card">
-      <div class="image-container">
-        <img src="./../../../assets/png/x.png" class="charity-image" />
-      </div>
-      <ion-card-header>
-        <ion-card-title>$10.000 goal reached</ion-card-title>
-      </ion-card-header>
-
-      <!-- TODO: update with charity description -->
-      <ion-card-content>
-        <b>{{charity.name}}</b> <br />Lorem Ipsum is simply dummy text of the
-        printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard.
-        <br />
-        <br />
-        <p class="charity-impact">Read about the impact ></p>
-      </ion-card-content>
-    </ion-card>
-  </ng-container>
-</ion-content>
+  <ion-content>
+    <div class="home-header">
+      <h2>Hi, {{currentUser.firstName}}!</h2>
+      <p>Let's change the world today.</p>
+      <h3><b>Updates</b></h3>
+    </div>
+  
+    <ng-container *ngFor="let charity of charities">
+      <ion-card class="charity-card">
+        <div class="image-container">
+          <img src="./../../../assets/png/x.png" class="charity-image" />
+        </div>
+        <ion-card-header>
+          <ion-card-title>$10.000 goal reached</ion-card-title>
+        </ion-card-header>
+  
+        <!-- TODO: update with charity description -->
+        <ion-card-content>
+          <b>{{charity.name}}</b> <br />Lorem Ipsum is simply dummy text of the
+          printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard.
+          <br />
+          <br />
+          <p class="charity-impact">Read about the impact ></p>
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
+    
+  </ion-content>
+  <ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="home-outline"></ion-icon>
+        <!-- <ion-badge></ion-badge> -->
+      </ion-tab-button>
+  
+      <ion-tab-button tab="hand">
+        <ion-icon name="hand-right-outline"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button>
+      </ion-tab-button>
+      
+      <ion-tab-button tab="paymeny">
+        <ion-icon name="cash-outline"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="account">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>
+<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

@@ -5,23 +5,27 @@
     </ion-avatar>   
     <h3>App name</h3>
     <h1>Create account</h1>
-      <ion-item>
-        <ion-label position="stacked">Email</ion-label>
-        <ion-input #email type="email" inputmode="email" [(ngModel)]="credentials.email"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">Password</ion-label>
-        <ion-input type="password" [(ngModel)]="credentials.password"></ion-input>
-      </ion-item>
-      <ion-item lines="none" class="mt-5">
-        <ion-button (click)="register()">
-          Register
-        </ion-button>
-      </ion-item>
-    
-    
-      
-    
+    <ion-item>
+      <ion-label position="stacked">First Name</ion-label>
+      <ion-input type="string" [(ngModel)]="credentials.firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Last Name</ion-label>
+      <ion-input type="string" [(ngModel)]="credentials.lastName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input #email type="email" inputmode="email" [(ngModel)]="credentials.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="credentials.password"></ion-input>
+    </ion-item>
+    <ion-item lines="none" class="mt-5">
+      <ion-button (click)="register()">
+        Register
+      </ion-button>
+    </ion-item>
     <a class="mt-3" [routerLink]="['/login']" routerLinkActive="active">Already have an account? Log in</a>
     <span class="fill-remaining-space"></span>
     <a class="mb-6">About App</a>

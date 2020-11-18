@@ -6,7 +6,7 @@ import { Platform } from "@ionic/angular";
 import { Storage } from "@ionic/storage";
 import { BehaviorSubject, from, Observable } from "rxjs";
 import { map, switchMap, take } from "rxjs/operators";
-import { Credentials, User } from "../data/models";
+import { Credentials, PaymentMethod, User } from "../data/models";
 import { environment } from "./../../environments/environment";
 
 const helper = new JwtHelperService();
@@ -67,7 +67,7 @@ export class AuthService {
   }
 
   register(credentials: Credentials) {
-    return this.http.post(`${environment.apiUrl}/users`, credentials).pipe(
+    return this.http.post(`${environment.apiUrl}/users`, {...credentials, firstLogin: true}).pipe(
       take(1),
       switchMap((res) => {
         return this.login(credentials);
@@ -96,6 +96,13 @@ export class AuthService {
     const id = this.getUserToken().id;
     return this.http
       .put(`${environment.apiUrl}/users/preferences/${id}`, data)
+      .pipe(take(1));
+  }
+
+  addPaymentMethod(data: PaymentMethod) {
+    data.userId = this.getUserToken().id;
+    return this.http
+      .post<PaymentMethod>(`${environment.apiUrl}/payment`, data)
       .pipe(take(1));
   }
 

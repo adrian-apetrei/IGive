@@ -31,9 +31,9 @@ export class UserPreferencesPage implements OnInit {
       this.topics = topics;
     });
     this.paymentMethod = [
-      { name: "Bank Account", icon: "graduate-cap", isSelected: false },
-      { name: "PayPal", icon: "graduate-cap", isSelected: false },
-      { name: "Other", icon: "graduate-cap", isSelected: false },
+      { name: "Bank Account", icon: "bank", isSelected: false },
+      { name: "PayPal", icon: "paypal", isSelected: false },
+      { name: "Other", icon: "dollar", isSelected: false },
     ];
   }
 
@@ -75,6 +75,6 @@ export class UserPreferencesPage implements OnInit {
         taxReturns: this.taxReturns,
       })
       .subscribe();
-    // this.router.navigateByUrl(`/payment/${name.replace(" ", "")}`);
+    this.router.navigateByUrl(`/payment/${name.replace(" ", "")}`);
   }
 }

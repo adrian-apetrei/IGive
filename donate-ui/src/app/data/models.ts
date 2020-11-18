@@ -26,3 +26,11 @@ export interface User {
   id: string;
   firstLogin: boolean;
 }
+
+export interface PaymentMethod {
+  userId: string;
+  paymentMethod: 'BANK_ACCOUNT' | 'PAYPAL' | 'OTHER';
+  bankName: string;
+  accountNumber: string;
+  accessCode: string;
+}

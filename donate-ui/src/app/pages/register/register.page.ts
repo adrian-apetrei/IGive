@@ -12,7 +12,9 @@ import { AuthService } from 'src/app/services/auth.service';
 export class RegisterPage implements OnInit {
   credentials = {
     email: '',
-    password: ''
+    password: '',
+    firstName: '',
+    lastName: ''
   };
   constructor(
     private auth: AuthService,

@@ -23,6 +23,6 @@ export class BankAccountComponent implements OnInit {
 
   save() {
     this.auth.addPaymentMethod(this.bankDetails).subscribe();
-    this.router.navigateByUrl(`/home`);
+    this.router.navigateByUrl(`/tabs/home`);
   }
 }

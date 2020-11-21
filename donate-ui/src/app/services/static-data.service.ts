@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { take } from "rxjs/operators";
-import { Topic } from "../data/models";
+import { CharityOrganization, Topic } from "../data/models";
 import { environment } from "./../../environments/environment";
 
 @Injectable({
@@ -18,7 +18,7 @@ export class StaticDataService {
 
   getCharities() {
     return this.http
-      .get<Topic>(`${environment.apiUrl}/static-data/charities`)
+      .get<CharityOrganization>(`${environment.apiUrl}/static-data/charities`)
       .pipe(take(1));
   }
 }

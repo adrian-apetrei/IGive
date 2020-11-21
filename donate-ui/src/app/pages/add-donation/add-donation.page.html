@@ -1,0 +1,16 @@
+<ion-header class="add-donation-header">
+  <h3 class="title">Add a Donation</h3>
+  <p class="subtitle">Select the cause you want to support</p>
+</ion-header>
+<ion-content>
+  <div class="add-donation-container">
+    <ion-searchbar></ion-searchbar>
+
+    <ng-container *ngFor="let item of data | keyvalue">
+      <app-topic-card
+        [topic]="item.key"
+        [charities]="item.value"
+      ></app-topic-card>
+    </ng-container>
+  </div>
+</ion-content>

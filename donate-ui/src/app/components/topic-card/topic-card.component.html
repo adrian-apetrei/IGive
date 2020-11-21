@@ -1,0 +1,23 @@
+<div class="topic-container">
+  <div class="topic">
+    <h3>{{ topic }}</h3>
+  </div>
+
+  <ion-slides>
+    <ion-slide *ngFor="let charity of charities">
+      <ion-card class="charity-card">
+        <div class="image-container">
+          <img src="./../../../assets/png/x.png" class="charity-image" />
+        </div>
+        <ion-card-content>
+          <h3 class="title">{{ charity.name }}</h3>
+          <p class="description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <p class="read-more">Read more</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</div>

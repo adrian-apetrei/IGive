@@ -14,6 +14,12 @@ const routes: Routes = [
         loadChildren: "../home/home.module#HomePageModule",
         canActivate: [AuthGuard],
       },
+      {
+        path: "register-donation",
+        loadChildren:
+          "../add-donation/add-donation.module#AddDonationPageModule",
+        canActivate: [AuthGuard],
+      },
     ],
   },
 ];

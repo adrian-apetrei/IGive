@@ -20,6 +20,28 @@ const routes: Routes = [
           "../add-donation/add-donation.module#AddDonationPageModule",
         canActivate: [AuthGuard],
       },
+      {
+        path: "add-donation",
+        loadChildren: () =>
+          import("../add-donation/add-donation.module").then(
+            (m) => m.AddDonationPageModule
+          ),
+        canActivate: [AuthGuard],
+      },
+      {
+        path: "charity-details",
+        loadChildren: () =>
+          import("../charity-details/charity-details.module").then(
+            (m) => m.CharityDetailsPageModule
+          ),
+      },
+      {
+        path: "donation-method",
+        loadChildren: () =>
+          import("../donation-method/donation-method.module").then(
+            (m) => m.DonationMethodPageModule
+          ),
+      },
     ],
   },
 ];

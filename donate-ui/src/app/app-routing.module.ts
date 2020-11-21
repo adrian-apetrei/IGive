@@ -41,11 +41,7 @@ const routes: Routes = [
   {
     path: "tabs",
     loadChildren: "./pages/tabs/tabs.module#TabsPageModule",
-  },  {
-    path: 'add-donation',
-    loadChildren: () => import('./pages/add-donation/add-donation.module').then( m => m.AddDonationPageModule)
   },
-
 ];
 
 @NgModule({

@@ -1,0 +1,21 @@
+.donation-methods-container {
+  padding: 12px;
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.donation-method {
+  cursor: pointer;
+  background: #92e7bd;
+  padding: 12px;
+  margin-bottom: 12px;
+}

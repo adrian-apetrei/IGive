@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="tabs/register-donation"
+        text=""
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="charity-details">
+    <h2 class="title">{{charity.name}}</h2>
+    <!-- charity description -->
+    <p class="subtitle">Help children have access to reading.</p>
+    <ion-button expand="block" (click)="goToDonationMethods()"
+      >Support this cause</ion-button
+    >
+
+    <div class="charity-effort">
+      <h4>Current Efforts</h4>
+      <p class="subtitle">
+        Raise money for the Clara Brenton Public Schiool Library
+      </p>
+
+      <p class="current-value">$516.35</p>
+      <ion-range
+        disabled
+        color="primary"
+        class="effort-range"
+        value="516.35"
+        max="1500"
+      >
+      </ion-range>
+      <p class="target-value">Goal: $1500</p>
+    </div>
+
+    <div class="charity-updates">
+      <h4>Latest Updates</h4>
+      <div *ngFor="let update of charityUpdates" class="update-container">
+        <p class="text">{{update.title}}</p>
+        <p class="text">{{update.message}}</p>
+        <p class="text">{{update.date | date:'short'}}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

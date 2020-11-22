@@ -13,7 +13,7 @@ export class CharityOrganization {
 
 export interface LatestUpdates {
   title: string;
-  description: string;
+  message: string;
   date: string;
 }
 

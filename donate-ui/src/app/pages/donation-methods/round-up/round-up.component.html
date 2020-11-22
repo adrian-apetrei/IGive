@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" (click)="back()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="round-up-container">
+    <h2 class="title">Round Up</h2>
+    <p>
+      App will round up to the nearest dollar on every purchase made using your
+      bank card and donate that money to the cause
+      <br />
+      <br />
+
+      eg if you spent $4,80, iGive will donate 20c to round up the total to $5
+    </p>
+
+    <ion-radio-group value="donate-goal">
+      <div class="radio-container">
+        <ion-radio
+          slot="start"
+          value="donate-goal"
+          class="methods-btn"
+        ></ion-radio>
+        <ion-label>Donate until the goal is met</ion-label>
+      </div>
+
+      <div class="radio-container">
+        <ion-radio
+          slot="start"
+          value="donate-date"
+          class="methods-btn"
+        ></ion-radio>
+        <ion-label>Donate until a specific date</ion-label>
+      </div>
+
+      <ion-item class="amount-input">
+        <ion-input
+          placeholder="select date"
+          type="date"
+          (input)="date = $event.target.value"
+        ></ion-input>
+      </ion-item>
+
+      <div class="radio-container">
+        <ion-radio
+          slot="start"
+          value="donate-limit"
+          class="methods-btn"
+        ></ion-radio>
+        <ion-label>Donate until reach a limit of</ion-label>
+      </div>
+
+      <ion-item class="amount-input">
+        <ion-input placeholder="amount" type="text"></ion-input>
+        <ion-icon name="cash-outline" slot="start"></ion-icon
+      ></ion-item>
+    </ion-radio-group>
+  </div>
+</ion-content>

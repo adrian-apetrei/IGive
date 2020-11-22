@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="determined-container">
+    <h2 class="title">Determined</h2>
+    <p>
+      Carefully select how much you want to donate to which charities, when you
+      want to donate
+      <br />
+      <br />
+      eg donate $25 each month to the charity of your choice
+    </p>
+
+    <h3 class="title">I want to donate</h3>
+    <ion-item>
+      <ion-input placeholder="amount" type="text"></ion-input>
+      <ion-icon name="cash-outline" slot="start"></ion-icon>
+    </ion-item>
+
+    <h3 class="title">to {{ charity.name }} every</h3>
+    <ion-item>
+      <ion-label>Select period </ion-label>
+      <ion-select interface="popover">
+        <ion-select-option value="nes">week</ion-select-option>
+        <ion-select-option value="n64">month</ion-select-option>
+        <ion-select-option value="ps">year</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+</ion-content>

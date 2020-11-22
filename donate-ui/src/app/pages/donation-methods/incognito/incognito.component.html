@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="incognito-container">
+    <h2 class="title">Incognito</h2>
+    <p>
+      iGive will take a set amount from your account every time you perform an
+      action, with limits you can control
+      <br />
+      <br />
+      eg take 25c every time you use your debit card
+    </p>
+
+    <h3 class="title">I want to donate</h3>
+    <ion-item>
+      <ion-input placeholder="amount" type="text"></ion-input>
+      <ion-icon name="cash-outline" slot="start"></ion-icon>
+    </ion-item>
+
+    <h3 class="title">to {{ charity.name }} every time</h3>
+    <ion-item>
+      <ion-label>Select option </ion-label>
+      <ion-select interface="popover">
+        <ion-select-option value="nes">Option 1</ion-select-option>
+        <ion-select-option value="n64">Option 2</ion-select-option>
+        <ion-select-option value="ps">Option 3</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <h3 class="title">with a maximum donation of</h3>
+    <ion-item>
+      <ion-input placeholder="amount" type="text"></ion-input>
+      <ion-icon name="cash-outline" slot="start"></ion-icon>
+    </ion-item>
+
+    <h3 class="title">every</h3>
+    <ion-item>
+      <ion-label>Select period </ion-label>
+      <ion-select interface="popover">
+        <ion-select-option value="nes">week</ion-select-option>
+        <ion-select-option value="n64">month</ion-select-option>
+        <ion-select-option value="ps">year</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+</ion-content>

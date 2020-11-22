@@ -19,6 +19,6 @@ export class CharityDetailsPage implements OnInit {
   }
 
   goToDonationMethods() {
-    this.router.navigateByUrl("tabs/donation-method");
+    this.router.navigateByUrl("tabs/donation-methods");
   }
 }

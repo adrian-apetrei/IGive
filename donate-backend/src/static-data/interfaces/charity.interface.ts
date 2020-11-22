@@ -2,7 +2,7 @@ import { Document } from 'mongoose';
 
 export interface LatestUpdates {
   readonly title: string;
-  readonly description: string;
+  readonly message: string;
   readonly date: string;
 }
 

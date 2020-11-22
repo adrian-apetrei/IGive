@@ -34,13 +34,15 @@ const routes: Routes = [
           import("../charity-details/charity-details.module").then(
             (m) => m.CharityDetailsPageModule
           ),
+        canActivate: [AuthGuard],
       },
       {
-        path: "donation-method",
+        path: "donation-methods",
         loadChildren: () =>
-          import("../donation-method/donation-method.module").then(
-            (m) => m.DonationMethodPageModule
+          import("../donation-methods/donation-methods.module").then(
+            (m) => m.DonationMethodsPageModule
           ),
+        canActivate: [AuthGuard],
       },
       {
         path: "profile",

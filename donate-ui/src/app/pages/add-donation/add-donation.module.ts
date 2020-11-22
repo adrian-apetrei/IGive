@@ -7,7 +7,7 @@ import { IonicModule } from "@ionic/angular";
 import { AddDonationPageRoutingModule } from "./add-donation-routing.module";
 
 import { AddDonationPage } from "./add-donation.page";
-import { TopicCardComponent } from "src/app/components/topic-card/topic-card.component";
+import { TopicCardComponent } from './topic-card/topic-card.component';
 
 @NgModule({
   imports: [

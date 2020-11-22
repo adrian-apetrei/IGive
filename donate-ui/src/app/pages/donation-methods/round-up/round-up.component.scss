@@ -1,0 +1,23 @@
+.round-up-container {
+  padding: 12px;
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .radio-container {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+
+    .methods-btn {
+      margin-right: 12px;
+    }
+  }
+
+  .amount-input {
+    width: 90%;
+    margin-left: auto;
+  }
+}

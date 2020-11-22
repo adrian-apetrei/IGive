@@ -1,7 +1,9 @@
 ion-slides {
   height: 100%;
   max-width: 100%;
-  overflow-y: auto;
+  ion-slide {
+    overflow-y: auto;
+  }
 
   .slide-title {
     margin-top: 3rem;

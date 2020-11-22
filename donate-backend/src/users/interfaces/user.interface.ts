@@ -16,4 +16,13 @@ export interface User extends Document {
   readonly bio: string;
   readonly firstLogin: boolean;
   readonly userPreferences: UserPreferences;
+  readonly userSettings: UserSettings;
+}
+
+export interface UserSettings {
+  readonly notifications: {
+    readonly charityUpdates: string;
+    readonly email: boolean;
+    readonly sms: boolean;
+  };
 }

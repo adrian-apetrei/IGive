@@ -84,7 +84,7 @@
 <ion-footer fxLayout="row" fxLayoutAlign="space-between center">
   <div fxFlex="30" fxLayoutAlign="start center">
     <ion-item lines="none">
-      <ion-button *ngIf="slideIndex !== 0" (click)="swipeBack()">
+      <ion-button *ngIf="slideIndex !== 0" (click)="slides.slidePrev()">
         Back
       </ion-button>
     </ion-item>
@@ -98,7 +98,7 @@
   </div>
   <div fxFlex="30" fxLayoutAlign="end center">
     <ion-item lines="none">
-      <ion-button *ngIf="slideIndex !== 2" (click)="swipeNext()">
+      <ion-button *ngIf="slideIndex !== 2" (click)="slides.slideNext()">
         Next
       </ion-button>
     </ion-item>

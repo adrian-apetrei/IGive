@@ -42,6 +42,14 @@ const routes: Routes = [
             (m) => m.DonationMethodPageModule
           ),
       },
+      {
+        path: "profile",
+        loadChildren: () =>
+          import("../user-profile/user-profile.module").then(
+            (m) => m.UserProfilePageModule
+          ),
+        canActivate: [AuthGuard],
+      },
     ],
   },
 ];

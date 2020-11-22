@@ -25,6 +25,13 @@ export const UserSchema = new mongoose.Schema(
       goLocal: Boolean,
       taxReturns: Boolean,
     },
+    userSettings: {
+      notifications: {
+        charityUpdates: String,
+        email: Boolean,
+        sms: Boolean,
+      },
+    },
   },
   {
     timestamps: true,

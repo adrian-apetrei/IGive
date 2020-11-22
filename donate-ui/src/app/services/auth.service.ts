@@ -80,13 +80,14 @@ export class AuthService {
   }
 
   getUserData() {
-    const id = this.getUserToken().id;
+    const id = this.getUserToken()?.id;
     return this.http
       .get<User>(`${environment.apiUrl}/users/${id}`)
       .pipe(take(1));
   }
 
-  updateUser(id, data) {
+  updateUser(data) {
+    const id = this.getUserToken().id;
     return this.http
       .put(`${environment.apiUrl}/users/${id}`, data)
       .pipe(take(1));
@@ -96,6 +97,13 @@ export class AuthService {
     const id = this.getUserToken().id;
     return this.http
       .put(`${environment.apiUrl}/users/preferences/${id}`, data)
+      .pipe(take(1));
+  }
+
+  updateUserSettings(data) {
+    const id = this.getUserToken().id;
+    return this.http
+      .put(`${environment.apiUrl}/users/settings/${id}`, data)
       .pipe(take(1));
   }
 
@@ -112,7 +120,7 @@ export class AuthService {
 
   logout() {
     this.storage.remove(TOKEN).then(() => {
-      this.router.navigateByUrl("/");
+      this.router.navigateByUrl("/login");
       this.userData.next(null);
     });
   }

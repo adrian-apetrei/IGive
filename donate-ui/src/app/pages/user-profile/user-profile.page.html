@@ -1,0 +1,32 @@
+<ion-content>
+  <div
+    class="user-profile-content"
+    fxLayout="column"
+    fxLayoutAlign="start center"
+  >
+    <ion-avatar>
+      <img [src]="avatar" />
+    </ion-avatar>
+    <a [routerLink]="['/profile/info']"  [state]="{ user: user }" class="mt-4">Edit Profile</a>
+    <h3>{{ fullName }}</h3>
+    <ion-list class="full-width pl-3 pr-3">
+      <ion-item
+        detail="true"
+        lines="none"
+        *ngFor="let item of settings"
+        button
+        (click)="goTo(item.route)"
+      >
+        <ion-label>{{ item.name }}</ion-label>
+      </ion-item>
+      <ion-item
+        detail="true"
+        lines="none"
+        button
+        (click)="logout()"
+      >
+        <ion-label>Logout</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

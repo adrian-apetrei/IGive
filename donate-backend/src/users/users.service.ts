@@ -50,4 +50,16 @@ export class UsersService {
     );
     return updatedUser;
   }
+
+  // UPDATE user settings
+  async updateUserSettings(userId, data): Promise<User> {
+    const updatedUser = await this.userModel.findByIdAndUpdate(
+      userId,
+      { userSettings: data },
+      {
+        new: true,
+      },
+    );
+    return updatedUser;
+  }
 }

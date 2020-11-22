@@ -12,3 +12,12 @@ export class UserPreferencesDto {
   readonly goLocal: boolean;
   readonly taxReturns: boolean;
 }
+
+// tslint:disable-next-line: max-classes-per-file
+export class UserSettingsDto {
+  readonly notifications: {
+    readonly charityUpdates: string;
+    readonly email: boolean;
+    readonly sms: boolean;
+  };
+}

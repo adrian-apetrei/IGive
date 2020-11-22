@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="saveChanges()">
+      <ion-back-button text="" icon="chevron-back" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div fxLayout="column" fxLayoutAlign="start center" class="mt-5 mb-5">
+    <ion-avatar>
+      <img [src]="user.avatar">
+    </ion-avatar>
+    <a class="mt-4">Change photo</a>
+  </div>
+  
+  <ion-item>
+    <ion-label position="stacked">First Name</ion-label>
+    <ion-input type="string" [(ngModel)]="user.firstName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Last Name</ion-label>
+    <ion-input type="string" [(ngModel)]="user.lastName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input #email type="email" inputmode="email" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  
+</ion-content>

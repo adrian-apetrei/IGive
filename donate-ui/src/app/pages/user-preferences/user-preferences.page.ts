@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, Input, OnInit, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
 import { IonSlides } from "@ionic/angular";
 import { StaticDataService } from "src/app/services/static-data.service";
@@ -10,8 +10,9 @@ import { AuthService } from "src/app/services/auth.service";
   styleUrls: ["./user-preferences.page.scss"],
 })
 export class UserPreferencesPage implements OnInit {
+  @Input() initialSlide = 0;
   slideOpts = {
-    initialSlide: 0,
+    initialSlide: this.initialSlide
   };
   slideIndex = 0;
   topics;
@@ -43,14 +44,6 @@ export class UserPreferencesPage implements OnInit {
     });
   }
 
-  swipeNext() {
-    this.slides.slideNext();
-  }
-
-  swipeBack() {
-    this.slides.slidePrev();
-  }
-
   selectTopic(name: string) {
     this.topics.forEach((topic) => {
       if (topic.name === name) {
@@ -60,7 +53,6 @@ export class UserPreferencesPage implements OnInit {
   }
 
   selectPaymentMethod(name: string) {
-    // save preferences then
     const selectedTopics = this.topics
       .filter((topic) => topic.isSelected)
       .map((topic) => {

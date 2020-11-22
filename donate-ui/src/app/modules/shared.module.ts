@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [],
@@ -8,6 +9,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     FlexLayoutModule.withConfig({ useColumnBasisZero: false })
   ],
-  exports: [FlexLayoutModule, CommonModule]
+  exports: [FlexLayoutModule, MaterialModule, CommonModule]
 })
 export class SharedModule { }

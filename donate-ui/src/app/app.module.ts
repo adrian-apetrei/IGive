@@ -11,6 +11,7 @@ import { SharedModule } from './modules/shared.module';
 import { TOKEN } from './services/auth.service';
 import { IonicStorageModule, Storage } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function jwtOptionsFactory(storage) {
   return {
@@ -38,7 +39,8 @@ export function jwtOptionsFactory(storage) {
         useFactory: jwtOptionsFactory,
         deps: [Storage]
       }
-    })
+    }),
+    BrowserAnimationsModule
   ],
   providers: [
     StatusBar,

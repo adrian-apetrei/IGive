@@ -4,6 +4,17 @@ export class CharityOrganization {
   country: string;
   name: string;
   websiteUrl: string;
+  description: string;
+  latestUpdates: LatestUpdates[];
+  goal: number;
+  currentEffort: number;
+  currentEffortDescription: string;
+}
+
+export interface LatestUpdates {
+  title: string;
+  description: string;
+  date: string;
 }
 
 export interface Topic {
@@ -29,7 +40,7 @@ export interface User {
 
 export interface PaymentMethod {
   userId: string;
-  paymentMethod: 'BANK_ACCOUNT' | 'PAYPAL' | 'OTHER';
+  paymentMethod: "BANK_ACCOUNT" | "PAYPAL" | "OTHER";
   bankName: string;
   accountNumber: string;
   accessCode: string;

@@ -6,4 +6,9 @@ export const CharitySchema = new mongoose.Schema({
   country: String,
   name: String,
   websiteUrl: String,
+  description: String,
+  latestUpdates: Array,
+  goal: Number,
+  currentEffort: Number,
+  currentEffortDescription: String,
 });

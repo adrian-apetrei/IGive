@@ -1,0 +1,1622 @@
+[
+  {
+    "topic": "Education",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "Save the Children",
+    "websiteUrl": "https://www.savethechildren.net/",
+    "description": "Nunc nisl.",
+    "goal": 2765,
+    "currentEffort": 475,
+    "currentEffortDescription": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.",
+    "latestUpdates": [
+      {
+        "title": "Suspendisse ornare consequat lectus.",
+        "message": "Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+        "date": {
+          "$date": "2020-08-04T08:50:42.000Z"
+        }
+      },
+      {
+        "title": "Aenean auctor gravida sem.",
+        "message": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+        "date": {
+          "$date": "2020-08-09T05:05:57.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Education",
+    "regionFocus": "Asia Pacific",
+    "country": "China",
+    "name": "Teach for China",
+    "websiteUrl": "http://www.tfchina.org/",
+    "description": "Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+    "goal": 2357,
+    "currentEffort": 461,
+    "currentEffortDescription": "In hac habitasse platea dictumst. Etiam faucibus cursus urna.",
+    "latestUpdates": [
+      {
+        "title": "Integer a nibh.",
+        "message": "Ut tellus. Nulla ut erat id mauris vulputate elementum.",
+        "date": {
+          "$date": "2019-11-22T05:08:18.000Z"
+        }
+      },
+      {
+        "title": "Proin eu mi.",
+        "message": "Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.",
+        "date": {
+          "$date": "2020-06-15T00:36:25.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Education",
+    "regionFocus": "North America",
+    "country": "United States",
+    "name": "Scholarship America",
+    "websiteUrl": "https://scholarshipamerica.org/",
+    "description": "Nulla facilisi.",
+    "goal": 1423,
+    "currentEffort": 328,
+    "currentEffortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    "latestUpdates": [
+      {
+        "title": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla.",
+        "message": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus.",
+        "date": {
+          "$date": "2020-05-25T17:22:27.000Z"
+        }
+      },
+      {
+        "title": "Nulla tempus.",
+        "message": "Ut tellus.",
+        "date": {
+          "$date": "2020-06-19T08:14:54.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Education",
+    "regionFocus": "Africa",
+    "country": "Kenya, Uganda",
+    "name": "Build Africa",
+    "websiteUrl": "https://www.build-africa.org/",
+    "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.",
+    "goal": 1632,
+    "currentEffort": 632,
+    "currentEffortDescription": "Sed vel enim sit amet nunc viverra dapibus.",
+    "latestUpdates": [
+      {
+        "title": "Praesent blandit.",
+        "message": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+        "date": {
+          "$date": "2020-03-27T15:34:31.000Z"
+        }
+      },
+      {
+        "title": "Quisque id justo sit amet sapien dignissim vestibulum.",
+        "message": "Morbi a ipsum. Integer a nibh. In quis justo.",
+        "date": {
+          "$date": "2020-08-08T06:04:02.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Education",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "Children International",
+    "websiteUrl": "https://www.children.org/",
+    "description": "In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.",
+    "goal": 2228,
+    "currentEffort": 549,
+    "currentEffortDescription": "Nulla facilisi. Cras non velit nec nisi vulputate nonummy.",
+    "latestUpdates": [
+      {
+        "title": "Nam dui.",
+        "message": "Etiam justo.",
+        "date": {
+          "$date": "2020-09-26T15:09:48.000Z"
+        }
+      },
+      {
+        "title": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "message": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros.",
+        "date": {
+          "$date": "2019-12-29T08:12:10.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Education",
+    "regionFocus": "North America",
+    "country": "United States",
+    "name": "Teach for America",
+    "websiteUrl": "https://www.teachforamerica.org/",
+    "description": "Ut at dolor quis odio consequat varius. Integer ac leo.",
+    "goal": 2275,
+    "currentEffort": 759,
+    "currentEffortDescription": "Vestibulum ac est lacinia nisi venenatis tristique.",
+    "latestUpdates": [
+      {
+        "title": "Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.",
+        "message": "Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.",
+        "date": {
+          "$date": "2020-09-26T23:53:10.000Z"
+        }
+      },
+      {
+        "title": "Donec ut dolor.",
+        "message": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.",
+        "date": {
+          "$date": "2020-07-09T16:23:25.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Education",
+    "regionFocus": "South America",
+    "country": "Bolivia",
+    "name": "UNFPA Bolivia",
+    "websiteUrl": "https://bolivia.unfpa.org/",
+    "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy.",
+    "goal": 2713,
+    "currentEffort": 626,
+    "currentEffortDescription": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",
+    "latestUpdates": [
+      {
+        "title": "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+        "message": "Vivamus vel nulla eget eros elementum pellentesque.",
+        "date": {
+          "$date": "2020-02-10T23:25:36.000Z"
+        }
+      },
+      {
+        "title": "Fusce posuere felis sed lacus.",
+        "message": "Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti.",
+        "date": {
+          "$date": "2020-09-22T18:25:29.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Education",
+    "regionFocus": "South America",
+    "country": "Colombia",
+    "name": "Fundaci�n Mi Sangre",
+    "websiteUrl": "https://fundacionmisangre.org/",
+    "description": "Pellentesque ultrices mattis odio. Donec vitae nisi.",
+    "goal": 2750,
+    "currentEffort": 507,
+    "currentEffortDescription": "Vivamus in felis eu sapien cursus vestibulum. Proin eu mi.",
+    "latestUpdates": [
+      {
+        "title": "Praesent blandit lacinia erat.",
+        "message": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla.",
+        "date": {
+          "$date": "2020-07-13T17:04:58.000Z"
+        }
+      },
+      {
+        "title": "Suspendisse potenti.",
+        "message": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+        "date": {
+          "$date": "2020-11-06T13:54:12.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Education",
+    "regionFocus": "South America",
+    "country": "Paraguay",
+    "name": "Global Infancia",
+    "websiteUrl": "http://www.globalinfancia.org.py/",
+    "description": "Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.",
+    "goal": 1686,
+    "currentEffort": 709,
+    "currentEffortDescription": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor.",
+    "latestUpdates": [
+      {
+        "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+        "message": "Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
+        "date": {
+          "$date": "2020-05-10T17:05:34.000Z"
+        }
+      },
+      {
+        "title": "Aliquam erat volutpat.",
+        "message": "Nunc purus.",
+        "date": {
+          "$date": "2020-08-29T21:44:31.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Education",
+    "regionFocus": "South America",
+    "country": "Venezuela",
+    "name": "Amnist�a Internacional Venezuela",
+    "websiteUrl": "https://www.amnistia.org/",
+    "description": "Proin eu mi.",
+    "goal": 1514,
+    "currentEffort": 913,
+    "currentEffortDescription": "Pellentesque at nulla.",
+    "latestUpdates": [
+      {
+        "title": "Nam dui.",
+        "message": "Duis aliquam convallis nunc.",
+        "date": {
+          "$date": "2020-07-26T08:25:34.000Z"
+        }
+      },
+      {
+        "title": "Vivamus in felis eu sapien cursus vestibulum.",
+        "message": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.",
+        "date": {
+          "$date": "2020-01-01T16:24:54.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Education",
+    "regionFocus": "Asia Pacific",
+    "country": "Lebanon, Jordan",
+    "name": "Anera",
+    "websiteUrl": "https://www.anera.org/",
+    "description": "Etiam vel augue. Vestibulum rutrum rutrum neque.",
+    "goal": 1129,
+    "currentEffort": 846,
+    "currentEffortDescription": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor.",
+    "latestUpdates": [
+      {
+        "title": "Nunc rhoncus dui vel sem.",
+        "message": "In hac habitasse platea dictumst.",
+        "date": {
+          "$date": "2020-10-15T19:31:57.000Z"
+        }
+      },
+      {
+        "title": "Pellentesque at nulla.",
+        "message": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+        "date": {
+          "$date": "2020-10-31T19:01:39.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Medical Aid",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "Doctors Without Borders",
+    "websiteUrl": "https://www.doctorswithoutborders.org/",
+    "description": "Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+    "goal": 2862,
+    "currentEffort": 664,
+    "currentEffortDescription": "Nulla tellus. In sagittis dui vel nisl.",
+    "latestUpdates": [
+      {
+        "title": "Etiam faucibus cursus urna.",
+        "message": "In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem.",
+        "date": {
+          "$date": "2020-07-20T04:16:26.000Z"
+        }
+      },
+      {
+        "title": "Nullam molestie nibh in lectus.",
+        "message": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+        "date": {
+          "$date": "2020-01-19T06:23:50.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Medical Aid",
+    "regionFocus": "Asia Pacific",
+    "country": "Lebanon, Jordan",
+    "name": "Anera",
+    "websiteUrl": "https://www.anera.org/",
+    "description": "Quisque id justo sit amet sapien dignissim vestibulum.",
+    "goal": 2798,
+    "currentEffort": 673,
+    "currentEffortDescription": "Aliquam erat volutpat.",
+    "latestUpdates": [
+      {
+        "title": "Aenean lectus.",
+        "message": "Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl.",
+        "date": {
+          "$date": "2020-07-10T08:13:57.000Z"
+        }
+      },
+      {
+        "title": "In congue.",
+        "message": "Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+        "date": {
+          "$date": "2020-06-07T17:51:14.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Medical Aid",
+    "regionFocus": "Asia Pacific",
+    "country": "Kiribati",
+    "name": "Pacific Islands Medical Aid",
+    "websiteUrl": "https://pacificislandsaid.org/",
+    "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+    "goal": 2522,
+    "currentEffort": 814,
+    "currentEffortDescription": "Sed vel enim sit amet nunc viverra dapibus.",
+    "latestUpdates": [
+      {
+        "title": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+        "message": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+        "date": {
+          "$date": "2020-10-10T14:02:32.000Z"
+        }
+      },
+      {
+        "title": "Nam tristique tortor eu pede.",
+        "message": "Morbi quis tortor id nulla ultrices aliquet.",
+        "date": {
+          "$date": "2020-02-12T00:22:32.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Medical Aid",
+    "regionFocus": "Asia Pacific",
+    "country": "Syria",
+    "name": "Medical Aid Syria",
+    "websiteUrl": "https://medicalaidsyria.com/",
+    "description": "Vivamus vestibulum sagittis sapien.",
+    "goal": 1044,
+    "currentEffort": 488,
+    "currentEffortDescription": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+    "latestUpdates": [
+      {
+        "title": "Sed vel enim sit amet nunc viverra dapibus.",
+        "message": "Duis aliquam convallis nunc.",
+        "date": {
+          "$date": "2020-01-30T17:00:28.000Z"
+        }
+      },
+      {
+        "title": "Duis ac nibh.",
+        "message": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "date": {
+          "$date": "2020-11-20T05:54:54.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Medical Aid",
+    "regionFocus": "Africa",
+    "country": "Ethiopia, Kenya, Malawi, South Africa, Tanzania, Uganda, Zambia",
+    "name": "Amref Health Africa",
+    "websiteUrl": "https://amref.org/",
+    "description": "In sagittis dui vel nisl.",
+    "goal": 2453,
+    "currentEffort": 749,
+    "currentEffortDescription": "Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
+    "latestUpdates": [
+      {
+        "title": "Nulla justo.",
+        "message": "Nunc purus. Phasellus in felis.",
+        "date": {
+          "$date": "2020-04-09T16:30:05.000Z"
+        }
+      },
+      {
+        "title": "Nullam porttitor lacus at turpis.",
+        "message": "Sed ante.",
+        "date": {
+          "$date": "2020-03-08T13:25:22.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Environment",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "WWF",
+    "websiteUrl": "https://www.worldwildlife.org/",
+    "description": "Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.",
+    "goal": 2649,
+    "currentEffort": 658,
+    "currentEffortDescription": "Nulla tellus.",
+    "latestUpdates": [
+      {
+        "title": "Aenean auctor gravida sem.",
+        "message": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem.",
+        "date": {
+          "$date": "2020-07-30T01:25:52.000Z"
+        }
+      },
+      {
+        "title": "Quisque ut erat.",
+        "message": "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy.",
+        "date": {
+          "$date": "2020-07-23T23:48:24.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Environment",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "Rainforest Alliance",
+    "websiteUrl": "https://www.rainforest-alliance.org/",
+    "description": "Phasellus sit amet erat.",
+    "goal": 2797,
+    "currentEffort": 476,
+    "currentEffortDescription": "Etiam vel augue. Vestibulum rutrum rutrum neque.",
+    "latestUpdates": [
+      {
+        "title": "Integer ac neque.",
+        "message": "Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.",
+        "date": {
+          "$date": "2020-07-22T20:52:24.000Z"
+        }
+      },
+      {
+        "title": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "message": "Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio.",
+        "date": {
+          "$date": "2020-11-12T11:56:33.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Environment",
+    "regionFocus": "South America",
+    "country": "Ecuador",
+    "name": "Charles Darwin Foundation",
+    "websiteUrl": "https://www.darwinfoundation.org/en/",
+    "description": "Nunc purus. Phasellus in felis.",
+    "goal": 2581,
+    "currentEffort": 824,
+    "currentEffortDescription": "Nullam porttitor lacus at turpis.",
+    "latestUpdates": [
+      {
+        "title": "Nam tristique tortor eu pede.",
+        "message": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+        "date": {
+          "$date": "2020-06-20T06:53:23.000Z"
+        }
+      },
+      {
+        "title": "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
+        "message": "Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula.",
+        "date": {
+          "$date": "2020-08-20T16:34:22.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Environment",
+    "regionFocus": "South America",
+    "country": "Chile",
+    "name": "Comit� Nacional Pro-Defensa de la Flora y Fauna",
+    "websiteUrl": "https://www.codeff.cl/",
+    "description": "Phasellus in felis. Donec semper sapien a libero.",
+    "goal": 2277,
+    "currentEffort": 486,
+    "currentEffortDescription": "Vestibulum ac est lacinia nisi venenatis tristique.",
+    "latestUpdates": [
+      {
+        "title": "Integer non velit.",
+        "message": "Ut at dolor quis odio consequat varius. Integer ac leo.",
+        "date": {
+          "$date": "2020-01-04T16:41:45.000Z"
+        }
+      },
+      {
+        "title": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.",
+        "message": "Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla.",
+        "date": {
+          "$date": "2020-10-31T19:16:17.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Environment",
+    "regionFocus": "Asia Pacific",
+    "country": "Japan",
+    "name": "Seafood Legacy",
+    "websiteUrl": "http://seafoodlegacy.com/",
+    "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi.",
+    "goal": 1945,
+    "currentEffort": 514,
+    "currentEffortDescription": "Nulla nisl.",
+    "latestUpdates": [
+      {
+        "title": "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+        "message": "In congue. Etiam justo. Etiam pretium iaculis justo.",
+        "date": {
+          "$date": "2020-08-23T17:21:55.000Z"
+        }
+      },
+      {
+        "title": "Integer ac neque.",
+        "message": "Aliquam erat volutpat. In congue. Etiam justo.",
+        "date": {
+          "$date": "2020-11-13T15:46:36.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Environment",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "OCEANA",
+    "websiteUrl": "https://oceana.org/",
+    "description": "Duis mattis egestas metus. Aenean fermentum.",
+    "goal": 1540,
+    "currentEffort": 700,
+    "currentEffortDescription": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.",
+    "latestUpdates": [
+      {
+        "title": "Nullam molestie nibh in lectus.",
+        "message": "Suspendisse ornare consequat lectus.",
+        "date": {
+          "$date": "2020-09-15T09:16:14.000Z"
+        }
+      },
+      {
+        "title": "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+        "message": "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque.",
+        "date": {
+          "$date": "2020-05-04T15:14:49.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Wildlife",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "WWF",
+    "websiteUrl": "https://www.worldwildlife.org/",
+    "description": "Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+    "goal": 1171,
+    "currentEffort": 459,
+    "currentEffortDescription": "Fusce consequat.",
+    "latestUpdates": [
+      {
+        "title": "Donec ut mauris eget massa tempor convallis.",
+        "message": "Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+        "date": {
+          "$date": "2020-10-27T12:51:56.000Z"
+        }
+      },
+      {
+        "title": "Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.",
+        "message": "Nam dui.",
+        "date": {
+          "$date": "2020-09-05T17:57:48.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Wildlife",
+    "regionFocus": "South America",
+    "country": "Chile",
+    "name": "Comit� Nacional Pro-Defensa de la Flora y Fauna",
+    "websiteUrl": "https://www.codeff.cl/",
+    "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius.",
+    "goal": 1107,
+    "currentEffort": 411,
+    "currentEffortDescription": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.",
+    "latestUpdates": [
+      {
+        "title": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.",
+        "message": "Integer non velit.",
+        "date": {
+          "$date": "2020-09-15T17:54:57.000Z"
+        }
+      },
+      {
+        "title": "Pellentesque viverra pede ac diam.",
+        "message": "In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices.",
+        "date": {
+          "$date": "2020-03-29T02:51:59.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Wildlife",
+    "regionFocus": "Africa",
+    "country": "Botswana, Cameroon, Congo, Ethiopia, Kenya, Mozambique, Nigeria, Rwanda, South Africa, Tanzania, Uganda, Zambia, Zimbabwe",
+    "name": "African Wildlife Foundation",
+    "websiteUrl": "https://www.awf.org/",
+    "description": "Nam tristique tortor eu pede.",
+    "goal": 2997,
+    "currentEffort": 759,
+    "currentEffortDescription": "Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+    "latestUpdates": [
+      {
+        "title": "Nulla tempus.",
+        "message": "In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices.",
+        "date": {
+          "$date": "2020-06-09T19:16:55.000Z"
+        }
+      },
+      {
+        "title": "Integer tincidunt ante vel ipsum.",
+        "message": "Duis consequat dui nec nisi volutpat eleifend.",
+        "date": {
+          "$date": "2020-02-22T01:41:39.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Wildlife",
+    "regionFocus": "Asia Pacific",
+    "country": "Fiji",
+    "name": "Animals Fiji",
+    "websiteUrl": "https://www.animalsfiji.org/",
+    "description": "Pellentesque at nulla.",
+    "goal": 2395,
+    "currentEffort": 599,
+    "currentEffortDescription": "Integer a nibh.",
+    "latestUpdates": [
+      {
+        "title": "Sed ante.",
+        "message": "Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.",
+        "date": {
+          "$date": "2020-08-24T05:00:46.000Z"
+        }
+      },
+      {
+        "title": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.",
+        "message": "Maecenas rhoncus aliquam lacus.",
+        "date": {
+          "$date": "2020-05-24T06:21:37.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Wildlife",
+    "regionFocus": "Asia Pacific",
+    "country": "Indonesia",
+    "name": "Borneo Nature Foundation",
+    "websiteUrl": "http://www.borneonaturefoundation.org/en/",
+    "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+    "goal": 2680,
+    "currentEffort": 598,
+    "currentEffortDescription": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.",
+    "latestUpdates": [
+      {
+        "title": "Vestibulum ac est lacinia nisi venenatis tristique.",
+        "message": "Aenean sit amet justo.",
+        "date": {
+          "$date": "2020-08-28T16:40:34.000Z"
+        }
+      },
+      {
+        "title": "Nullam sit amet turpis elementum ligula vehicula consequat.",
+        "message": "Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti.",
+        "date": {
+          "$date": "2020-06-06T23:53:09.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Cultural Relics",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "UNESCO World Heritage Center",
+    "websiteUrl": "https://whc.unesco.org/en/donation",
+    "description": "Pellentesque viverra pede ac diam.",
+    "goal": 2833,
+    "currentEffort": 439,
+    "currentEffortDescription": "Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+    "latestUpdates": [
+      {
+        "title": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.",
+        "message": "Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla.",
+        "date": {
+          "$date": "2020-01-07T06:55:08.000Z"
+        }
+      },
+      {
+        "title": "Nulla ut erat id mauris vulputate elementum.",
+        "message": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+        "date": {
+          "$date": "2020-04-19T02:12:48.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Cultural Relics",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "International Center for the Study of the Preservation and Restoration of Cultural Property",
+    "websiteUrl": "https://www.iccrom.org/",
+    "description": "Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
+    "goal": 2229,
+    "currentEffort": 961,
+    "currentEffortDescription": "Mauris lacinia sapien quis libero.",
+    "latestUpdates": [
+      {
+        "title": "Etiam vel augue.",
+        "message": "Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+        "date": {
+          "$date": "2019-12-18T04:10:12.000Z"
+        }
+      },
+      {
+        "title": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
+        "message": "Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.",
+        "date": {
+          "$date": "2020-01-20T18:23:12.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Cultural Relics",
+    "regionFocus": "Europe",
+    "country": "France",
+    "name": "Notre Dame Foundation",
+    "websiteUrl": "https://don.fondationnotredame.fr/us",
+    "description": "Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.",
+    "goal": 1561,
+    "currentEffort": 879,
+    "currentEffortDescription": "Integer ac leo.",
+    "latestUpdates": [
+      {
+        "title": "Mauris sit amet eros.",
+        "message": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
+        "date": {
+          "$date": "2019-12-16T03:58:12.000Z"
+        }
+      },
+      {
+        "title": "Curabitur convallis.",
+        "message": "Duis bibendum.",
+        "date": {
+          "$date": "2020-04-13T10:06:08.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Cultural Relics",
+    "regionFocus": "Asia Pacific",
+    "country": "Lebanon",
+    "name": "Beirut Recovery Fund (UNESCO)",
+    "websiteUrl": "https://en.unesco.org/fieldoffice/beirut/libeirut",
+    "description": "In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+    "goal": 2955,
+    "currentEffort": 998,
+    "currentEffortDescription": "Sed accumsan felis.",
+    "latestUpdates": [
+      {
+        "title": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+        "message": "Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus.",
+        "date": {
+          "$date": "2020-03-21T14:11:45.000Z"
+        }
+      },
+      {
+        "title": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.",
+        "message": "Vivamus tortor. Duis mattis egestas metus.",
+        "date": {
+          "$date": "2020-04-06T07:07:39.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Cultural Relics",
+    "regionFocus": "Asia Pacific",
+    "country": "New Zealand",
+    "name": "Auckland Art Gallery",
+    "websiteUrl": "https://www.aucklandartgallery.com/",
+    "description": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+    "goal": 2441,
+    "currentEffort": 966,
+    "currentEffortDescription": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "latestUpdates": [
+      {
+        "title": "Maecenas tincidunt lacus at velit.",
+        "message": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.",
+        "date": {
+          "$date": "2020-09-24T18:35:01.000Z"
+        }
+      },
+      {
+        "title": "Duis mattis egestas metus.",
+        "message": "Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede.",
+        "date": {
+          "$date": "2020-04-04T18:54:29.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Covid",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "COVID-19 Solidarity Response Fund (WHO)",
+    "websiteUrl": "https://covid19responsefund.org/",
+    "description": "Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+    "goal": 2514,
+    "currentEffort": 359,
+    "currentEffortDescription": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+    "latestUpdates": [
+      {
+        "title": "Integer non velit.",
+        "message": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+        "date": {
+          "$date": "2020-11-06T09:57:42.000Z"
+        }
+      },
+      {
+        "title": "Mauris lacinia sapien quis libero.",
+        "message": "In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+        "date": {
+          "$date": "2020-07-04T13:52:18.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Covid",
+    "regionFocus": "Asia Pacific",
+    "country": "India",
+    "name": "PM-CARES Fund",
+    "websiteUrl": "https://www.pmcares.gov.in/en/",
+    "description": "Maecenas rhoncus aliquam lacus.",
+    "goal": 2267,
+    "currentEffort": 998,
+    "currentEffortDescription": "In quis justo. Maecenas rhoncus aliquam lacus.",
+    "latestUpdates": [
+      {
+        "title": "Phasellus id sapien in sapien iaculis congue.",
+        "message": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor.",
+        "date": {
+          "$date": "2020-04-02T21:41:37.000Z"
+        }
+      },
+      {
+        "title": "Maecenas rhoncus aliquam lacus.",
+        "message": "Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.",
+        "date": {
+          "$date": "2020-07-16T17:02:38.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Covid",
+    "regionFocus": "North America",
+    "country": "US",
+    "name": "American Red Cross",
+    "websiteUrl": "https://www.redcross.org/",
+    "description": "Nulla tempus.",
+    "goal": 1979,
+    "currentEffort": 551,
+    "currentEffortDescription": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.",
+    "latestUpdates": [
+      {
+        "title": "Mauris ullamcorper purus sit amet nulla.",
+        "message": "Maecenas pulvinar lobortis est. Phasellus sit amet erat.",
+        "date": {
+          "$date": "2020-08-30T09:27:52.000Z"
+        }
+      },
+      {
+        "title": "In hac habitasse platea dictumst.",
+        "message": "Nulla facilisi. Cras non velit nec nisi vulputate nonummy.",
+        "date": {
+          "$date": "2020-09-03T07:10:33.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Covid",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "Direct Relief",
+    "websiteUrl": "https://www.directrelief.org/emergency/coronavirus-outbreak/",
+    "description": "Praesent blandit. Nam nulla.",
+    "goal": 1568,
+    "currentEffort": 657,
+    "currentEffortDescription": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.",
+    "latestUpdates": [
+      {
+        "title": "Morbi non quam nec dui luctus rutrum.",
+        "message": "Suspendisse potenti. Nullam porttitor lacus at turpis.",
+        "date": {
+          "$date": "2020-08-02T03:56:40.000Z"
+        }
+      },
+      {
+        "title": "Maecenas pulvinar lobortis est.",
+        "message": "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc.",
+        "date": {
+          "$date": "2020-01-05T09:53:20.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Covid",
+    "regionFocus": "South America",
+    "country": "Brazil",
+    "name": "Brazil Foundation",
+    "websiteUrl": "https://covid19.brazilfoundation.org/en",
+    "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.",
+    "goal": 2336,
+    "currentEffort": 628,
+    "currentEffortDescription": "Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "latestUpdates": [
+      {
+        "title": "Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.",
+        "message": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "date": {
+          "$date": "2020-07-02T06:14:17.000Z"
+        }
+      },
+      {
+        "title": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.",
+        "message": "Donec ut dolor.",
+        "date": {
+          "$date": "2020-03-11T16:43:11.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Covid",
+    "regionFocus": "Africa",
+    "country": "Africa",
+    "name": "Covid-19 Response Fund (African Union)",
+    "websiteUrl": "https://au.int/how-donate",
+    "description": "Aenean lectus. Pellentesque eget nunc.",
+    "goal": 1598,
+    "currentEffort": 548,
+    "currentEffortDescription": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+    "latestUpdates": [
+      {
+        "title": "Curabitur convallis.",
+        "message": "Etiam justo.",
+        "date": {
+          "$date": "2020-07-16T19:34:31.000Z"
+        }
+      },
+      {
+        "title": "Integer a nibh.",
+        "message": "Phasellus in felis. Donec semper sapien a libero.",
+        "date": {
+          "$date": "2019-12-13T19:28:37.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Disabilities",
+    "regionFocus": "Africa",
+    "country": "Africa",
+    "name": "Disability Africa",
+    "websiteUrl": "https://www.disability-africa.org/home/",
+    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.",
+    "goal": 1118,
+    "currentEffort": 645,
+    "currentEffortDescription": "Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "latestUpdates": [
+      {
+        "title": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",
+        "message": "Ut at dolor quis odio consequat varius.",
+        "date": {
+          "$date": "2020-03-18T23:24:59.000Z"
+        }
+      },
+      {
+        "title": "Donec dapibus.",
+        "message": "Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus.",
+        "date": {
+          "$date": "2020-02-02T09:45:34.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Disabilities",
+    "regionFocus": "Asia Pacific",
+    "country": "China",
+    "name": "International China Concern",
+    "websiteUrl": "https://chinaconcern.org/support-join/donate/",
+    "description": "Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+    "goal": 2081,
+    "currentEffort": 932,
+    "currentEffortDescription": "Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+    "latestUpdates": [
+      {
+        "title": "Nunc rhoncus dui vel sem.",
+        "message": "Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
+        "date": {
+          "$date": "2020-03-07T16:12:14.000Z"
+        }
+      },
+      {
+        "title": "Donec quis orci eget orci vehicula condimentum.",
+        "message": "Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.",
+        "date": {
+          "$date": "2019-12-09T07:15:31.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Disabilities",
+    "regionFocus": "North America",
+    "country": "Canada",
+    "name": "Council of Canadians with Disabilities",
+    "websiteUrl": "http://www.ccdonline.ca/en/donate/",
+    "description": "Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.",
+    "goal": 2883,
+    "currentEffort": 969,
+    "currentEffortDescription": "Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti.",
+    "latestUpdates": [
+      {
+        "title": "Etiam pretium iaculis justo.",
+        "message": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.",
+        "date": {
+          "$date": "2020-09-04T08:23:18.000Z"
+        }
+      },
+      {
+        "title": "Morbi non quam nec dui luctus rutrum.",
+        "message": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+        "date": {
+          "$date": "2020-09-13T11:42:30.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Disabilities",
+    "regionFocus": "Europe",
+    "country": "Romania",
+    "name": "Motivation Romania Wheelchair Fund",
+    "websiteUrl": "https://motivation.ro/en/",
+    "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy.",
+    "goal": 2670,
+    "currentEffort": 959,
+    "currentEffortDescription": "Quisque porta volutpat erat.",
+    "latestUpdates": [
+      {
+        "title": "Nulla ut erat id mauris vulputate elementum.",
+        "message": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue.",
+        "date": {
+          "$date": "2020-02-18T05:27:59.000Z"
+        }
+      },
+      {
+        "title": "Praesent lectus.",
+        "message": "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+        "date": {
+          "$date": "2019-12-01T17:21:55.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Wellness",
+    "regionFocus": "Africa",
+    "country": "Cameroon",
+    "name": "Women and Children Wellness Funds",
+    "websiteUrl": "http://saveafricabroadcast.org/donations/women-and-children-wellness-funds/",
+    "description": "Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.",
+    "goal": 2699,
+    "currentEffort": 352,
+    "currentEffortDescription": "Praesent blandit. Nam nulla.",
+    "latestUpdates": [
+      {
+        "title": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.",
+        "message": "Morbi ut odio.",
+        "date": {
+          "$date": "2020-04-29T01:35:32.000Z"
+        }
+      },
+      {
+        "title": "Suspendisse ornare consequat lectus.",
+        "message": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.",
+        "date": {
+          "$date": "2019-12-22T02:39:33.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Wellness",
+    "regionFocus": "North America",
+    "country": "US",
+    "name": "Dive in Well",
+    "websiteUrl": "https://www.diveinwell.com/",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices.",
+    "goal": 1718,
+    "currentEffort": 832,
+    "currentEffortDescription": "Duis at velit eu est congue elementum. In hac habitasse platea dictumst.",
+    "latestUpdates": [
+      {
+        "title": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",
+        "message": "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.",
+        "date": {
+          "$date": "2020-06-30T00:12:31.000Z"
+        }
+      },
+      {
+        "title": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.",
+        "message": "Vestibulum ac est lacinia nisi venenatis tristique.",
+        "date": {
+          "$date": "2020-06-26T16:31:45.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Wellness",
+    "regionFocus": "South America",
+    "country": "Brazil",
+    "name": "Bola Pra Frente",
+    "websiteUrl": "https://bolaprafrente.org.br/",
+    "description": "In quis justo.",
+    "goal": 1125,
+    "currentEffort": 987,
+    "currentEffortDescription": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus.",
+    "latestUpdates": [
+      {
+        "title": "Etiam pretium iaculis justo.",
+        "message": "Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius.",
+        "date": {
+          "$date": "2020-08-07T03:29:46.000Z"
+        }
+      },
+      {
+        "title": "Praesent lectus.",
+        "message": "Aliquam erat volutpat. In congue.",
+        "date": {
+          "$date": "2020-08-18T22:59:36.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Wellness",
+    "regionFocus": "Asia Pacific",
+    "country": "Cambodia, Nepal",
+    "name": "Operation Hope Foundation",
+    "websiteUrl": "https://ohf.org.sg/",
+    "description": "Sed ante.",
+    "goal": 1370,
+    "currentEffort": 663,
+    "currentEffortDescription": "Integer ac leo. Pellentesque ultrices mattis odio.",
+    "latestUpdates": [
+      {
+        "title": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.",
+        "message": "Aenean auctor gravida sem.",
+        "date": {
+          "$date": "2020-05-02T18:51:00.000Z"
+        }
+      },
+      {
+        "title": "Morbi non lectus.",
+        "message": "Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat.",
+        "date": {
+          "$date": "2020-01-06T23:24:18.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Wellness",
+    "regionFocus": "Asia Pacific",
+    "country": "India",
+    "name": "Dream a Dream",
+    "websiteUrl": "https://dreamadream.org/",
+    "description": "Morbi a ipsum.",
+    "goal": 1841,
+    "currentEffort": 580,
+    "currentEffortDescription": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
+    "latestUpdates": [
+      {
+        "title": "Maecenas ut massa quis augue luctus tincidunt.",
+        "message": "Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus.",
+        "date": {
+          "$date": "2020-08-16T09:24:14.000Z"
+        }
+      },
+      {
+        "title": "Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+        "message": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.",
+        "date": {
+          "$date": "2020-03-22T15:35:28.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "LGBT",
+    "regionFocus": "South America",
+    "country": "Venezuela",
+    "name": "Amnist�a Internacional Venezuela",
+    "websiteUrl": "https://www.amnistia.org/",
+    "description": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus.",
+    "goal": 2173,
+    "currentEffort": 626,
+    "currentEffortDescription": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.",
+    "latestUpdates": [
+      {
+        "title": "Nulla facilisi.",
+        "message": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis.",
+        "date": {
+          "$date": "2019-12-22T01:42:46.000Z"
+        }
+      },
+      {
+        "title": "Vestibulum sed magna at nunc commodo placerat.",
+        "message": "Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia.",
+        "date": {
+          "$date": "2020-06-23T19:55:55.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "LGBT",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "ILGA-Europe",
+    "websiteUrl": "https://www.ilga-europe.org/",
+    "description": "Duis bibendum.",
+    "goal": 1389,
+    "currentEffort": 567,
+    "currentEffortDescription": "Aliquam non mauris. Morbi non lectus.",
+    "latestUpdates": [
+      {
+        "title": "Phasellus in felis.",
+        "message": "In hac habitasse platea dictumst.",
+        "date": {
+          "$date": "2020-04-12T20:39:05.000Z"
+        }
+      },
+      {
+        "title": "Aliquam erat volutpat.",
+        "message": "Praesent lectus.",
+        "date": {
+          "$date": "2020-02-01T13:16:56.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "LGBT",
+    "regionFocus": "Asia Pacific",
+    "country": "Singapore",
+    "name": "Oogachaga",
+    "websiteUrl": "https://oogachaga.com/",
+    "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
+    "goal": 1069,
+    "currentEffort": 572,
+    "currentEffortDescription": "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
+    "latestUpdates": [
+      {
+        "title": "Aenean fermentum.",
+        "message": "In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+        "date": {
+          "$date": "2020-10-29T18:55:58.000Z"
+        }
+      },
+      {
+        "title": "Aliquam non mauris.",
+        "message": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
+        "date": {
+          "$date": "2020-10-24T06:16:03.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "LGBT",
+    "regionFocus": "Africa",
+    "country": "South Africa",
+    "name": "Coalition of African Lesbian",
+    "websiteUrl": "http://www.cal.org.za/",
+    "description": "Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
+    "goal": 2897,
+    "currentEffort": 346,
+    "currentEffortDescription": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio.",
+    "latestUpdates": [
+      {
+        "title": "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+        "message": "Fusce posuere felis sed lacus.",
+        "date": {
+          "$date": "2019-12-14T04:40:53.000Z"
+        }
+      },
+      {
+        "title": "Pellentesque ultrices mattis odio.",
+        "message": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam.",
+        "date": {
+          "$date": "2020-03-24T13:33:44.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Women and Kids",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "Save the Children",
+    "websiteUrl": "https://www.savethechildren.net/",
+    "description": "Fusce consequat. Nulla nisl.",
+    "goal": 1572,
+    "currentEffort": 357,
+    "currentEffortDescription": "Morbi a ipsum. Integer a nibh.",
+    "latestUpdates": [
+      {
+        "title": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.",
+        "message": "Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.",
+        "date": {
+          "$date": "2020-03-04T00:22:17.000Z"
+        }
+      },
+      {
+        "title": "Vivamus in felis eu sapien cursus vestibulum.",
+        "message": "Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+        "date": {
+          "$date": "2020-06-18T12:25:50.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Women and Kids",
+    "regionFocus": "South America",
+    "country": "Bolivia",
+    "name": "UNFPA Bolivia",
+    "websiteUrl": "https://bolivia.unfpa.org/",
+    "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus.",
+    "goal": 1537,
+    "currentEffort": 985,
+    "currentEffortDescription": "In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.",
+    "latestUpdates": [
+      {
+        "title": "In eleifend quam a odio.",
+        "message": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis.",
+        "date": {
+          "$date": "2020-05-11T06:54:09.000Z"
+        }
+      },
+      {
+        "title": "Duis at velit eu est congue elementum.",
+        "message": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis.",
+        "date": {
+          "$date": "2020-06-03T21:45:26.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Women and Kids",
+    "regionFocus": "South America",
+    "country": "Venezuela",
+    "name": "Amnist�a Internacional Venezuela",
+    "websiteUrl": "https://www.amnistia.org/",
+    "description": "Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+    "goal": 1347,
+    "currentEffort": 715,
+    "currentEffortDescription": "Nulla justo. Aliquam quis turpis eget elit sodales scelerisque.",
+    "latestUpdates": [
+      {
+        "title": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+        "message": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy.",
+        "date": {
+          "$date": "2020-07-09T09:26:13.000Z"
+        }
+      },
+      {
+        "title": "Duis bibendum.",
+        "message": "Sed sagittis.",
+        "date": {
+          "$date": "2020-08-31T19:40:47.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Women and Kids",
+    "regionFocus": "South America",
+    "country": "Brazil",
+    "name": "Bola Pra Frente",
+    "websiteUrl": "https://bolaprafrente.org.br/",
+    "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
+    "goal": 1833,
+    "currentEffort": 934,
+    "currentEffortDescription": "Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+    "latestUpdates": [
+      {
+        "title": "Integer tincidunt ante vel ipsum.",
+        "message": "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.",
+        "date": {
+          "$date": "2020-03-14T07:06:00.000Z"
+        }
+      },
+      {
+        "title": "Donec ut dolor.",
+        "message": "Phasellus sit amet erat. Nulla tempus.",
+        "date": {
+          "$date": "2020-01-01T20:18:12.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Women and Kids",
+    "regionFocus": "Asia Pacific",
+    "country": "Korea",
+    "name": "The Beautiful Foundation",
+    "websiteUrl": "https://www.beautifulfund.org/eng/index.php",
+    "description": "Proin eu mi. Nulla ac enim.",
+    "goal": 1753,
+    "currentEffort": 815,
+    "currentEffortDescription": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+    "latestUpdates": [
+      {
+        "title": "Nullam sit amet turpis elementum ligula vehicula consequat.",
+        "message": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.",
+        "date": {
+          "$date": "2020-06-15T01:58:16.000Z"
+        }
+      },
+      {
+        "title": "Nunc nisl.",
+        "message": "Integer ac neque.",
+        "date": {
+          "$date": "2020-05-29T11:49:48.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Disaster",
+    "regionFocus": "Asia Pacific",
+    "country": "Thailand, Cambodia, Philippines, Vietnam",
+    "name": "Give2Asia",
+    "websiteUrl": "https://give2asia.org/2020-typhoon-flood-relief-cambodia-thailand-philippines/",
+    "description": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+    "goal": 2236,
+    "currentEffort": 905,
+    "currentEffortDescription": "Duis mattis egestas metus.",
+    "latestUpdates": [
+      {
+        "title": "In hac habitasse platea dictumst.",
+        "message": "Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti.",
+        "date": {
+          "$date": "2020-08-06T09:02:00.000Z"
+        }
+      },
+      {
+        "title": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.",
+        "message": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.",
+        "date": {
+          "$date": "2020-06-26T21:03:27.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Disaster",
+    "regionFocus": "Asia Pacific",
+    "country": "Lebanon",
+    "name": "Union of Relief and Development Associations",
+    "websiteUrl": "https://urda-lb.org/en/home/",
+    "description": "Suspendisse potenti.",
+    "goal": 1576,
+    "currentEffort": 914,
+    "currentEffortDescription": "Mauris ullamcorper purus sit amet nulla.",
+    "latestUpdates": [
+      {
+        "title": "Donec dapibus.",
+        "message": "Nullam sit amet turpis elementum ligula vehicula consequat.",
+        "date": {
+          "$date": "2020-11-01T09:43:16.000Z"
+        }
+      },
+      {
+        "title": "Duis ac nibh.",
+        "message": "Nam tristique tortor eu pede.",
+        "date": {
+          "$date": "2020-09-14T05:39:36.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Disaster",
+    "regionFocus": "Europe",
+    "country": "Serbia",
+    "name": "Pomoc Deci",
+    "websiteUrl": "https://www.globalgiving.org/projects/support-for-children-in-flooded-areas-of-serbia/?rf=ggWidget",
+    "description": "Fusce consequat. Nulla nisl.",
+    "goal": 2867,
+    "currentEffort": 775,
+    "currentEffortDescription": "Curabitur gravida nisi at nibh.",
+    "latestUpdates": [
+      {
+        "title": "In quis justo.",
+        "message": "Nullam molestie nibh in lectus. Pellentesque at nulla.",
+        "date": {
+          "$date": "2019-12-02T01:35:10.000Z"
+        }
+      },
+      {
+        "title": "Duis aliquam convallis nunc.",
+        "message": "Nullam molestie nibh in lectus. Pellentesque at nulla.",
+        "date": {
+          "$date": "2020-09-02T15:26:09.000Z"
+        }
+      }
+    ]
+  },
+  {
+    "topic": "Disaster",
+    "regionFocus": "Global",
+    "country": "Global",
+    "name": "HHRD�",
+    "websiteUrl": "https://new.hhrd.org/",
+    "description": "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+    "goal": 2542,
+    "currentEffort": 795,
+    "currentEffortDescription": "Etiam vel augue.",
+    "latestUpdates": [
+      {
+        "title": "Nullam sit amet turpis elementum ligula vehicula consequat.",
+        "message": "Nunc nisl.",
+        "date": {
+          "$date": "2020-01-17T20:06:20.000Z"
+        }
+      },
+      {
+        "title": "Aliquam quis turpis eget elit sodales scelerisque.",
+        "message": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla.",
+        "date": {
+          "$date": "2019-12-21T17:18:09.000Z"
+        }
+      }
+    ]
+  }
+]

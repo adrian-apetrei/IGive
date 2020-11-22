@@ -12,10 +12,9 @@
         <ion-card-content>
           <h3 class="title">{{ charity.name }}</h3>
           <p class="description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            {{ charity.description }}
           </p>
-          <p class="read-more">Read more</p>
+          <p class="read-more"><a [href]="charity.websiteUrl">Read more</a></p>
         </ion-card-content>
       </ion-card>
     </ion-slide>

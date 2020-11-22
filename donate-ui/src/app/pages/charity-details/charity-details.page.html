@@ -13,18 +13,16 @@
   <div class="charity-details">
     <h2 class="title">{{charity.name}}</h2>
     <!-- charity description -->
-    <p class="subtitle">Help children have access to reading.</p>
+    <p class="subtitle">{{charity.description}}</p>
     <ion-button expand="block" (click)="goToDonationMethods()"
       >Support this cause</ion-button
     >
 
     <div class="charity-effort">
       <h4>Current Efforts</h4>
-      <p class="subtitle">
-        Raise money for the Clara Brenton Public Schiool Library
-      </p>
+      <p class="subtitle">{{charity.currentEffortDescription}}</p>
 
-      <p class="current-value">$516.35</p>
+      <p class="current-value">${{charity.currentEffort}}</p>
       <ion-range
         disabled
         color="primary"
@@ -33,12 +31,15 @@
         max="1500"
       >
       </ion-range>
-      <p class="target-value">Goal: $1500</p>
+      <p class="target-value">Goal: ${{charity.goal}}</p>
     </div>
 
     <div class="charity-updates">
       <h4>Latest Updates</h4>
-      <div *ngFor="let update of charityUpdates" class="update-container">
+      <div
+        *ngFor="let update of charity.latestUpdates"
+        class="update-container"
+      >
         <p class="text">{{update.title}}</p>
         <p class="text">{{update.message}}</p>
         <p class="text">{{update.date | date:'short'}}</p>

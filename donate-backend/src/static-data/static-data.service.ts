@@ -22,4 +22,16 @@ export class StaticDataService {
     const charities = await this.charityModel.find().exec();
     return charities;
   }
+
+  // Update charity - currentEffort
+  async updateCharityCurrentEffort(charityId, newEffort): Promise<Charity> {
+    const updatedCharity = await this.charityModel.findByIdAndUpdate(
+      charityId,
+      { $inc: { currentEffort: newEffort } },
+      {
+        new: true,
+      },
+    );
+    return updatedCharity;
+  }
 }

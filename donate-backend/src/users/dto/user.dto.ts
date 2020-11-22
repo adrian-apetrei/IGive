@@ -21,3 +21,9 @@ export class UserSettingsDto {
     readonly sms: boolean;
   };
 }
+
+// tslint:disable-next-line: max-classes-per-file
+export class LoginUserDto {
+  readonly email: string;
+  readonly password: string;
+}

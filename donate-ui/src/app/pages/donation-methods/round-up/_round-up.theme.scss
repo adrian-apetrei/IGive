@@ -14,6 +14,12 @@
       .round-up-radio-btns {
         margin-bottom: $uxg-spacing-3;
       }
+
+      .round-up-field {
+        .mat-form-field-flex {
+          background: white !important;
+        }
+      }
     }
   }
 }

@@ -1,0 +1,19 @@
+@mixin app-add-donation($theme) {
+  .add-donation-header {
+    padding: 10px;
+    .subtitle {
+      font-size: 14px;
+    }
+  }
+  .add-donation-container {
+    padding: 0 10px;
+  }
+
+  .donation-search {
+    width: 100%;
+
+    .mat-form-field-flex {
+      background: white !important;
+    }
+  }
+}

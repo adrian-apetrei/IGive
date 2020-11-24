@@ -27,11 +27,9 @@
     <div class="charity-effort">
       <h4>Current Efforts</h4>
       <p class="subtitle">{{charity.currentEffortDescription}}</p>
-
       <p class="current-value">${{charity.currentEffort}}</p>
       <ion-range
-        disabled
-        color="primary"
+        style="pointer-events: none"
         class="effort-range"
         value="516.35"
         max="1500"

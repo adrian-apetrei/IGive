@@ -4,7 +4,10 @@
 </ion-header>
 <ion-content>
   <div class="add-donation-container">
-    <ion-searchbar></ion-searchbar>
+    <mat-form-field appearance="fill" class="donation-search">
+      <mat-icon color="accent" matPrefix>search</mat-icon>
+      <input matInput placeholder="search" autocomplete="off" />
+    </mat-form-field>
 
     <ng-container *ngFor="let item of data | keyvalue">
       <app-topic-card

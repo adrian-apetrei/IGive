@@ -10,6 +10,10 @@
 
     .incognito-fields {
       width: 100%;
+
+      .mat-form-field-flex {
+        background: white !important;
+      }
     }
   }
 }

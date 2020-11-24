@@ -2,9 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { StaticDataService } from "src/app/services/static-data.service";
 
 @Component({
-  selector: "",
+  selector: "app-add-donation",
   templateUrl: "./add-donation.page.html",
-  styleUrls: ["./add-donation.page.scss"],
 })
 export class AddDonationPage implements OnInit {
   charities = <any>[];

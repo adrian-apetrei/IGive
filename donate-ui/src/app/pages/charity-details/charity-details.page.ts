@@ -6,7 +6,6 @@ import { Router } from "@angular/router";
 @Component({
   selector: "app-charity-details",
   templateUrl: "./charity-details.page.html",
-  styleUrls: ["./charity-details.page.scss"],
 })
 export class CharityDetailsPage implements OnInit {
   charity: CharityOrganization = <any>{};

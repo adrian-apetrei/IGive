@@ -18,35 +18,34 @@
     </p>
 
     <h3 class="title">I want to donate</h3>
-    <ion-item>
-      <ion-input placeholder="amount" type="text"></ion-input>
-      <ion-icon name="cash-outline" slot="start"></ion-icon>
-    </ion-item>
+    <mat-form-field appearance="fill" dense class="incognito-fields">
+      <mat-icon color="accent" matPrefix>attach_money</mat-icon>
+      <input matInput placeholder="amount" type="number" autocomplete="off" />
+    </mat-form-field>
 
     <h3 class="title">to {{ charity.name }} every time</h3>
-    <ion-item>
-      <ion-label>Select option </ion-label>
-      <ion-select interface="popover">
-        <ion-select-option value="nes">Option 1</ion-select-option>
-        <ion-select-option value="n64">Option 2</ion-select-option>
-        <ion-select-option value="ps">Option 3</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <mat-form-field appearance="fill" dense class="incognito-fields">
+      <mat-label>select option</mat-label>
+      <mat-select>
+        <mat-option value="option1">Option 1</mat-option>
+        <mat-option value="option2">Option 2</mat-option>
+        <mat-option value="option3">Option 3</mat-option>
+      </mat-select>
+    </mat-form-field>
 
     <h3 class="title">with a maximum donation of</h3>
-    <ion-item>
-      <ion-input placeholder="amount" type="text"></ion-input>
-      <ion-icon name="cash-outline" slot="start"></ion-icon>
-    </ion-item>
+    <mat-form-field appearance="fill" dense class="incognito-fields">
+      <mat-icon color="accent" matPrefix>attach_money</mat-icon>
+      <input matInput placeholder="amount" type="number" autocomplete="off" />
+    </mat-form-field>
 
     <h3 class="title">every</h3>
-    <ion-item>
-      <ion-label>Select period </ion-label>
-      <ion-select interface="popover">
-        <ion-select-option value="nes">week</ion-select-option>
-        <ion-select-option value="n64">month</ion-select-option>
-        <ion-select-option value="ps">year</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <mat-form-field appearance="fill" dense class="incognito-fields">
+      <mat-select value="month">
+        <mat-option value="week">week</mat-option>
+        <mat-option value="month">month</mat-option>
+        <mat-option value="year">year</mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
 </ion-content>

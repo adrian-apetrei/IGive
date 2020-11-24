@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -25,9 +25,19 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-@import '~@angular/flex-layout/mq';
+@import "~@angular/flex-layout/mq";
 
-@import './theme/helpers';
-@import './theme/base';
+@import "./theme/helpers";
+@import "./theme/base";
 
-@import '~@ffdc/uxg-angular-theme/all-theme';
+@import "~@ffdc/uxg-angular-theme/all-theme";
+
+@import "./app/pages/donation-methods/donation-methods.theme";
+@import "./app/pages/charity-details/charity-details.theme";
+@import "~@ffdc/uxg-angular-theme/lib/core/style/spacing";
+
+@mixin app-theme($theme) {
+  @include app-donation-method($theme);
+  @include app-charity-details($theme);
+}
+@include app-theme($uxg-light-theme);

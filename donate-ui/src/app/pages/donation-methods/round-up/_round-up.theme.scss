@@ -1,0 +1,19 @@
+@mixin app-round-up($theme) {
+  .round-up-container {
+    padding: 12px;
+
+    .title {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .round-up-radio-group {
+      display: flex;
+      flex-direction: column;
+
+      .round-up-radio-btns {
+        margin-bottom: $uxg-spacing-3;
+      }
+    }
+  }
+}

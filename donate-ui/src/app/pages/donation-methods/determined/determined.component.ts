@@ -6,7 +6,6 @@ import { CharityOrganization } from "src/app/data/models";
 @Component({
   selector: "app-determined",
   templateUrl: "./determined.component.html",
-  styleUrls: ["./determined.component.scss"],
 })
 export class DeterminedComponent implements OnInit {
   charity: CharityOrganization = <any>{};

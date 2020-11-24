@@ -4,7 +4,6 @@ import { Router } from "@angular/router";
 @Component({
   selector: "app-donation-method",
   templateUrl: "./donation-methods.page.html",
-  styleUrls: ["./donation-methods.page.scss"],
 })
 export class DonationMethodsPage implements OnInit {
   constructor(private router: Router) {}

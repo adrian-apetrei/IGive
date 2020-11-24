@@ -113,16 +113,16 @@ $app-theme: mat-light-theme(
 }
 
 :root {
-  --color-primary: 146, 231, 189 !important;
+  --color-primary: 38, 208, 124 !important;
   --color-secondary: 65, 65, 65 !important;
-  --color-warn: 228, 54, 0 !important;
+  --color-warn: 228, 84, 0 !important;
   --text-color-primary: 65, 65, 65 !important;
   --text-color-primary-lighter: 65, 65, 65 !important;
   --text-color-primary-darker: 65, 65, 65 !important;
-  --color-gradient: rgba(146, 231, 189), rgba(65, 65, 65, 1) !important;
+  --color-gradient: rgba(38, 208, 124), rgba(65, 65, 65, 1) !important;
   --text-color-gradient: 255, 255, 255 !important;
-  --color-primary-lighter: 296, 381, 339 !important;
-  --color-primary-darker: -4, 81, 39 !important;
+  --color-primary-lighter: 188, 358, 274 !important;
+  --color-primary-darker: -112, 58, -26 !important;
   --text-color-secondary: 255, 255, 255 !important;
   --text-color-secondary-lighter: 255, 255, 255 !important;
   --text-color-secondary-darker: 255, 255, 255 !important;
@@ -131,8 +131,8 @@ $app-theme: mat-light-theme(
   --text-color-warn: 255, 255, 255 !important;
   --text-color-warn-lighter: 255, 255, 255 !important;
   --text-color-warn-darker: 255, 255, 255 !important;
-  --color-warn-lighter: 378, 204, 150 !important;
-  --color-warn-darker: 78, -96, -150 !important;
+  --color-warn-lighter: 378, 234, 150 !important;
+  --color-warn-darker: 78, -66, -150 !important;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -45,3 +45,9 @@ export interface PaymentMethod {
   accountNumber: string;
   accessCode: string;
 }
+
+export enum DonationMethods {
+  "ROUND_UP" = "ROUND_UP",
+  "INCOGNITO" = "INCOGNITO",
+  "DETERMINED" = "DETERMINED",
+}

@@ -1,0 +1,15 @@
+@mixin app-determined($theme) {
+  .determined-container {
+    padding: 12px;
+
+    .title {
+      margin-bottom: $uxg-spacing-2;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .determined-fields {
+      width: 100%;
+    }
+  }
+}

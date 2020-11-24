@@ -1,0 +1,15 @@
+@mixin app-incognito($theme) {
+  .incognito-container {
+    padding: 12px;
+
+    .title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: $uxg-spacing-2;
+    }
+
+    .incognito-fields {
+      width: 100%;
+    }
+  }
+}

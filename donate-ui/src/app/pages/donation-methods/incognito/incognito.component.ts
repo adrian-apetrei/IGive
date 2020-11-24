@@ -6,7 +6,6 @@ import { CharityOrganization } from "src/app/data/models";
 @Component({
   selector: "app-incognito",
   templateUrl: "./incognito.component.html",
-  styleUrls: ["./incognito.component.scss"],
 })
 export class IncognitoComponent implements OnInit {
   charity: CharityOrganization = <any>{};

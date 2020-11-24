@@ -14,9 +14,15 @@
     <h2 class="title">{{charity.name}}</h2>
     <!-- charity description -->
     <p class="subtitle">{{charity.description}}</p>
-    <ion-button expand="block" (click)="goToDonationMethods()"
-      >Support this cause</ion-button
+
+    <button
+      mat-flat-button
+      color="primary"
+      class="support-btn"
+      (click)="goToDonationMethods()"
     >
+      Support this cause
+    </button>
 
     <div class="charity-effort">
       <h4>Current Efforts</h4>

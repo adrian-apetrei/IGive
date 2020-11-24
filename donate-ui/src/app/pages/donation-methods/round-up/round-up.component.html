@@ -18,46 +18,37 @@
       eg if you spent $4,80, iGive will donate 20c to round up the total to $5
     </p>
 
-    <ion-radio-group value="donate-goal">
-      <div class="radio-container">
-        <ion-radio
-          slot="start"
-          value="donate-goal"
-          class="methods-btn"
-        ></ion-radio>
-        <ion-label>Donate until the goal is met</ion-label>
-      </div>
+    <mat-radio-group
+      [(ngModel)]="method"
+      (change)="onChangeRoundUpMethod($event)"
+      class="round-up-radio-group"
+    >
+      <mat-radio-button value="donate-goal" class="round-up-radio-btns"
+        >Donate until the goal is met</mat-radio-button
+      >
+      <mat-radio-button value="donate-date" class="round-up-radio-btns"
+        >Donate until a specific date</mat-radio-button
+      >
 
-      <div class="radio-container">
-        <ion-radio
-          slot="start"
-          value="donate-date"
-          class="methods-btn"
-        ></ion-radio>
-        <ion-label>Donate until a specific date</ion-label>
-      </div>
-
-      <ion-item class="amount-input">
-        <ion-input
+      <mat-form-field appearance="fill" dense>
+        <input
+          matInput
+          [matDatepicker]="picker"
           placeholder="select date"
-          type="date"
-          (input)="date = $event.target.value"
-        ></ion-input>
-      </ion-item>
+          autocomplete="off"
+        />
+        <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
 
-      <div class="radio-container">
-        <ion-radio
-          slot="start"
-          value="donate-limit"
-          class="methods-btn"
-        ></ion-radio>
-        <ion-label>Donate until reach a limit of</ion-label>
-      </div>
+      <mat-radio-button value="donate-limit" class="round-up-radio-btns"
+        >Donate until reach a limit of</mat-radio-button
+      >
 
-      <ion-item class="amount-input">
-        <ion-input placeholder="amount" type="text"></ion-input>
-        <ion-icon name="cash-outline" slot="start"></ion-icon
-      ></ion-item>
-    </ion-radio-group>
+      <mat-form-field appearance="fill" dense>
+        <mat-icon color="accent" matPrefix>attach_money</mat-icon>
+        <input matInput placeholder="amount" type="number" autocomplete="off" />
+      </mat-form-field>
+    </mat-radio-group>
   </div>
 </ion-content>

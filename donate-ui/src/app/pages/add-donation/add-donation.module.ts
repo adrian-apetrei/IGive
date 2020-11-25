@@ -16,6 +16,9 @@ import { TopicCardComponent } from './topic-card/topic-card.component';
     IonicModule,
     AddDonationPageRoutingModule,
   ],
+  exports: [
+    TopicCardComponent
+  ],
   declarations: [AddDonationPage, TopicCardComponent],
 })
 export class AddDonationPageModule {}

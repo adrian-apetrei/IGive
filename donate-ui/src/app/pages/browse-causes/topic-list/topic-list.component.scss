@@ -1,0 +1,34 @@
+@mixin app-topic-list($theme) {
+  .topic-list-container {
+    padding: 3rem 0 10px 10px;
+
+    .charity-card {
+      margin: 0 0 $uxg-spacing-3 0;
+      cursor: pointer;
+    }
+
+    .title {
+      height: 35px;
+      overflow: hidden;
+    }
+
+    .description {
+      height: 50px;
+      overflow: hidden;
+      font-size: 12px;
+    }
+
+    .image-container {
+      height: 100px;
+      .charity-image {
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+      }
+    }
+
+    .read-more {
+      font-size: 12px;
+    }
+  }
+}

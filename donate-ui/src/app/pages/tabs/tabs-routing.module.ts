@@ -52,6 +52,14 @@ const routes: Routes = [
           ),
         canActivate: [AuthGuard],
       },
+      {
+        path: "browse",
+        loadChildren: () =>
+          import("../browse-causes/browse-causes.module").then(
+            (m) => m.BrowseCausesPageModule
+          ),
+        canActivate: [AuthGuard],
+      },
     ],
   },
 ];

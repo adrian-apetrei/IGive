@@ -49,7 +49,7 @@ const routes: Routes = [
         (m) => m.UserProfilePageModule
       ),
     canActivate: [AuthGuard],
-  },
+  }
 ];
 
 @NgModule({

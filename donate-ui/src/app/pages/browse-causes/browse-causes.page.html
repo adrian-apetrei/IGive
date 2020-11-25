@@ -1,0 +1,35 @@
+<ion-content>
+  <div class="browse-container">
+    <h3 class="title">Browse Causes</h3>
+
+    <mat-form-field appearance="fill" class="browse-search">
+      <mat-icon color="accent" matPrefix>search</mat-icon>
+      <input matInput placeholder="search" autocomplete="off" />
+    </mat-form-field>
+
+    <app-topic-card
+      topic="Trending Now"
+      [charities]="trending"
+    ></app-topic-card>
+
+    <h3 class="section-title">By Topic</h3>
+ 
+    <div fxLayout="row wrap" fxLayoutAlign="center start">
+      <ion-card
+        fxFlex="35"
+        *ngFor="let topic of topics"
+        class="browse-card"
+        (click)="openTopicList(topic)"
+      >
+        <ion-card-content>
+          <img
+            class="topic-icon"
+            [alt]="topic.icon"
+            [src]="'./../../../assets/svg/'+ topic.icon +'.svg'"
+          />
+          <h3 class="topic-title">{{ topic.name }}</h3>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

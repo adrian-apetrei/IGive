@@ -31,15 +31,20 @@
 @import "./theme/base";
 
 @import "~@ffdc/uxg-angular-theme/all-theme";
+@import "~@ffdc/uxg-angular-theme/lib/core/style/spacing";
 
 @import "./app/pages/donation-methods/donation-methods.theme";
 @import "./app/pages/charity-details/charity-details.theme";
 @import "./app/pages/add-donation/add-donation.theme";
-@import "~@ffdc/uxg-angular-theme/lib/core/style/spacing";
+@import "./app/pages/browse-causes/browse-causes.page.scss";
+@import "./app/pages/browse-causes/topic-list/topic-list.component.scss";
 
 @mixin app-theme($theme) {
   @include app-donation-method($theme);
   @include app-charity-details($theme);
   @include app-add-donation($theme);
+
+  @include app-browse-causes($theme);
+  @include app-topic-list($theme);
 }
 @include app-theme($uxg-light-theme);

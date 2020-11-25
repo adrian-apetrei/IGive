@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -13,15 +13,14 @@ export class NotificationsComponent implements OnInit {
     charityUpdates: '',
     email: false,
     sms: false
-  }
-  constructor(public activatedRoute: ActivatedRoute, public auth: AuthService) { }
+  };
+  constructor(public activatedRoute: ActivatedRoute, public auth: AuthService, public router: Router) { }
 
   ngOnInit() {
     this.activatedRoute.paramMap
     .pipe(map(() => window.history.state)).subscribe(data => {
-      console.log(data);
       Object.keys(this.notifications).forEach(key => {
-        if(data.user.userSettings?.notifications){
+        if (data.user?.userSettings?.notifications){
           this.notifications[key] = data.user.userSettings.notifications[key];
         }
       });

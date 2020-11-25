@@ -1,11 +1,11 @@
 <ion-content>
-  <ion-tabs>
+  <ion-tabs #tabs>
     <ion-tab-bar slot="bottom">
       <ion-tab-button tab="home">
         <ion-icon name="home-outline"></ion-icon>
       </ion-tab-button>
 
-      <ion-tab-button tab="hand">
+      <ion-tab-button tab="browse" (click)="openTab('browse', $event)">
         <ion-icon name="hand-right-outline"></ion-icon>
       </ion-tab-button>
 

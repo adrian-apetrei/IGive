@@ -1,0 +1,31 @@
+<ion-content>
+  <div class="topic-list-container">
+    <h3 class="title">{{ topic }}</h3>
+    <div class="add-donation-container">
+      <mat-form-field appearance="fill" class="donation-search">
+        <mat-icon color="accent" matPrefix>search</mat-icon>
+        <input matInput placeholder="search" autocomplete="off" />
+      </mat-form-field>
+
+      <ng-container *ngFor="let charity of charities">
+        <ion-card class="charity-card" (click)="goToCharityDetails(charity)">
+          <div class="image-container">
+            <img src="./../../../assets/png/x.png" class="charity-image" />
+          </div>
+          <ion-card-content>
+            <h3 class="title">{{ charity.name }}</h3>
+            <p class="description">
+              {{ charity.description }}
+            </p>
+            <p class="read-more">
+              <a [href]="charity.websiteUrl">Read more</a>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ng-container>
+      <!-- <ng-container *ngIf="!charities.length">
+      There are no causes associated with this topic.
+    </ng-container> -->
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,24 @@
+@mixin app-welcome-page($theme) {
+  .welcome {
+    padding: 0 $uxg-spacing-2;
+
+    .subtitle,
+    .title {
+      text-align: center;
+    }
+
+    .description {
+      margin-top: $uxg-spacing-4;
+    }
+
+    .checkmark {
+      width: 24px;
+      height: 24px;
+      margin-right: $uxg-spacing-3;
+    }
+    .start-btn {
+      position: absolute;
+      bottom: 5rem;
+    }
+  }
+}

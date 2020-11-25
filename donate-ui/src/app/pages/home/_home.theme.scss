@@ -1,0 +1,23 @@
+@mixin app-home($theme) {
+  .home-content {
+    margin: 0px $uxg-spacing-3 0;
+  }
+
+  .charity-card {
+    ion-card-title {
+      font-size: 18px;
+
+      .charity-impact {
+        cursor: pointer;
+      }
+    }
+
+    .image-container {
+      height: 150px;
+      .charity-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

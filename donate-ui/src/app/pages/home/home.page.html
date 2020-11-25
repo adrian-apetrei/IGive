@@ -1,14 +1,19 @@
-<ion-content>
-  <div class="home-header">
-    <h2>Hi, {{currentUser.firstName}}!</h2>
-    <p>Let's change the world today.</p>
-    <h3><b>Updates</b></h3>
-  </div>
+<ion-header class="tall-header">
+  <h2 class="title">Hi, {{currentUser.firstName}}!</h2>
+  <p>Let's change the world today.</p>
+</ion-header>
 
+<ion-content>
+  <div class="home-content">
+    <h3>Your Updates</h3>
+  </div>
   <ng-container *ngFor="let charity of charities">
     <ion-card class="charity-card">
       <div class="image-container">
-        <img src="./../../../assets/png/x.png" class="charity-image" />
+        <img
+          src="https://www.tespack.com/wp-content/uploads/2018/04/save-child.jpg"
+          class="charity-image"
+        />
       </div>
       <ion-card-header>
         <ion-card-title>$10.000 goal reached</ion-card-title>
@@ -19,7 +24,7 @@
         <br />
         <br />
         <p class="charity-impact">
-          <a [href]="charity.websiteUrl">Read about the impact ></a>
+          <a [href]="charity.websiteUrl">Read more</a>
         </p>
       </ion-card-content>
     </ion-card>

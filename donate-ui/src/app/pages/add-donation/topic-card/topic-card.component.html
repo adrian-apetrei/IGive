@@ -6,11 +6,14 @@
   <ion-slides>
     <ion-slide *ngFor="let charity of charities">
       <ion-card class="charity-card" (click)="goToCharityDetails(charity)">
-        <div class="image-container">
-          <img src="./../../../assets/png/x.png" class="charity-image" />
+        <div class="topic-image-container">
+          <img
+            src="https://www.tespack.com/wp-content/uploads/2018/04/save-child.jpg"
+            class="charity-image"
+          />
         </div>
         <ion-card-content>
-          <h3 class="title">{{ charity.name }}</h3>
+          <p class="title">{{ charity.name }}</p>
           <p class="description">
             {{ charity.description }}
           </p>

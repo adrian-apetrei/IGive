@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="63px" viewBox="0 0 375 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Header</title>
+    <g id="First-Time-User" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle">
+            <polygon fill="#26D07C" points="0 -3.55271368e-15 375 -3.55271368e-15 375 62.0714616 274.044058 47 0 47"></polygon>
+            <polygon fill="#5DDC9D" points="2.27373675e-13 0 375 0 274.044058 47 6.08402217e-14 62.0714616"></polygon>
+            <polygon fill="#92E7BD" points="0 -7.10542736e-15 375 -7.10542736e-15 0 62.0714616"></polygon>
+        </g>
+    </g>
+</svg>

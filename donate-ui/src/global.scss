@@ -38,11 +38,58 @@
 @import "./app/pages/add-donation/add-donation.theme";
 @import "./app/pages/browse-causes/browse-causes.page.scss";
 @import "./app/pages/browse-causes/topic-list/topic-list.component.scss";
+@import "./app/pages/home/home.theme";
+@import "./app/pages/user-preferences/user-preferences.theme";
+@import './app/pages/payment/bank-account/bank-account.theme';
+
+:root {
+  --ion-background-color: white !important;
+}
+
+ion-header::after {
+  background: none !important;
+}
+
+.tall-header {
+  background: url("/assets/svg/tallheader.svg");
+  height: 16%;
+  background-repeat: no-repeat;
+  padding: $uxg-spacing-4 $uxg-spacing-3 0;
+  background-size: contain;
+
+  //TODO: update fonts
+  .title {
+    margin-bottom: 0;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+}
+
+.short-header {
+  background: url("/assets/svg/shortheader.svg");
+  background-repeat: no-repeat;
+  padding: $uxg-spacing-2 $uxg-spacing-2 0;
+  background-size: contain;
+  min-height: 9%;
+
+  .back-btn-container {
+    display: initial !important;
+  }
+
+  .back-btn {
+    width: 48px;
+  }
+}
 
 @mixin app-theme($theme) {
   @include app-donation-method($theme);
   @include app-charity-details($theme);
   @include app-add-donation($theme);
+  @include app-home($theme);
+  @include app-user-preferences($theme);
+  @include app-bank-account($theme);
 
   @include app-browse-causes($theme);
   @include app-topic-list($theme);

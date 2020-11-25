@@ -1,3 +1,5 @@
+<ion-header class="short-header"> </ion-header>
+
 <ion-content>
   <ion-slides
     #preferencesSlides
@@ -6,12 +8,19 @@
     (ionSlideDidChange)="updateSlideIndex()"
   >
     <ion-slide fxLayout="column" fxLayoutAlign="start center">
-      <h3 class="slide-title">First, choose the causes you want to support</h3>
+      <h2 class="slide-title">first, tell us what matters most to you</h2>
+
+      <mat-form-field appearance="fill" class="user-preferences-search">
+        <mat-icon color="accent" matPrefix>search</mat-icon>
+        <input matInput placeholder="search" autocomplete="off" />
+      </mat-form-field>
+
       <div fxLayout="row wrap" fxLayoutAlign="center start">
-        <ion-card
-          fxFlex="35"
+        <div
+          fxFlex="40"
           *ngFor="let topic of topics"
           [class.selected]="topic.isSelected"
+          class="topic-cards"
           (click)="selectTopic(topic.name)"
         >
           <ion-card-content>
@@ -20,20 +29,20 @@
               [alt]="topic.icon"
               [src]="'./../../../assets/svg/'+ topic.icon +'.svg'"
             />
-            <h3 class="topic-title">{{ topic.name }}</h3>
+            <p class="topic-title">{{ topic.name }}</p>
           </ion-card-content>
-        </ion-card>
+        </div>
       </div>
     </ion-slide>
     <ion-slide fxLayout="column" fxLayoutAlign="start center">
-      <h3 class="slide-title">Next, set some preferences</h3>
+      <h2 class="slide-title">next, set some preferences</h2>
       <ion-list>
         <ion-item lines="none">
           <ion-label
             >Go Local<br />
-            <h6 class="subtitle">
+            <p class="subtitle">
               Prioritize charities and causes that are close to me
-            </h6>
+            </p>
           </ion-label>
           <ion-toggle [(ngModel)]="goLocal"></ion-toggle>
         </ion-item>
@@ -41,10 +50,10 @@
         <ion-item lines="none">
           <ion-label
             >Optimize My Donation<br />
-            <h6 class="subtitle">
+            <p class="subtitle">
               Priotitize charities and causes that make my money go further
               through matching ($1 donated means the charity gets $2)
-            </h6>
+            </p>
           </ion-label>
           <ion-toggle [(ngModel)]="optimizeDonation"></ion-toggle>
         </ion-item>
@@ -52,32 +61,30 @@
         <ion-item lines="none">
           <ion-label
             >Get Those Tax Returns<br />
-            <h6 class="subtitle">
+            <p class="subtitle">
               Only show charities and causes that will provide a proof of
               donation for tax purposes
-            </h6></ion-label
+            </p></ion-label
           >
           <ion-toggle [(ngModel)]="taxReturns"></ion-toggle>
         </ion-item>
       </ion-list>
     </ion-slide>
     <ion-slide fxLayout="column" fxLayoutAlign="start center">
-      <h3 class="slide-title">Choose your payment method</h3>
-      <ion-card
+      <h2 class="slide-title">Choose your payment method</h2>
+      <div
         class="payment-card"
         *ngFor="let method of paymentMethod"
         [class.selected]="method.isSelected"
         (click)="selectPaymentMethod(method.name)"
       >
-        <ion-card-content>
-          <img
-            class="topic-icon"
-            [alt]="method.icon"
-            [src]="'./../../../assets/svg/'+ method.icon +'.svg'"
-          />
-          <h3 class="topic-title">{{ method.name }}</h3>
-        </ion-card-content>
-      </ion-card>
+        <img
+          class="bank-icon"
+          [alt]="method.icon"
+          [src]="'./../../../assets/svg/'+ method.icon +'.svg'"
+        />
+        <h3 class="topic-title">{{ method.name }}</h3>
+      </div>
     </ion-slide>
   </ion-slides>
 </ion-content>

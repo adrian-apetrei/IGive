@@ -7,12 +7,11 @@ import { AuthService } from "src/app/services/auth.service";
 @Component({
   selector: "app-user-preferences",
   templateUrl: "./user-preferences.page.html",
-  styleUrls: ["./user-preferences.page.scss"],
 })
 export class UserPreferencesPage implements OnInit {
   @Input() initialSlide = 0;
   slideOpts = {
-    initialSlide: this.initialSlide
+    initialSlide: this.initialSlide,
   };
   slideIndex = 0;
   topics;

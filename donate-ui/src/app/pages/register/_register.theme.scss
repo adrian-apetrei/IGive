@@ -1,0 +1,25 @@
+@mixin app-register($theme) {
+  $accent: map-get($theme, accent);
+
+  .register-page-content {
+    background: url("/assets/svg/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    ion-avatar {
+      margin-top: 5rem;
+    }
+
+    .register-field {
+      width: 85%;
+      .mat-form-field-flex {
+        background: #d4f5e5 !important;
+      }
+    }
+
+    .link {
+      color: mat-color($accent, default);
+    }
+  }
+}

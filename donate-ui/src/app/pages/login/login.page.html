@@ -1,25 +1,39 @@
 <ion-content>
-  <div class="register-page-content" fxLayout="column" fxLayoutAlign="center center">
+  <div
+    class="register-page-content"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+  >
     <ion-avatar>
-      <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y">
+      <img
+        src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y"
+      />
     </ion-avatar>
     <h3>iGive</h3>
     <h1>Login</h1>
-    <ion-item>
-      <ion-label position="stacked">Email</ion-label>
-      <ion-input #email type="email" inputmode="email" [(ngModel)]="credentials.email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Password</ion-label>
-      <ion-input type="password" [(ngModel)]="credentials.password"></ion-input>
-    </ion-item>
-    <ion-item lines="none" class="mt-5">
-      <ion-button (click)="login()">
-        Login
-      </ion-button>
-    </ion-item>
-    <a class="mt-3" [routerLink]="['/register']" routerLinkActive="active">Don't have an account? Register</a>
+    <mat-form-field appearance="fill" dense class="login-field">
+      <mat-icon color="accent" matPrefix>mail_outline</mat-icon>
+      <input
+        matInput
+        placeholder="email"
+        autocomplete="off"
+        [(ngModel)]="credentials.email"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" dense class="login-field">
+      <mat-icon color="accent" matPrefix>lock</mat-icon>
+      <input
+        matInput
+        placeholder="password"
+        autocomplete="off"
+        [(ngModel)]="credentials.password"
+      />
+    </mat-form-field>
+    <button mat-stroked-button color="accent" (click)="login()">Login</button>
+    <a class="link mt-3" [routerLink]="['/register']" routerLinkActive="active"
+      >Don't have an account? Register</a
+    >
     <span class="fill-remaining-space"></span>
-    <a class="mb-6">About iGive</a>
+    <a class="link mb-6">About iGive</a>
   </div>
 </ion-content>

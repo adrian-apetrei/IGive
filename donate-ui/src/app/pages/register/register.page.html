@@ -1,33 +1,56 @@
 <ion-content>
-  <div class="register-page-content" fxLayout="column" fxLayoutAlign="center center">
+  <div
+    class="register-page-content"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+  >
     <ion-avatar>
-      <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y">
-    </ion-avatar>   
-    <h3>iGive</h3>
-    <h1>Create account</h1>
-    <ion-item>
-      <ion-label position="stacked">First Name</ion-label>
-      <ion-input type="string" [(ngModel)]="credentials.firstName"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Last Name</ion-label>
-      <ion-input type="string" [(ngModel)]="credentials.lastName"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Email</ion-label>
-      <ion-input #email type="email" inputmode="email" [(ngModel)]="credentials.email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Password</ion-label>
-      <ion-input type="password" [(ngModel)]="credentials.password"></ion-input>
-    </ion-item>
-    <ion-item lines="none" class="mt-5">
-      <ion-button (click)="register()">
-        Register
-      </ion-button>
-    </ion-item>
-    <a class="mt-3" [routerLink]="['/login']" routerLinkActive="active">Already have an account? Log in</a>
+      <img
+        src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y"
+      />
+    </ion-avatar>
+    <h1>iGive</h1>
+    <h2>Create an account</h2>
+    <mat-form-field appearance="fill" dense class="register-field">
+      <mat-icon color="accent" matPrefix>person_outline</mat-icon>
+      <input
+        matInput
+        placeholder="first name"
+        autocomplete="off"
+        [(ngModel)]="credentials.firstName"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" dense class="register-field">
+      <mat-icon color="accent" matPrefix>person_outline</mat-icon>
+      <input
+        matInput
+        placeholder="last name"
+        autocomplete="off"
+        [(ngModel)]="credentials.lastName"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" dense class="register-field">
+      <mat-icon color="accent" matPrefix>mail_outline</mat-icon>
+      <input
+        matInput
+        placeholder="email"
+        autocomplete="off"
+        [(ngModel)]="credentials.email"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" dense class="register-field">
+      <mat-icon color="accent" matPrefix>lock</mat-icon>
+      <input
+        matInput
+        placeholder="password"
+        autocomplete="off"
+        [(ngModel)]="credentials.password"
+      />
+    </mat-form-field>
+    <a class="link mt-3" [routerLink]="['/login']" routerLinkActive="active"
+      >Already have an account? Log in</a
+    >
     <span class="fill-remaining-space"></span>
-    <a class="mb-6">About iGive</a>
+    <a class="link mb-6">About iGive</a>
   </div>
 </ion-content>

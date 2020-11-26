@@ -24,7 +24,7 @@
     </button>
 
     <div class="charity-effort">
-      <h4>Current Efforts</h4>
+      <h3 class="section-title">Current Efforts</h3>
       <p class="subtitle">{{charity.currentEffortDescription}}</p>
       <p class="current-value">${{charity.currentEffort}}</p>
       <ion-range
@@ -38,14 +38,14 @@
     </div>
 
     <div class="charity-updates">
-      <h4>Latest Updates</h4>
+      <h3 class="section-title">Latest Updates</h3>
       <div
         *ngFor="let update of charity.latestUpdates"
         class="update-container"
       >
-        <p class="text">{{update.title}}</p>
+        <p class="text mt-1">{{update.title}}</p>
         <p class="text">{{update.message}}</p>
-        <p class="text">{{update.date | date:'short'}}</p>
+        <p class="text mb-1">{{update.date | date:'short'}}</p>
       </div>
     </div>
   </div>

@@ -1,7 +1,9 @@
+<ion-header class="tall-header">
+  <h2 class="title">Browse Causes</h2>
+</ion-header>
+
 <ion-content>
   <div class="browse-container">
-    <h3 class="title">Browse Causes</h3>
-
     <mat-form-field appearance="fill" class="browse-search">
       <mat-icon color="accent" matPrefix>search</mat-icon>
       <input matInput placeholder="search" autocomplete="off" />
@@ -13,10 +15,10 @@
     ></app-topic-card>
 
     <h3 class="section-title">By Topic</h3>
- 
+
     <div fxLayout="row wrap" fxLayoutAlign="center start">
-      <ion-card
-        fxFlex="35"
+      <div
+        fxFlex="40"
         *ngFor="let topic of topics"
         class="browse-card"
         (click)="openTopicList(topic)"
@@ -27,9 +29,9 @@
             [alt]="topic.icon"
             [src]="'./../../../assets/svg/'+ topic.icon +'.svg'"
           />
-          <h3 class="topic-title">{{ topic.name }}</h3>
+          <p class="topic-title">{{ topic.name }}</p>
         </ion-card-content>
-      </ion-card>
+      </div>
     </div>
   </div>
 </ion-content>

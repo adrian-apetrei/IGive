@@ -5,7 +5,6 @@ import { StaticDataService } from "src/app/services/static-data.service";
 @Component({
   selector: "app-browse-causes",
   templateUrl: "./browse-causes.page.html",
-  styleUrls: ["./browse-causes.page.scss"],
 })
 export class BrowseCausesPage implements OnInit {
   charities;

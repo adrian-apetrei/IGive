@@ -1,6 +1,6 @@
 @mixin app-browse-causes($theme) {
   .browse-container {
-    padding: 3rem 0 10px 10px;
+    padding: 0 0 10px 10px;
 
     .section-title {
       margin-top: $uxg-spacing-3;
@@ -15,18 +15,20 @@
     }
 
     .browse-card {
+      margin: $uxg-spacing-2 !important;
+      text-align: center;
       cursor: pointer;
+
       ion-card-content {
         padding: 0;
       }
       .topic-icon {
-        padding: 16px;
+        padding: $uxg-spacing-4;
         max-height: 100px;
       }
       .topic-title {
         white-space: nowrap;
-        margin-bottom: $uxg-spacing-1;
-        text-align: center;
+        margin-top: -15px;
       }
     }
   }

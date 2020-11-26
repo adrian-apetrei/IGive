@@ -6,9 +6,13 @@
       text-align: start;
       cursor: pointer;
     }
+    .topic {
+      margin: $uxg-spacing-2;
+      font-weight: 500;
+    }
 
     .charity-card {
-      margin: 0;
+      margin: 1px;
     }
 
     .title {

@@ -36,12 +36,13 @@
 @import "./app/pages/donation-methods/donation-methods.theme";
 @import "./app/pages/charity-details/charity-details.theme";
 @import "./app/pages/add-donation/add-donation.theme";
-@import "./app/pages/browse-causes/browse-causes.page.scss";
-@import "./app/pages/browse-causes/topic-list/topic-list.component.scss";
+@import "./app/pages/browse-causes/browse-causes.theme";
+@import "./app/pages/browse-causes/topic-list/topic-list.theme";
 @import "./app/pages/home/home.theme";
 @import "./app/pages/user-preferences/user-preferences.theme";
 @import "./app/pages/payment/bank-account/bank-account.theme";
 @import "./app/pages/login/login.theme";
+@import "./app/pages/register/register.theme";
 @import "./app/pages/register/register.theme";
 
 :root {
@@ -94,7 +95,6 @@ ion-header::after {
   @include app-bank-account($theme);
   @include app-login($theme);
   @include app-register($theme);
-
   @include app-browse-causes($theme);
   @include app-topic-list($theme);
 }

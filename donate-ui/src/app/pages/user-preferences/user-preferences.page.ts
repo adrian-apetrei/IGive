@@ -31,9 +31,9 @@ export class UserPreferencesPage implements OnInit {
       this.topics = topics;
     });
     this.paymentMethod = [
-      { name: "Bank Account", icon: "bank", isSelected: false },
-      { name: "PayPal", icon: "paypal", isSelected: false },
-      { name: "Other", icon: "dollar", isSelected: false },
+      { name: "bank", icon: "bank", isSelected: false },
+      { name: "paypal", icon: "paypal", isSelected: false },
+      { name: "card", icon: "dollar", isSelected: false },
     ];
   }
 

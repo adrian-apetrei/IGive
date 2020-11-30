@@ -2,13 +2,24 @@
   .welcome {
     padding: 0 $uxg-spacing-2;
 
-    .subtitle,
     .title {
       text-align: center;
     }
 
+    .subtitle {
+      font-size: 16px;
+      margin-bottom: 48px;
+      line-height: 20px;
+      text-align: center;
+    }
+
     .description {
-      margin-top: $uxg-spacing-4;
+      margin-top: $uxg-spacing-2;
+    }
+
+    .welcome-description {
+      font-size: 18px;
+      line-height: 24px;
     }
 
     .checkmark {

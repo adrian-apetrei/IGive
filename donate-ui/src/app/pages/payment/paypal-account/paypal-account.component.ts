@@ -6,7 +6,6 @@ import { AuthService } from "src/app/services/auth.service";
 @Component({
   selector: "app-paypal-account",
   templateUrl: "./paypal-account.component.html",
-  styleUrls: ["./paypal-account.component.scss"],
 })
 export class PaypalAccountComponent implements OnInit {
   paypalDetails: PaymentMethod = {

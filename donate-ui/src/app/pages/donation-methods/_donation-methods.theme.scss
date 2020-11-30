@@ -8,21 +8,29 @@
 
     .title {
       margin-top: 0;
-      margin-bottom: 12px;
+      margin-bottom: $uxg-spacing-4 !important;
     }
 
     .subtitle {
       margin-top: 0;
       font-size: 18px;
       font-weight: 600;
+      margin-bottom: $uxg-spacing-1;
+    }
+
+    .method-description {
+      font-family: "Typo Round Regular Demo", sans-serif !important;
     }
   }
 
   .donation-method {
     cursor: pointer;
-    background: #92e7bd;
-    padding: 12px;
-    margin-bottom: 12px;
+    // background: #92e7bd;
+    background: url("../../../assets/svg/selectarrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: $uxg-spacing-2;
+    padding-right: $uxg-spacing-5;
   }
 
   @include app-determined($theme);

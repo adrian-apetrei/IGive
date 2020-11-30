@@ -10,29 +10,26 @@
 
 <ion-content>
   <div class="paypal-account" fxLayout="column" fxLayoutAlign="center center">
-    <img
-      class="topic-icon"
-      alt="bank icon"
-      [src]="'./../../../../assets/svg/paypal.svg'"
-    />
-    <h3 class="topic-title">PayPal Account</h3>
-
-    <ion-item>
-      <ion-label position="stacked">Account number</ion-label>
-      <ion-input
-        type="string"
+    <h1 class="payment-title">PayPal Account</h1>
+    <mat-form-field appearance="fill" dense class="paypal-field">
+      <input
+        matInput
+        autocomplete="off"
+        placeholder="Account Number"
         [(ngModel)]="paypalDetails.accountNumber"
-      ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Access code</ion-label>
-      <ion-input
-        type="string"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" dense class="paypal-field">
+      <input
+        matInput
+        type="password"
+        autocomplete="off"
+        placeholder="PayPal Access Code"
         [(ngModel)]="paypalDetails.accessCode"
-      ></ion-input>
-    </ion-item>
-    <ion-item lines="none" class="save-btn">
-      <ion-button (click)="save()"> Save </ion-button>
-    </ion-item>
+      />
+    </mat-form-field>
+    <button mat-flat-button (click)="save()" class="save-btn" color="primary">
+      Save
+    </button>
   </div>
 </ion-content>

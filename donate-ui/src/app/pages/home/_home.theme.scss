@@ -4,19 +4,19 @@
   }
 
   .charity-card {
-    ion-card-title {
-      font-size: 18px;
-
-      .charity-impact {
-        cursor: pointer;
-      }
-    }
-
     .image-container {
       height: 150px;
       .charity-image {
         width: 100%;
         height: 100%;
+      }
+    }
+
+    .content-container {
+      padding: $uxg-spacing-2;
+      .charity-impact {
+        cursor: pointer;
+        margin-bottom: 0;
       }
     }
   }

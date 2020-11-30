@@ -1,11 +1,11 @@
 <ion-header class="tall-header">
-  <h2 class="title">Hi, {{currentUser.firstName}}!</h2>
+  <h1 class="title">Hi, {{currentUser.firstName}}!</h1>
   <p>Let's change the world today.</p>
 </ion-header>
 
 <ion-content>
   <div class="home-content">
-    <h3>Your Updates</h3>
+    <h2>Your Updates</h2>
   </div>
   <ng-container *ngFor="let charity of charities">
     <ion-card class="charity-card">
@@ -15,18 +15,13 @@
           class="charity-image"
         />
       </div>
-      <ion-card-header>
-        <ion-card-title>$10.000 goal reached</ion-card-title>
-      </ion-card-header>
-
-      <ion-card-content>
-        <b>{{charity.name}}</b> <br />{{charity.description}}
-        <br />
-        <br />
+      <div class="content-container">
+        <p>$10,000 goal reached!</p>
+        <p>{{charity.description}}</p>
         <p class="charity-impact">
           <a [href]="charity.websiteUrl">Read more</a>
         </p>
-      </ion-card-content>
+      </div>
     </ion-card>
   </ng-container>
 </ion-content>

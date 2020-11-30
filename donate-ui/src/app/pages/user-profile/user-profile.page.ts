@@ -26,8 +26,7 @@ export class UserProfilePage implements OnInit {
     });
     this.settings = [
       { name: "Notifications", icon: "", route: 'notifications' },
-      { name: "Charity Settings", icon: "", route: 'charity-settings' },
-      { name: "Banking Information", icon: "", route: 'banking-info' },
+      { name: "Payment Information", icon: "", route: 'banking-info' },
     ];
   }
 

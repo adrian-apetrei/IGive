@@ -11,30 +11,36 @@
 
 <ion-content>
   <div class="bank-account" fxLayout="column" fxLayoutAlign="center center">
-    <img alt="bank icon" [src]="'./../../../../assets/svg/bank.svg'" />
-    <h3 class="topic-title">Bank Account</h3>
-
-    <ion-item>
-      <ion-label position="stacked">Bank Name</ion-label>
-      <ion-input
+    <h1 class="payment-title">bank information</h1>
+    <mat-form-field appearance="fill" dense class="bank-field">
+      <input
+        matInput
         #email
         type="string"
+        autocomplete="off"
+        placeholder="Bank Name"
         [(ngModel)]="bankDetails.bankName"
-      ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Account number</ion-label>
-      <ion-input
-        type="string"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" dense class="bank-field">
+      <input
+        matInput
+        autocomplete="off"
+        placeholder="Bank Account Number"
         [(ngModel)]="bankDetails.accountNumber"
-      ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Access code</ion-label>
-      <ion-input type="string" [(ngModel)]="bankDetails.accessCode"></ion-input>
-    </ion-item>
-    <ion-item lines="none" class="save-btn">
-      <ion-button (click)="save()"> Save </ion-button>
-    </ion-item>
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" dense class="bank-field">
+      <input
+        matInput
+        type="password"
+        autocomplete="off"
+        placeholder="Bank Account Access Code"
+        [(ngModel)]="bankDetails.accessCode"
+      />
+    </mat-form-field>
+    <button mat-flat-button (click)="save()" class="save-btn" color="primary">
+      Save
+    </button>
   </div>
 </ion-content>

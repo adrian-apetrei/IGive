@@ -10,15 +10,15 @@ const routes: Routes = [
     component: BankAccountComponent
   },
   {
-    path: 'BankAccount', // child route path
+    path: 'bank', // child route path
     component: BankAccountComponent, // child route component that the router renders
   },
   {
-    path: 'PayPal',
+    path: 'paypal',
     component: PaypalAccountComponent, // another child route component that the router renders
   },
   {
-    path: 'Other',
+    path: 'card',
     component: PaypalAccountComponent, // another child route component that the router renders
   }
 ];

@@ -41,6 +41,7 @@
 @import "./app/pages/home/home.theme";
 @import "./app/pages/user-preferences/user-preferences.theme";
 @import "./app/pages/payment/bank-account/bank-account.theme";
+@import "./app/pages/payment/paypal-account/paypal-account.theme";
 @import "./app/pages/login/login.theme";
 @import "./app/pages/register/register.theme";
 @import "./app/pages/register/register.theme";
@@ -60,7 +61,6 @@ ion-header::after {
   padding: $uxg-spacing-4 $uxg-spacing-3 0;
   background-size: contain;
 
-  //TODO: update fonts
   .title {
     margin-bottom: 0;
   }
@@ -86,6 +86,11 @@ ion-header::after {
   }
 }
 
+$custom-typography: mat-typography-config(
+  $font-family: '"Typo Round Regular Demo", sans-serif;',
+);
+@include mat-core($custom-typography);
+
 @mixin app-theme($theme) {
   @include app-donation-method($theme);
   @include app-charity-details($theme);
@@ -93,6 +98,7 @@ ion-header::after {
   @include app-home($theme);
   @include app-user-preferences($theme);
   @include app-bank-account($theme);
+  @include app-paypal-account($theme);
   @include app-login($theme);
   @include app-register($theme);
   @include app-browse-causes($theme);

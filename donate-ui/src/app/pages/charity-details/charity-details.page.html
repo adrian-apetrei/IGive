@@ -9,23 +9,25 @@
 </ion-header>
 
 <ion-content>
-  <div class="charity-details">
-    <h2 class="title">{{charity.name}}</h2>
-    <!-- charity description -->
-    <p class="subtitle">{{charity.description}}</p>
+  <div>
+    <div class="charity-details">
+      <h2 class="title">{{charity.name}}</h2>
+      <!-- charity description -->
+      <p class="subtitle">{{charity.description}}</p>
 
-    <button
-      mat-flat-button
-      color="primary"
-      class="support-btn"
-      (click)="goToDonationMethods()"
-    >
-      Support this cause
-    </button>
+      <button
+        mat-flat-button
+        color="primary"
+        class="support-btn"
+        (click)="goToDonationMethods()"
+      >
+        Support this cause
+      </button>
+    </div>
 
     <div class="charity-effort">
       <h3 class="section-title">Current Efforts</h3>
-      <p class="subtitle">{{charity.currentEffortDescription}}</p>
+      <p class="effort-subtitle">{{charity.currentEffortDescription}}</p>
       <p class="current-value">${{charity.currentEffort}}</p>
       <ion-range
         style="pointer-events: none"

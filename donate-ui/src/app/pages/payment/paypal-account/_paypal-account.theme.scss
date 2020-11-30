@@ -1,6 +1,6 @@
-@mixin app-bank-account($theme) {
-  .bank-account {
-    .bank-field {
+@mixin app-paypal-account($theme) {
+  .paypal-account {
+    .paypal-field {
       width: 85%;
     }
     .payment-title {

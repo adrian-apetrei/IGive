@@ -2,9 +2,9 @@
 
 <ion-content>
   <div class="welcome">
-    <h2 class="title">Welcome to iGive!</h2>
+    <h1 class="title uxg-h1">Welcome to iGive!</h1>
     <p class="subtitle">
-      The app for donating without having to think about it
+      The app for donating when you don't want to think about it
     </p>
 
     <div fxLayout="row" fxLayoutAlign="start center" class="description">
@@ -13,8 +13,8 @@
         alt="checkmark"
         src="./../../../../assets/svg/checkmark.svg"
       />
-      <p>
-        Donate every time you make a purchase by rounding up to the nearest
+      <p class="welcome-description">
+        donate every time you make a purchase by rounding up to the nearest
         dollar and donating the difference
       </p>
     </div>
@@ -24,9 +24,9 @@
         alt="checkmark"
         src="./../../../../assets/svg/checkmark.svg"
       />
-      <p>
-        Choose the charities and causes that matter most to you, whether they be
-        local or global
+      <p class="welcome-description">
+        tell us what causes you care about and we’ll show you the best way to
+        support it
       </p>
     </div>
     <div fxLayout="row" fxLayoutAlign="start center" class="description">
@@ -35,15 +35,20 @@
         alt="checkmark"
         src="./../../../../assets/svg/checkmark.svg"
       />
-      <p>
-        See the real impact your donations are making with updates directly from
-        the cause you're supporting
+      <p class="welcome-description">
+        see the difference! get updates directly from the cause you’re supporing
+        about the difference being made
       </p>
     </div>
     <div fxLayout="column" fxLayoutAlign="center center">
-      <ion-item lines="none" class="start-btn">
-        <ion-button (click)="getStarted()"> Get Started </ion-button>
-      </ion-item>
+      <button
+        mat-flat-button
+        (click)="getStarted()"
+        color="primary"
+        class="start-btn"
+      >
+        Get Started
+      </button>
     </div>
   </div>
 </ion-content>

@@ -9,22 +9,32 @@
     .topic {
       margin: $uxg-spacing-2;
       font-weight: 500;
+      font-size: 18px;
     }
 
     .charity-card {
       margin: 1px;
     }
 
-    .title {
-      height: 35px;
-      overflow: hidden;
-      font-weight: 500;
-    }
+    .topic-content-container {
+      padding: $uxg-spacing-2;
 
-    .description {
-      height: 50px;
-      overflow: hidden;
-      font-size: 12px;
+      .title {
+        height: 35px;
+        overflow: hidden;
+        font-weight: 500;
+      }
+
+      .description {
+        height: 65px;
+        overflow: hidden;
+        font-size: 12px;
+      }
+
+      .read-more {
+        font-size: 12px;
+        margin-bottom: 0;
+      }
     }
 
     .topic-image-container {
@@ -33,10 +43,6 @@
         width: 100%;
         height: 100%;
       }
-    }
-
-    .read-more {
-      font-size: 12px;
     }
   }
 }

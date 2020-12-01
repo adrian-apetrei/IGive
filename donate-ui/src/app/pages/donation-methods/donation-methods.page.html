@@ -1,9 +1,10 @@
 <ion-header class="short-header">
   <ion-buttons slot="start" class="back-btn-container">
     <ion-back-button
+      defaultHref=""
       class="back-btn"
-      defaultHref="tabs/charity-details"
       text=""
+      (click)="goBack()"
     ></ion-back-button>
   </ion-buttons>
 </ion-header>

@@ -12,7 +12,8 @@ export class BrowseCausesPage implements OnInit {
   topics;
   constructor(
     private staticDataService: StaticDataService,
-    private router: Router
+    private router: Router,
+    private dataService: StaticDataService
   ) {}
 
   ngOnInit() {
@@ -36,12 +37,8 @@ export class BrowseCausesPage implements OnInit {
     );
   }
 
-  openTopicList(topic) {
-    this.router.navigateByUrl(`/tabs/browse/topic`, {
-      state: {
-        topic: topic.name,
-        charities: this.filterByTopic(this.charities, topic.name),
-      },
-    });
+  goToTopicList(topic) {
+    this.dataService.setData(topic.name, this.filterByTopic(this.charities, topic.name));
+    this.router.navigateByUrl(`/tabs/browse/topic/${topic.name}`);
   }
 }

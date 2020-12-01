@@ -1,7 +1,7 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
 import { CharityOrganization } from "src/app/data/models";
-import { Storage } from "@ionic/storage";
-import { Router } from "@angular/router";
 
 @Component({
   selector: "app-charity-details",
@@ -9,15 +9,19 @@ import { Router } from "@angular/router";
 })
 export class CharityDetailsPage implements OnInit {
   charity: CharityOrganization = <any>{};
-  constructor(private storage: Storage, private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute, private location: Location) {}
 
   ngOnInit() {
-    this.storage.get("CHARITY").then((charity) => {
-      this.charity = charity;
-    });
+    if (this.route.snapshot.data['charity']) {
+      this.charity = this.route.snapshot.data['charity'];
+    }
   }
 
   goToDonationMethods() {
     this.router.navigateByUrl("tabs/donation-methods");
+  }
+
+  goBack() {
+    this.location.back();
   }
 }

@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { AuthGuard } from "src/app/guards/auth.guard";
+import { DataResolverService } from 'src/app/services/static-data-resolver.service';
 
 import { TabsPage } from "./tabs.page";
 
@@ -29,7 +30,10 @@ const routes: Routes = [
         canActivate: [AuthGuard],
       },
       {
-        path: "charity-details",
+        path: "charity-details/:id",
+        resolve: {
+          charity: DataResolverService
+        },
         loadChildren: () =>
           import("../charity-details/charity-details.module").then(
             (m) => m.CharityDetailsPageModule

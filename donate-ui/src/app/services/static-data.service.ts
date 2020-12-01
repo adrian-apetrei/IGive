@@ -8,6 +8,7 @@ import { environment } from "./../../environments/environment";
   providedIn: "root",
 })
 export class StaticDataService {
+  data = [];
   constructor(private http: HttpClient) {}
 
   getTopics() {
@@ -20,6 +21,14 @@ export class StaticDataService {
     return this.http
       .get<CharityOrganization>(`${environment.apiUrl}/static-data/charities`)
       .pipe(take(1));
+  }
+
+  setData(id, data) {
+    this.data[id] = data;
+  }
+
+  getData(id) {
+    return this.data[id];
   }
 
   getTransactions() {

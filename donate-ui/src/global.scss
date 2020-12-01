@@ -45,6 +45,7 @@
 @import "./app/pages/login/login.theme";
 @import "./app/pages/register/register.theme";
 @import "./app/pages/register/register.theme";
+@import "./app/pages/user-profile/user-profile.page.scss";
 
 :root {
   --ion-background-color: white !important;
@@ -103,5 +104,6 @@ $custom-typography: mat-typography-config(
   @include app-register($theme);
   @include app-browse-causes($theme);
   @include app-topic-list($theme);
+  @include app-user-profile-page($theme);
 }
 @include app-theme($uxg-light-theme);

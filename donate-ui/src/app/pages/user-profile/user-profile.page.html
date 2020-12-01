@@ -1,14 +1,19 @@
+<ion-header class="tall-header user-profile-header">
+  <div fxLayout="column" fxLayoutAlign="start center">
+    <ion-avatar>
+      <img [src]="avatar" />
+    </ion-avatar>
+    <h3 class="mt-3 mb-1">{{ fullName }}</h3>
+    <a [routerLink]="['/profile/info']"  [state]="{ user: user }" class="mt-0">edit profile</a>
+  </div>
+</ion-header>
 <ion-content>
   <div
     class="user-profile-content"
     fxLayout="column"
     fxLayoutAlign="start center"
   >
-    <ion-avatar>
-      <img [src]="avatar" />
-    </ion-avatar>
-    <a [routerLink]="['/profile/info']"  [state]="{ user: user }" class="mt-4">Edit Profile</a>
-    <h3>{{ fullName }}</h3>
+    
     <ion-list class="full-width pl-3 pr-3">
       <ion-item
         detail="true"

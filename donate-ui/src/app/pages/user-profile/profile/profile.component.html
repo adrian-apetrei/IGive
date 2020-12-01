@@ -1,12 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start" (click)="saveChanges()">
-      <ion-back-button text="" icon="chevron-back" ></ion-back-button>
-    </ion-buttons>
-    <ion-title>Profile</ion-title>
-  </ion-toolbar>
+<ion-header class="short-header">
+  <ion-buttons slot="start" class="back-btn-container">
+    <ion-back-button
+      class="back-btn"
+      defaultHref=""
+      (click)="saveChanges()"
+      text=""
+    ></ion-back-button>
+  </ion-buttons>
 </ion-header>
 <ion-content>
+  <h2 class="title">edit profile</h2>
   <div fxLayout="column" fxLayoutAlign="start center" class="mt-5 mb-5">
     <ion-avatar>
       <img [src]="user.avatar">

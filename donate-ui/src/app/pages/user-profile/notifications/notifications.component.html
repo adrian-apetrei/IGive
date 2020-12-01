@@ -1,12 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start" (click)="saveChanges()">
-      <ion-back-button text="" icon="chevron-back"></ion-back-button>
-    </ion-buttons>
-    <ion-title>notifications</ion-title>
-  </ion-toolbar>
+<ion-header class="short-header">
+  <ion-buttons slot="start" class="back-btn-container">
+    <ion-back-button
+      class="back-btn"
+      defaultHref=""
+      (click)="saveChanges()"
+      text=""
+    ></ion-back-button>
+  </ion-buttons>
 </ion-header>
 <ion-content>
+  <h2 class="title">notifications</h2>
     <ion-item-group>
       <ion-item-divider>
         <ion-label>push notifications</ion-label>

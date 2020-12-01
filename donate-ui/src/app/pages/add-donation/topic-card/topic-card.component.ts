@@ -1,6 +1,7 @@
 import { Component, Input } from "@angular/core";
 import { Router } from "@angular/router";
 import { Storage } from "@ionic/storage";
+import { StaticDataService } from 'src/app/services/static-data.service';
 
 @Component({
   selector: "app-topic-card",
@@ -10,11 +11,10 @@ export class TopicCardComponent {
   @Input() topic;
   @Input() charities;
 
-  constructor(private router: Router, private storage: Storage) {}
+  constructor(private router: Router, private dataService: StaticDataService) {}
 
   goToCharityDetails(charity) {
-    this.storage.set("CHARITY", charity).then(() => {
-      this.router.navigateByUrl("tabs/charity-details");
-    });
+    this.dataService.setData(charity._id, charity);
+    this.router.navigateByUrl(`tabs/charity-details/${charity._id}`);
   }
 }

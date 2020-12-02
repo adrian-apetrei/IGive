@@ -23,13 +23,19 @@
     <h3 class="title">I want to donate</h3>
     <mat-form-field appearance="fill" dense class="incognito-fields">
       <mat-icon color="accent" matPrefix>attach_money</mat-icon>
-      <input matInput placeholder="amount" type="number" autocomplete="off" />
+      <input
+        matInput
+        placeholder="amount"
+        type="number"
+        autocomplete="off"
+        [(ngModel)]="amount"
+      />
     </mat-form-field>
 
     <h3 class="title">to {{ charity.name }} every time</h3>
     <mat-form-field appearance="fill" dense class="incognito-fields">
       <mat-label>select option</mat-label>
-      <mat-select>
+      <mat-select [(ngModel)]="when">
         <mat-option value="option1">Option 1</mat-option>
         <mat-option value="option2">Option 2</mat-option>
         <mat-option value="option3">Option 3</mat-option>
@@ -39,16 +45,24 @@
     <h3 class="title">with a maximum donation of</h3>
     <mat-form-field appearance="fill" dense class="incognito-fields">
       <mat-icon color="accent" matPrefix>attach_money</mat-icon>
-      <input matInput placeholder="amount" type="number" autocomplete="off" />
+      <input
+        matInput
+        placeholder="amount"
+        type="number"
+        autocomplete="off"
+        [(ngModel)]="donationLimit"
+      />
     </mat-form-field>
 
     <h3 class="title">every</h3>
     <mat-form-field appearance="fill" dense class="incognito-fields">
-      <mat-select value="month">
+      <mat-select [(ngModel)]="period">
         <mat-option value="week">week</mat-option>
         <mat-option value="month">month</mat-option>
         <mat-option value="year">year</mat-option>
       </mat-select>
     </mat-form-field>
+
+    <button mat-stroked-button color="primary" class="pay-btn" (click)="pay()">Pay</button>
   </div>
 </ion-content>

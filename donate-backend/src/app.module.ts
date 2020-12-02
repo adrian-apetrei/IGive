@@ -8,6 +8,7 @@ import * as path from 'path';
 import { NeconfigModule } from 'neconfig';
 import { StaticDataModule } from './static-data/static-data.module';
 import { PaymentModule } from './payment/payment.module';
+import { DonationModule } from './donation/donation.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { PaymentModule } from './payment/payment.module';
       inject: [ConfigService],
     }),
     AuthModule,
+    DonationModule,
   ],
   controllers: [],
   providers: [],

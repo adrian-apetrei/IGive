@@ -1,4 +1,4 @@
-import { Location } from '@angular/common';
+import { Location } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { CharityOrganization } from "src/app/data/models";
@@ -9,16 +9,21 @@ import { CharityOrganization } from "src/app/data/models";
 })
 export class CharityDetailsPage implements OnInit {
   charity: CharityOrganization = <any>{};
-  constructor(private router: Router, private route: ActivatedRoute, private location: Location) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private location: Location
+  ) {}
 
   ngOnInit() {
-    if (this.route.snapshot.data['charity']) {
-      this.charity = this.route.snapshot.data['charity'];
+    if (this.route.snapshot.data["charity"]) {
+      this.charity = this.route.snapshot.data["charity"];
+      console.log("charity: ", this.charity);
     }
   }
 
   goToDonationMethods() {
-    this.router.navigateByUrl("tabs/donation-methods");
+    this.router.navigateByUrl(`tabs/donation-methods/${this.charity._id}`);
   }
 
   goBack() {

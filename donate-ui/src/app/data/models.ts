@@ -1,4 +1,5 @@
 export class CharityOrganization {
+  _id: string;
   topic: string;
   regionFocus: string;
   country: string;

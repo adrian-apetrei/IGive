@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { DataResolverService } from "src/app/services/static-data-resolver.service";
 import { DeterminedComponent } from "./determined/determined.component";
 
 import { DonationMethodsPage } from "./donation-methods.page";
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   {
     path: "incognito",
+    // resolve: {
+    //   charity: DataResolverService,
+    // },
     component: IncognitoComponent,
   },
   {

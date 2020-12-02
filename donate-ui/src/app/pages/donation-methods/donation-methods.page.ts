@@ -1,22 +1,35 @@
-import { Location } from '@angular/common';
+import { Location } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
+import { CharityOrganization } from "src/app/data/models";
 
 @Component({
   selector: "app-donation-method",
   templateUrl: "./donation-methods.page.html",
 })
 export class DonationMethodsPage implements OnInit {
-  constructor(private router: Router, private location: Location) {}
+  charity: CharityOrganization = <any>{};
+  constructor(
+    private router: Router,
+    private location: Location,
+    private route: ActivatedRoute
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (this.route.snapshot.data["charity"]) {
+      this.charity = this.route.snapshot.data["charity"];
+      console.log("charity: ", this.charity);
+    }
+  }
 
   goToRoundUpMethod() {
     this.router.navigateByUrl(`/tabs/donation-methods/round-up`);
   }
 
   goToIncognitopMethod() {
-    this.router.navigateByUrl(`/tabs/donation-methods/incognito`);
+    this.router.navigateByUrl(
+      `/tabs/donation-methods/${this.charity._id}/incognito`
+    );
   }
 
   goToDeterminedMethod() {

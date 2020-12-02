@@ -9,6 +9,7 @@ import { IncognitoComponent } from "./incognito/incognito.component";
 import { DeterminedComponent } from "./determined/determined.component";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatNativeDateModule } from "@angular/material/core";
+import { DonationService } from "src/app/services/donation.service";
 
 @NgModule({
   imports: [
@@ -25,5 +26,6 @@ import { MatNativeDateModule } from "@angular/material/core";
     IncognitoComponent,
     DeterminedComponent,
   ],
+  providers: [DonationService],
 })
 export class DonationMethodsPageModule {}

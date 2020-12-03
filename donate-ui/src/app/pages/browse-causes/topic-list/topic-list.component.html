@@ -1,6 +1,17 @@
+<ion-header class="short-header">
+  <ion-buttons slot="start" class="back-btn-container">
+    <ion-back-button
+      class="back-btn"
+      defaultHref=""
+      (click)="goBack()"
+      text=""
+    ></ion-back-button>
+  </ion-buttons>
+</ion-header>
+
 <ion-content>
   <div class="topic-list-container">
-    <h3 class="title">{{ topic }}</h3>
+    <h1 class="title">{{ topic }}</h1>
     <div class="add-donation-container">
       <mat-form-field appearance="fill" class="donation-search">
         <mat-icon color="accent" matPrefix>search</mat-icon>
@@ -10,7 +21,15 @@
       <ng-container *ngFor="let charity of charities">
         <ion-card class="charity-card" (click)="goToCharityDetails(charity)">
           <div class="image-container">
-            <img [src]='"../../../../assets/img/" + charity.topic + "/" + charity.name + ".jpg"' />
+            <img
+              [src]="
+                '../../../../assets/img/' +
+                charity.topic +
+                '/' +
+                charity.name +
+                '.jpg'
+              "
+            />
           </div>
           <ion-card-content>
             <h3 class="title">{{ charity.name }}</h3>

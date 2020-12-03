@@ -8,7 +8,7 @@
       <ion-card class="charity-card" (click)="goToCharityDetails(charity)">
         <div class="topic-image-container">
           <img
-            src="https://www.tespack.com/wp-content/uploads/2018/04/save-child.jpg"
+            [src]='"../../../../assets/img/" + charity.topic + "/" + charity.name + ".jpg"'
             class="charity-image"
           />
         </div>

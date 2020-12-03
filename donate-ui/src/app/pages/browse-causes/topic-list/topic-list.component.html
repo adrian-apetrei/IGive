@@ -10,7 +10,7 @@
       <ng-container *ngFor="let charity of charities">
         <ion-card class="charity-card" (click)="goToCharityDetails(charity)">
           <div class="image-container">
-            <img src="./../../../assets/png/x.png" class="charity-image" />
+            <img [src]='"../../../../assets/img/" + charity.topic + "/" + charity.name + ".jpg"' />
           </div>
           <ion-card-content>
             <h3 class="title">{{ charity.name }}</h3>

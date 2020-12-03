@@ -18,7 +18,6 @@ export class CharityDetailsPage implements OnInit {
   ngOnInit() {
     if (this.route.snapshot.data["charity"]) {
       this.charity = this.route.snapshot.data["charity"];
-      console.log("charity: ", this.charity);
     }
   }
 

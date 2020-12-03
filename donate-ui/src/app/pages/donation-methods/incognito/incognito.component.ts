@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { CharityOrganization } from "src/app/data/models";
 import { Location } from "@angular/common";
 import { DonationService } from "src/app/services/donation.service";
+import { StaticDataService } from "src/app/services/static-data.service";
 
 @Component({
   selector: "app-incognito",
@@ -20,13 +21,13 @@ export class IncognitoComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private donationService: DonationService,
-    private router: Router
+    private dataService: StaticDataService
   ) {}
 
   ngOnInit() {
-    // if (this.route.snapshot.data["charity"]) {
-    //   this.charity = this.route.snapshot.data["charity"];
-    // }
+    if (this.route.snapshot.params["id"]) {
+      this.charity = this.dataService.getData(this.route.snapshot.params["id"]);
+    }
   }
 
   back() {
@@ -34,10 +35,10 @@ export class IncognitoComponent implements OnInit {
   }
 
   pay() {
-    // TODO: update mock data (userId, charityId)
+    // TODO: update mock data (userId)
     const donationMethod = {
       userId: "1",
-      charityId: "1",
+      charityId: this.charity._id,
       donationMethod: "INCOGNITO",
       incognitoMethod: {
         donationAmount: this.amount,

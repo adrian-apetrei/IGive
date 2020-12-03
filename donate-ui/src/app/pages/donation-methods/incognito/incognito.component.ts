@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
 import { CharityOrganization } from "src/app/data/models";
 import { Location } from "@angular/common";
 import { DonationService } from "src/app/services/donation.service";

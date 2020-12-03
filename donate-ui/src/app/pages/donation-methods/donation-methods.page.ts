@@ -22,7 +22,7 @@ export class DonationMethodsPage implements OnInit {
   }
 
   goToRoundUpMethod() {
-    this.router.navigateByUrl(`/tabs/donation-methods/round-up`);
+    this.router.navigateByUrl(`/tabs/donation-methods/${this.charity._id}/round-up`);
   }
 
   goToIncognitopMethod() {
@@ -32,7 +32,7 @@ export class DonationMethodsPage implements OnInit {
   }
 
   goToDeterminedMethod() {
-    this.router.navigateByUrl(`/tabs/donation-methods/determined`);
+    this.router.navigateByUrl(`/tabs/donation-methods/${this.charity._id}/determined`);
   }
 
   goBack() {

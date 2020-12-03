@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import { Location } from "@angular/common";
 
 @Component({
   selector: "app-round-up",
@@ -9,12 +9,12 @@ export class RoundUpComponent implements OnInit {
   date;
   method: "donate-goal" | "donate-date" | "donate-limit" = "donate-goal";
 
-  constructor(private router: Router) {}
+  constructor(private location: Location) {}
 
   ngOnInit() {}
 
   back() {
-    this.router.navigateByUrl("/tabs/donation-methods");
+    this.location.back();
   }
 
   onChangeRoundUpMethod(e) {}

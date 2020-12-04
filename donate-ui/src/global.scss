@@ -71,6 +71,14 @@ ion-header::after {
   }
 }
 
+h1,
+h2,
+h3,
+span,
+.bold {
+  font-weight: 600 !important;
+}
+
 .short-header {
   background: url("/assets/svg/shortheader.svg");
   background-repeat: no-repeat;

@@ -1,14 +1,26 @@
 @mixin app-login($theme) {
   $accent: map-get($theme, accent);
 
-  .register-page-content {
+  .login-page-content {
     background: url("/assets/svg/background.svg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
 
-    ion-avatar {
-      margin-top: 5rem;
+    .login-avatar {
+      height: 124px;
+      width: 124px;
+      margin-top: -9rem !important;
+      margin-bottom: 6rem !important;
+      text-align: center;
+
+      .logo {
+        margin-bottom: $uxg-spacing-3;
+      }
+
+      .app-name {
+        font-size: 32px;
+      }
     }
 
     .login-field {

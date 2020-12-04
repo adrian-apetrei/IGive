@@ -1,6 +1,6 @@
 @mixin app-topic-list($theme) {
   .topic-list-container {
-    padding: $uxg-spacing-2;
+    padding: $uxg-spacing-3;
 
     .charity-card {
       margin: 0 0 $uxg-spacing-3 0;
@@ -9,7 +9,6 @@
 
     .title {
       height: 35px;
-      margin-left: $uxg-spacing-3;
       overflow: hidden;
     }
 

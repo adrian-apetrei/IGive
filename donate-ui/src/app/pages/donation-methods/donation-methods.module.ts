@@ -10,6 +10,7 @@ import { DeterminedComponent } from "./determined/determined.component";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatNativeDateModule } from "@angular/material/core";
 import { DonationService } from "src/app/services/donation.service";
+import { DonationNotificationComponent } from "./donation-notification/donation-notification.component";
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { DonationService } from "src/app/services/donation.service";
     RoundUpComponent,
     IncognitoComponent,
     DeterminedComponent,
+    DonationNotificationComponent,
   ],
   providers: [DonationService],
 })

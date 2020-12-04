@@ -33,6 +33,10 @@
     padding-right: $uxg-spacing-5;
   }
 
+  .pay-btn {
+    width: 100%;
+  }
+
   @include app-determined($theme);
   @include app-round-up($theme);
   @include app-incognito($theme);

@@ -21,11 +21,7 @@
       eg if you spent $4,80, iGive will donate 20c to round up the total to $5
     </p>
 
-    <mat-radio-group
-      [(ngModel)]="method"
-      (change)="onChangeRoundUpMethod($event)"
-      class="round-up-radio-group"
-    >
+    <mat-radio-group [(ngModel)]="method" class="round-up-radio-group">
       <mat-radio-button value="donate-goal" class="round-up-radio-btns"
         >Donate until the goal is met</mat-radio-button
       >
@@ -39,6 +35,7 @@
           [matDatepicker]="picker"
           placeholder="select date"
           autocomplete="off"
+          [(ngModel)]="date"
         />
         <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
@@ -50,8 +47,18 @@
 
       <mat-form-field appearance="fill" dense class="round-up-field">
         <mat-icon color="accent" matPrefix>attach_money</mat-icon>
-        <input matInput placeholder="amount" type="number" autocomplete="off" />
+        <input
+          matInput
+          placeholder="amount"
+          type="number"
+          autocomplete="off"
+          [(ngModel)]="amount"
+        />
       </mat-form-field>
     </mat-radio-group>
+
+    <button mat-flat-button color="primary" class="pay-btn" (click)="pay()">
+      Pay
+    </button>
   </div>
 </ion-content>

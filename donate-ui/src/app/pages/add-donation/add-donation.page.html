@@ -2,18 +2,16 @@
   <h2 class="title">Add a Donation</h2>
   <p class="subtitle">Select the cause you want to support</p>
 </ion-header>
-<ion-content>
-  <div class="add-donation-container">
-    <mat-form-field appearance="fill" class="donation-search">
-      <mat-icon color="accent" matPrefix>search</mat-icon>
-      <input matInput placeholder="search" autocomplete="off" />
-    </mat-form-field>
+<div class="content add-donation-container">
+  <mat-form-field appearance="fill" class="donation-search">
+    <mat-icon color="accent" matPrefix>search</mat-icon>
+    <input matInput placeholder="search" autocomplete="off" />
+  </mat-form-field>
 
-    <ng-container *ngFor="let item of data | keyvalue">
-      <app-topic-card
-        [topic]="item.key"
-        [charities]="item.value"
-      ></app-topic-card>
-    </ng-container>
-  </div>
-</ion-content>
+  <ng-container *ngFor="let item of data | keyvalue">
+    <app-topic-card
+      [topic]="item.key"
+      [charities]="item.value"
+    ></app-topic-card>
+  </ng-container>
+</div>

@@ -9,45 +9,40 @@
   </ion-buttons>
 </ion-header>
 
-<ion-content>
-  <div>
-    <div class="charity-details">
-      <h2 class="title">{{charity.name}}</h2>
-      <p class="subtitle">{{charity.description}}</p>
+<div class="content">
+  <div class="charity-details">
+    <h2 class="title">{{charity.name}}</h2>
+    <p class="subtitle">{{charity.description}}</p>
 
-      <button
-        mat-flat-button
-        color="primary"
-        class="support-btn"
-        (click)="goToDonationMethods()"
-      >
-        Support this cause
-      </button>
-    </div>
+    <button
+      mat-flat-button
+      color="primary"
+      class="support-btn"
+      (click)="goToDonationMethods()"
+    >
+      Support this cause
+    </button>
+  </div>
 
-    <div class="charity-effort">
-      <h3 class="section-title">Current Efforts</h3>
-      <p class="current-value">${{charity.currentEffort}}</p>
-      <ion-range
-        style="pointer-events: none"
-        class="effort-range"
-        value="516.35"
-        max="1500"
-      >
-      </ion-range>
-      <p *ngIf="charity.goal" class="target-value">Goal: ${{charity.goal}}</p>
-    </div>
+  <div class="charity-effort">
+    <h3 class="section-title">Current Efforts</h3>
+    <p class="current-value">${{charity.currentEffort}}</p>
+    <ion-range
+      style="pointer-events: none"
+      class="effort-range"
+      value="516.35"
+      max="1500"
+    >
+    </ion-range>
+    <p *ngIf="charity.goal" class="target-value">Goal: ${{charity.goal}}</p>
+  </div>
 
-    <div class="charity-updates">
-      <h3 class="section-title">Latest Updates</h3>
-      <div
-        *ngFor="let update of charity.latestUpdates"
-        class="update-container"
-      >
-        <p class="text mt-1">{{update.title}}</p>
-        <p class="text">{{update.message}}</p>
-        <p class="text mb-1">{{update.date | date:'short'}}</p>
-      </div>
+  <div class="charity-updates">
+    <h3 class="section-title">Latest Updates</h3>
+    <div *ngFor="let update of charity.latestUpdates" class="update-container">
+      <p class="text mt-1">{{update.title}}</p>
+      <p class="text">{{update.message}}</p>
+      <p class="text mb-1">{{update.date | date:'short'}}</p>
     </div>
   </div>
-</ion-content>
+</div>

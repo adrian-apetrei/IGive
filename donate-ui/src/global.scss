@@ -59,7 +59,7 @@ ion-header::after {
   background: url("/assets/svg/tallheader.svg");
   height: 16%;
   background-repeat: no-repeat;
-  padding: $uxg-spacing-4 $uxg-spacing-3 0;
+  padding: $uxg-spacing-4 $uxg-spacing-3 $uxg-spacing-3;
   background-size: contain;
 
   .title {
@@ -85,6 +85,15 @@ ion-header::after {
   .back-btn {
     width: 48px;
   }
+}
+
+.content {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none !important;
 }
 
 $custom-typography: mat-typography-config(

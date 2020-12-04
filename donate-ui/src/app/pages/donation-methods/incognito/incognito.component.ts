@@ -36,7 +36,6 @@ export class IncognitoComponent implements OnInit {
   }
 
   pay() {
-    // TODO: update mock data (userId)
     const donationMethod = {
       charityId: this.charity._id,
       donationMethod: "INCOGNITO",
@@ -56,7 +55,9 @@ export class IncognitoComponent implements OnInit {
       .subscribe((response: any) => {
         window.open(response.data.connect_url, "_system");
         setTimeout(() => {
-          this.router.navigateByUrl(`/tabs/home`);
+          this.router.navigateByUrl(
+            `/tabs/donation-methods/${this.charity._id}/notification`
+          );
         }, 1000);
       });
   }

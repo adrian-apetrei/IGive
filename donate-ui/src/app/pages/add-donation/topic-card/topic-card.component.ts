@@ -1,6 +1,5 @@
 import { Component, Input } from "@angular/core";
 import { Router } from "@angular/router";
-import { Storage } from "@ionic/storage";
 import { StaticDataService } from 'src/app/services/static-data.service';
 
 @Component({

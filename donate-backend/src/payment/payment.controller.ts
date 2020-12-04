@@ -4,12 +4,13 @@ import {
   HttpService,
   HttpStatus,
   Post,
+  Req,
   Res,
   UseGuards,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { ConfigService } from 'src/config/config.service';
-import { PaymentMethodDto } from './dto/payment-method.dto';
+import { PaymentDto, PaymentMethodDto } from './dto/payment-method.dto';
 import { PaymentService } from './payment.service';
 
 @Controller('payment')
@@ -20,7 +21,7 @@ export class PaymentController {
     private configService: ConfigService,
   ) {}
 
-  //   @UseGuards(AuthGuard())
+  @UseGuards(AuthGuard())
   @Post()
   async addPaymentMethod(
     @Res() res,
@@ -41,8 +42,10 @@ export class PaymentController {
     }
   }
 
+  @UseGuards(AuthGuard())
   @Post('/pay')
-  async makePayment(@Res() res) {
+  async makePayment(@Req() request, @Res() res, @Body() payment: PaymentDto) {
+    const user = request.user;
     try {
       // 1st Step: get token :)
       const token = await this.getToken();
@@ -61,18 +64,11 @@ export class PaymentController {
                 'https://www.nao.org.uk/graduateblog/wp-content/uploads/sites/19/2014/07/job-done.jpg',
               payment_attributes: {
                 end_to_end_id: '#123123123',
-                customer_last_logged_at: '2018-11-21T13:48:40Z',
                 customer_ip_address: '10.0.0.1',
-                customer_device_os: 'iOS 11',
-                creditor_name: 'Jay Dawson',
-                creditor_street_name: 'One Canada Square',
-                creditor_building_number: 'One',
-                creditor_post_code: 'E14 5AB',
-                creditor_town: 'London',
-                creditor_country_code: 'UK',
+                creditor_name: user.firstName,
                 currency_code: 'EUR',
-                amount: '1.00',
-                description: 'Stocks purchase',
+                amount: payment.amount.toString(),
+                description: payment.description,
                 creditor_iban: 'GB33BUKB20201555555555',
                 mode: 'normal',
               },

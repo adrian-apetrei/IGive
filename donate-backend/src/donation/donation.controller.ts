@@ -3,6 +3,7 @@ import {
   Controller,
   HttpStatus,
   Post,
+  Req,
   Res,
   UseGuards,
 } from '@nestjs/common';
@@ -14,16 +15,19 @@ import { DonationService } from './donation.service';
 export class DonationController {
   constructor(private donationService: DonationService) {}
 
-  //   @UseGuards(AuthGuard())
+  @UseGuards(AuthGuard())
   @Post()
   async addDonationMethod(
+    @Req() req,
     @Res() res,
     @Body() createDonationMethod: DonationMethodDto,
   ) {
     try {
-      const donationMethod = await this.donationService.addDonationMethod(
-        createDonationMethod,
-      );
+      const user = req.user;
+      const donationMethod = await this.donationService.addDonationMethod({
+        userId: user._id,
+        ...createDonationMethod,
+      });
       return res.status(HttpStatus.OK).json({
         msg: 'Donation method has been added successfully',
         donationMethod,

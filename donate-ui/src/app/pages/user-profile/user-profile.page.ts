@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from '@angular/router';
+import { Router } from "@angular/router";
 import { AuthService } from "src/app/services/auth.service";
 
 @Component({
@@ -15,7 +15,8 @@ export class UserProfilePage implements OnInit {
   constructor(private auth: AuthService, private router: Router) {}
 
   ngOnInit() {
-    this.auth.currentUser.subscribe(data => {
+    this.auth.currentUser.subscribe((data) => {
+      if (!data) return;
       this.auth.getUserData().subscribe((user) => {
         this.avatar = user.avatar;
         this.user = user;
@@ -25,13 +26,15 @@ export class UserProfilePage implements OnInit {
       });
     });
     this.settings = [
-      { name: "Notifications", icon: "", route: 'notifications' },
-      { name: "Payment Information", icon: "", route: 'banking-info' },
+      { name: "Notifications", icon: "", route: "notifications" },
+      { name: "Payment Information", icon: "", route: "banking-info" },
     ];
   }
 
   goTo(route) {
-    this.router.navigateByUrl(`/profile/${route}`, { state: { user: this.user } });
+    this.router.navigateByUrl(`/profile/${route}`, {
+      state: { user: this.user },
+    });
   }
 
   logout() {

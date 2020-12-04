@@ -13,7 +13,6 @@
   <div>
     <div class="charity-details">
       <h2 class="title">{{charity.name}}</h2>
-      <!-- charity description -->
       <p class="subtitle">{{charity.description}}</p>
 
       <button
@@ -28,7 +27,6 @@
 
     <div class="charity-effort">
       <h3 class="section-title">Current Efforts</h3>
-      <p class="effort-subtitle">{{charity.currentEffortDescription}}</p>
       <p class="current-value">${{charity.currentEffort}}</p>
       <ion-range
         style="pointer-events: none"
@@ -37,7 +35,7 @@
         max="1500"
       >
       </ion-range>
-      <p class="target-value">Goal: ${{charity.goal}}</p>
+      <p *ngIf="charity.goal" class="target-value">Goal: ${{charity.goal}}</p>
     </div>
 
     <div class="charity-updates">

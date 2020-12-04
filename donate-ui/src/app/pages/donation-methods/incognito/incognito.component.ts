@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { CharityOrganization } from "src/app/data/models";
 import { Location } from "@angular/common";
 import { DonationService } from "src/app/services/donation.service";
@@ -21,7 +21,8 @@ export class IncognitoComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private donationService: DonationService,
-    private dataService: StaticDataService
+    private dataService: StaticDataService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -37,7 +38,6 @@ export class IncognitoComponent implements OnInit {
   pay() {
     // TODO: update mock data (userId)
     const donationMethod = {
-      userId: "1",
       charityId: this.charity._id,
       donationMethod: "INCOGNITO",
       incognitoMethod: {
@@ -48,8 +48,16 @@ export class IncognitoComponent implements OnInit {
       },
     };
     this.donationService.addDonationMethod(donationMethod).subscribe();
-    this.donationService.addPayment().subscribe((response: any) => {
-      window.open(response.data.connect_url, "_system");
-    });
+    this.donationService
+      .addPayment({
+        amount: this.amount,
+        description: `Donate to ${this.charity.name}`,
+      })
+      .subscribe((response: any) => {
+        window.open(response.data.connect_url, "_system");
+        setTimeout(() => {
+          this.router.navigateByUrl(`/tabs/home`);
+        }, 1000);
+      });
   }
 }

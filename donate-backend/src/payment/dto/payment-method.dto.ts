@@ -5,3 +5,9 @@ export class PaymentMethodDto {
   readonly accountNumber: string;
   readonly accessCode: string;
 }
+
+// tslint:disable-next-line: max-classes-per-file
+export class PaymentDto {
+  readonly amount: string;
+  readonly description: string;
+}

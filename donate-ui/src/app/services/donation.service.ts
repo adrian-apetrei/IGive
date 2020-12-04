@@ -13,9 +13,9 @@ export class DonationService {
     return this.http.post(`${environment.apiUrl}/donation`, data).pipe(take(1));
   }
 
-  addPayment() {
+  addPayment(data) {
     return this.http
-      .post(`${environment.apiUrl}/payment/pay`, {})
+      .post(`${environment.apiUrl}/payment/pay`, data)
       .pipe(take(1));
   }
 }

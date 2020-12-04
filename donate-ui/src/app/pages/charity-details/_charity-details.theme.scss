@@ -22,16 +22,16 @@
   .section-title {
     font-size: 16px;
     font-weight: 600 !important;
-    margin-bottom: $uxg-spacing-2;
-    margin-top: $uxg-spacing-2;
+    margin-bottom: $uxg-spacing-2 !important;
+    margin-top: $uxg-spacing-2 !important;
   }
 
   .charity-effort {
     background: url("../../../assets/svg/currenteffort.svg");
     background-repeat: no-repeat;
-    padding: $uxg-spacing-2 $uxg-spacing-3 0;
+    padding: $uxg-spacing-3 $uxg-spacing-3 0;
     background-size: cover;
-    height: 160px;
+    height: 150px;
 
     .effort-subtitle {
       font-size: 12px;

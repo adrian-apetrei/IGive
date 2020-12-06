@@ -46,6 +46,7 @@
 @import "./app/pages/register/register.theme";
 @import "./app/pages/register/register.theme";
 @import "./app/pages/user-profile/user-profile.page.scss";
+@import "./app/pages/user-profile/profile/profile.component.scss";
 
 :root {
   --ion-background-color: white !important;
@@ -68,6 +69,13 @@ ion-header::after {
 
   .subtitle {
     font-size: 14px;
+  }
+  
+  &.large {
+    background: url("/assets/svg/xtallheader.svg");
+    height: 40%;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -122,5 +130,6 @@ $custom-typography: mat-typography-config(
   @include app-browse-causes($theme);
   @include app-topic-list($theme);
   @include app-user-profile-page($theme);
+  @include app-user-profile($theme);
 }
 @include app-theme($uxg-light-theme);

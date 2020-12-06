@@ -14,16 +14,15 @@ export class NotificationsComponent implements OnInit {
     email: false,
     sms: false
   };
+  userData;
   constructor(public activatedRoute: ActivatedRoute, public auth: AuthService, public router: Router) { }
 
   ngOnInit() {
-    this.activatedRoute.paramMap
-    .pipe(map(() => window.history.state)).subscribe(data => {
-      Object.keys(this.notifications).forEach(key => {
-        if (data.user?.userSettings?.notifications){
-          this.notifications[key] = data.user.userSettings.notifications[key];
-        }
-      });
+    this.auth.getUserData().subscribe(user => {
+      this.userData = user;
+      this.notifications.email = user.userSettings?.notifications?.email;
+      this.notifications.sms = user.userSettings?.notifications?.sms;
+      this.notifications.charityUpdates = user.userSettings?.notifications?.charityUpdates;
     });
   }
 

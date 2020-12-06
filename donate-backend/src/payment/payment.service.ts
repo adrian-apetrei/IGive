@@ -17,4 +17,22 @@ export class PaymentService {
     const newPaymentMethod = await new this.paymentModel(createPaymentMethod);
     return newPaymentMethod.save();
   }
+
+  // UPDATE payment method
+  async updatePaymentMethod(methodId, data): Promise<PaymentMethod> {
+    const updatedPaymentMethod = await this.paymentModel.findByIdAndUpdate(
+      methodId,
+      data,
+      {
+        new: true,
+      },
+    );
+    return updatedPaymentMethod;
+  }
+
+  // GET USER payment methods
+  async getPaymentMethods(userID): Promise<PaymentMethod[]> {
+    const paymentMethods = await this.paymentModel.find().where('userId').in(userID).exec();
+    return paymentMethods;
+  }
 }

@@ -1,15 +1,22 @@
 @mixin app-user-profile-page($theme) {
     .user-profile-header {
-        height: 50%;
+        height: 100%;
         ion-avatar {
             width: 100px;
             height: 100px;
-            margin-top: 2rem;
             @include mat-elevation(12, white, 1);
         }
         a {
             text-decoration: none;
             color: black;
         }
+    }
+    .copyright {
+        position: absolute;
+        bottom: 16px;
+        font-size: smaller;
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
 }

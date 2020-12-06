@@ -8,6 +8,9 @@ import { AuthService } from "src/app/services/auth.service";
   templateUrl: "./bank-account.component.html",
 })
 export class BankAccountComponent implements OnInit {
+  mode: 'ADD' | 'EDIT' = 'ADD';
+  paymentMethod;
+  firstLogin = false;
   bankDetails: PaymentMethod = {
     userId: "",
     paymentMethod: "BANK_ACCOUNT",
@@ -18,10 +21,26 @@ export class BankAccountComponent implements OnInit {
 
   constructor(private auth: AuthService, private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.auth.getPaymentMethods().subscribe(data => {
+      if (data?.paymentMethods.length && data.paymentMethods.some(item => item.paymentMethod === 'BANK_ACCOUNT')) {
+        this.paymentMethod = data.paymentMethods.filter(item => item.paymentMethod === 'BANK_ACCOUNT')[0];
+        this.mode = 'EDIT';
+        this.bankDetails = { ...this.paymentMethod };
+      } else {
+          this.firstLogin = true;
+      }
+    });
+  }
 
   save() {
-    this.auth.addPaymentMethod(this.bankDetails).subscribe();
-    this.router.navigateByUrl(`/tabs/home`);
+    if (this.mode === 'ADD') {
+      this.auth.addPaymentMethod(this.bankDetails).subscribe();
+      if (this.firstLogin) {
+        this.router.navigateByUrl(`/tabs/home`);
+      }
+    } else {
+      this.auth.updatePaymentMethod(this.paymentMethod._id , this.bankDetails).subscribe();
+    }
   }
 }

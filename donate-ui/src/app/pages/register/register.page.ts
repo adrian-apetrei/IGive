@@ -14,6 +14,7 @@ export class RegisterPage implements OnInit {
     password: "",
     firstName: "",
     lastName: "",
+    displayName: ""
   };
   constructor(
     private auth: AuthService,
@@ -27,7 +28,7 @@ export class RegisterPage implements OnInit {
   async register() {
     const loading = await this.loadingCtrl.create();
     loading.present();
-
+    this.credentials.displayName = `${this.credentials.firstName} ${this.credentials.lastName}`; 
     this.auth
       .register(this.credentials)
       .pipe(finalize(() => loading.dismiss()))

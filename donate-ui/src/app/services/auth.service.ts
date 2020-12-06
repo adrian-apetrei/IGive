@@ -114,6 +114,18 @@ export class AuthService {
       .pipe(take(1));
   }
 
+  updatePaymentMethod(id, data) {
+    return this.http
+      .put(`${environment.apiUrl}/payment/update/${id}`, data)
+      .pipe(take(1));
+  }
+
+  getPaymentMethods() {
+    return this.http
+      .get<any>(`${environment.apiUrl}/payment/methods`)
+      .pipe(take(1));
+  }
+
   removeUser(id) {
     return this.http.delete(`${environment.apiUrl}/users/${id}`).pipe(take(1));
   }

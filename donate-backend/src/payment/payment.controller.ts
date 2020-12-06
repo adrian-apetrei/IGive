@@ -1,9 +1,13 @@
 import {
   Body,
   Controller,
+  Get,
   HttpService,
   HttpStatus,
+  NotFoundException,
+  Param,
   Post,
+  Put,
   Req,
   Res,
   UseGuards,
@@ -38,6 +42,45 @@ export class PaymentController {
     } catch (e) {
       return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
         msg: 'Error registering payment method',
+      });
+    }
+  }
+
+  @UseGuards(AuthGuard())
+  @Put('/update/:ID')
+  async updateUserSettings(
+    @Res() res,
+    @Param('ID') methodId,
+    @Body() updatePaymentMethod: PaymentMethodDto,
+  ) {
+    const method = await this.paymentService.updatePaymentMethod(
+      methodId,
+      updatePaymentMethod,
+    );
+    if (!method) {
+      throw new NotFoundException('Payment Method does not exist!');
+    }
+    return res.status(HttpStatus.OK).json({
+      msg: 'Payment Method has been successfully updated',
+      method,
+    });
+  }
+
+  @UseGuards(AuthGuard())
+  @Get('/methods')
+  async getPaymentMethods(@Req() request, @Res() res) {
+    const user = request.user;
+    try {
+      const paymentMethods = await this.paymentService.getPaymentMethods(
+        user._id,
+      );
+      return res.status(HttpStatus.OK).json({
+        msg: 'Payment methods successfully retrieved',
+        paymentMethods,
+      });
+    } catch (e) {
+      return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
+        msg: 'This user has no payment methods',
       });
     }
   }

@@ -9,8 +9,11 @@
 </ion-header>
 
 <ion-content>
+  <ion-item  lines="none">
+    <h2 class="title" *ngIf="mode ==='EDIT'">edit paypal details</h2>
+    <h2 class="title" *ngIf="mode ==='ADD'">set up paypal</h2>
+  </ion-item>
   <div class="paypal-account" fxLayout="column" fxLayoutAlign="center center">
-    <h1 class="payment-title">PayPal Account</h1>
     <mat-form-field appearance="fill" dense class="paypal-field">
       <input
         matInput

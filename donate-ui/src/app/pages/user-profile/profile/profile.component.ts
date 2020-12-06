@@ -1,8 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { AuthService } from 'src/app/services/auth.service';
+import { StaticDataService } from 'src/app/services/static-data.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,24 +9,30 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
-  user = {
-    firstName: '',
-    lastName: '',
+  user: any = {
+    displayName: '',
     email: '',
     avatar: ''
   };
-  state$: Observable<object>;
+  password = '';
+  userData;
 
-  constructor(public activatedRoute: ActivatedRoute, public auth: AuthService) {}
+  constructor(public activatedRoute: ActivatedRoute, public auth: AuthService, public data: StaticDataService) {}
 
   ngOnInit() {
-    this.activatedRoute.paramMap
-    .pipe(map(() => window.history.state)).subscribe(data => {
-      Object.keys(this.user).forEach(key => { this.user[key] = data.user[key]; });
+    this.auth.getUserData().subscribe(user => {
+      this.user.email = user.email;
+      this.user.displayName = user.displayName;
+      this.user.avatar = user.avatar;
+      this.userData = user;
     });
   }
 
   saveChanges() {
+    this.data.updateUserData(this.user);
+    if (this.password){
+      this.user.password = this.password;
+    }
     this.auth.updateUser(this.user).subscribe();
   }
 }

@@ -8,6 +8,9 @@ import { AuthService } from "src/app/services/auth.service";
   templateUrl: "./paypal-account.component.html",
 })
 export class PaypalAccountComponent implements OnInit {
+  mode: 'ADD' | 'EDIT' = 'ADD';
+  paymentMethod;
+  firstLogin = false;
   paypalDetails: PaymentMethod = {
     userId: "",
     paymentMethod: "PAYPAL",
@@ -18,10 +21,26 @@ export class PaypalAccountComponent implements OnInit {
 
   constructor(private auth: AuthService, private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.auth.getPaymentMethods().subscribe(data => {
+      if (data?.paymentMethods.length && data.paymentMethods.some(item => item.paymentMethod === 'PAYPAL')) {
+        this.paymentMethod = data.paymentMethods.filter(item => item.paymentMethod === 'PAYPAL')[0];
+        this.mode = 'EDIT';
+        this.paypalDetails = { ...this.paymentMethod };
+      } else {
+          this.firstLogin = true;
+      }
+    });
+  }
 
   save() {
-    this.auth.addPaymentMethod(this.paypalDetails).subscribe();
-    this.router.navigateByUrl(`/tabs/home`);
+    if (this.mode === 'ADD') {
+      this.auth.addPaymentMethod(this.paypalDetails).subscribe();
+      if (this.firstLogin) {
+        this.router.navigateByUrl(`/tabs/home`);
+      }
+    } else {
+      this.auth.updatePaymentMethod(this.paymentMethod._id , this.paypalDetails).subscribe();
+    }
   }
 }

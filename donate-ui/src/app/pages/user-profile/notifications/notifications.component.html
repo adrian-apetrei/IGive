@@ -5,11 +5,14 @@
       defaultHref=""
       (click)="saveChanges()"
       text=""
+      icon="arrow-back-circle-outline"
     ></ion-back-button>
   </ion-buttons>
 </ion-header>
 <ion-content>
-  <h2 class="title">notifications</h2>
+  <ion-item lines="none">
+    <h2 class="title">notifications</h2>
+  </ion-item>
     <ion-item-group>
       <ion-item-divider>
         <ion-label>push notifications</ion-label>
@@ -17,12 +20,14 @@
       <ion-list>
         <ion-item lines="none" detail="false">
           <ion-label>Charity updates</ion-label>
-          <ion-select interface="action-sheet" [(ngModel)]="notifications.charityUpdates">
-            <ion-select-option value="enable">Enable</ion-select-option>
-            <ion-select-option value="mute">Mute</ion-select-option>
-            <ion-select-option value="mute-week">Mute for a week</ion-select-option>
-            <ion-select-option value="mute-year">Mute for a year</ion-select-option>
-          </ion-select>
+          <mat-form-field appearance="stroke" class="updates-select">
+            <select matNativeControl [(ngModel)]="notifications.charityUpdates">
+              <option value="enable" selected>Enable</option>
+              <option value="mute">Mute</option>
+              <option value="mute-week" >Mute for a week</option>
+              <option value="mute-year">Mute for a year</option>
+            </select>
+          </mat-form-field>
         </ion-item>
       </ion-list>
     </ion-item-group>

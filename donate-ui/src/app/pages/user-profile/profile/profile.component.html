@@ -3,31 +3,43 @@
     <ion-back-button
       class="back-btn"
       defaultHref=""
-      (click)="saveChanges()"
       text=""
+      icon="arrow-back-circle-outline"
     ></ion-back-button>
   </ion-buttons>
 </ion-header>
 <ion-content>
-  <h2 class="title">edit profile</h2>
-  <div fxLayout="column" fxLayoutAlign="start center" class="mt-5 mb-5">
+  <ion-item lines="none">
+    <h2 class="title">edit profile</h2>
+  </ion-item>
+  <div fxLayout="column" fxLayoutAlign="start center" class="mb-4">
     <ion-avatar>
-      <img [src]="user.avatar">
+      <img [src]="user.avatar" />
+      <button class="edit-avatar-button">edit</button>
     </ion-avatar>
-    <a class="mt-4">Change photo</a>
   </div>
-  
-  <ion-item>
-    <ion-label position="stacked">First Name</ion-label>
-    <ion-input type="string" [(ngModel)]="user.firstName"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Last Name</ion-label>
-    <ion-input type="string" [(ngModel)]="user.lastName"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Email</ion-label>
-    <ion-input #email type="email" inputmode="email" [(ngModel)]="user.email"></ion-input>
-  </ion-item>
-  
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <mat-form-field appearance="fill" dense class="register-field">
+      <mat-icon color="accent" matPrefix>person_outline</mat-icon>
+      <mat-label>Display Name</mat-label>
+      <input matInput autocomplete="off" [(ngModel)]="user.displayName" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" dense class="register-field">
+      <mat-icon color="accent" matPrefix>mail_outline</mat-icon>
+      <mat-label>Email</mat-label>
+      <input matInput autocomplete="off" [(ngModel)]="user.email" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" dense class="register-field">
+      <mat-icon color="accent" matPrefix>lock</mat-icon>
+      <mat-label>Password</mat-label>
+      <input matInput autocomplete="off" type="password" [(ngModel)]="password" />
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="saveChanges()"
+    >
+      Save
+    </button>
+  </div>
 </ion-content>

@@ -9,6 +9,7 @@ import { UserProfilePageRoutingModule } from './user-profile-routing.module';
 import { UserProfilePage } from './user-profile.page';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PaymentInfoComponent } from './payment-info/payment-info.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { ProfileComponent } from './profile/profile.component';
     IonicModule,
     UserProfilePageRoutingModule
   ],
-  declarations: [UserProfilePage, NotificationsComponent, ProfileComponent]
+  declarations: [UserProfilePage, NotificationsComponent, ProfileComponent, PaymentInfoComponent]
 })
 export class UserProfilePageModule {}

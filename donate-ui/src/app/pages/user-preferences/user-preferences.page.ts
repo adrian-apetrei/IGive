@@ -33,7 +33,7 @@ export class UserPreferencesPage implements OnInit {
     this.paymentMethod = [
       { name: "bank", icon: "bank", isSelected: false },
       { name: "paypal", icon: "paypal", isSelected: false },
-      { name: "card", icon: "dollar", isSelected: false },
+      { name: "card", icon: "credit-card", isSelected: false },
     ];
   }
 

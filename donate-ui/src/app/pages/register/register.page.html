@@ -46,6 +46,7 @@
         [(ngModel)]="credentials.password"
       />
     </mat-form-field>
+    <button mat-stroked-button color="accent" (click)="register()">Register</button>
     <a class="link mt-3" [routerLink]="['/login']" routerLinkActive="active"
       >Already have an account? Log in</a
     >

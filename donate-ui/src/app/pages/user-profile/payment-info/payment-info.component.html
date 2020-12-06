@@ -1,0 +1,47 @@
+<ion-header class="short-header">
+  <ion-buttons slot="start" class="back-btn-container">
+    <ion-back-button
+      class="back-btn"
+      defaultHref=""
+      text=""
+      icon="arrow-back-circle-outline"
+    ></ion-back-button>
+  </ion-buttons>
+</ion-header>
+<ion-content>
+  <ion-item lines="none">
+    <h2 class="title">payment information</h2>
+  </ion-item>
+  <ion-item lines="none" class="mb-3">
+    <div
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      class="payment-info-container pl-4"
+      (click)="goToBankDetails()"
+    >
+      <mat-icon>account_balance</mat-icon>
+      <div class="title">{{hasBank ? 'edit' : 'set up'}} bank details</div>
+    </div>
+  </ion-item>
+  <ion-item lines="none" class="mb-3">
+    <div
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      class="payment-info-container pl-4"
+      (click)="goToPaypalDetails()"
+    >
+      <mat-icon svgIcon="svg-paypal"></mat-icon>
+      <div class="title">{{hasPaypal ? 'edit' : 'set up'}} paypal</div>
+    </div>
+  </ion-item>
+  <ion-item lines="none" class="mb-3">
+    <div
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      class="payment-info-container pl-4"
+    >
+      <mat-icon>credit_card</mat-icon>
+      <div class="title">{{hasCard ? 'edit' : 'set up'}} card</div>
+    </div>
+  </ion-item>
+</ion-content>

@@ -23,6 +23,10 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon(
       "svg-checkmark",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/svg/checkmark.svg")
+    )
+    .addSvgIcon(
+      "svg-paypal",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/svg/paypal.svg")
     );
   }
 

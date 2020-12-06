@@ -31,12 +31,16 @@ export interface Credentials {
 export interface User {
   firstName: string;
   lastName: string;
+  displayName: string;
   email: string;
   avatar: string;
   bio: string;
   createdAt: string;
   id: string;
   firstLogin: boolean;
+  password?: string;
+  userSettings: any;
+  userPreferences: any;
 }
 
 export interface PaymentMethod {

@@ -44,6 +44,7 @@ export class AuthService {
       id: user._id,
       email: user.email,
       firstName: user.firstName,
+      displayName: user.lastName,
     };
 
     const jwt = this.jwtService.sign(data);

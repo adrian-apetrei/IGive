@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthService } from "src/app/services/auth.service";
+import { StaticDataService } from 'src/app/services/static-data.service';
 
 @Component({
   selector: "app-user-profile",
@@ -8,33 +9,31 @@ import { AuthService } from "src/app/services/auth.service";
   styleUrls: ["./user-profile.page.scss"],
 })
 export class UserProfilePage implements OnInit {
-  user;
   avatar: string;
-  fullName: string;
+  displayName: string;
   settings;
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(private auth: AuthService, private router: Router, public data: StaticDataService) {}
 
   ngOnInit() {
-    this.auth.currentUser.subscribe((data) => {
-      if (!data) return;
-      this.auth.getUserData().subscribe((user) => {
+    this.auth.getUserData().subscribe(user => {
+      this.data.updateUserData(user);
+      this.avatar = user.avatar;
+      this.displayName = user.displayName;
+    });
+    this.data.userData.subscribe(user => {
+      if (user){
         this.avatar = user.avatar;
-        this.user = user;
-        if (user.lastName || user.firstName) {
-          this.fullName = `${user.firstName} ${user.lastName}`;
-        }
-      });
+        this.displayName = user.displayName;
+      }
     });
     this.settings = [
       { name: "Notifications", icon: "", route: "notifications" },
-      { name: "Payment Information", icon: "", route: "banking-info" },
+      { name: "Payment Information", icon: "", route: "payment-info" },
     ];
   }
 
   goTo(route) {
-    this.router.navigateByUrl(`/profile/${route}`, {
-      state: { user: this.user },
-    });
+    this.router.navigateByUrl(`tabs/profile/${route}`);
   }
 
   logout() {

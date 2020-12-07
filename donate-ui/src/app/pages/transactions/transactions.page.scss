@@ -1,0 +1,10 @@
+@mixin app-transaction-page($theme) {
+    $primary: map-get($theme, primary);
+    
+    .donated-amount {
+        color: mat-color($primary, default);
+    }
+    .charity-donation {
+        cursor: pointer;
+    }
+}

@@ -13,6 +13,10 @@ export class DonationService {
     return this.http.post(`${environment.apiUrl}/donation`, data).pipe(take(1));
   }
 
+  getDonationMethods(charityId) {
+    return this.http.get(`${environment.apiUrl}/donation/methods/${charityId}`).pipe(take(1));
+  }
+
   addPayment(data) {
     return this.http
       .post(`${environment.apiUrl}/payment/pay`, data)

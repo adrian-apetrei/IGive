@@ -49,6 +49,10 @@ const routes: Routes = [
         (m) => m.UserProfilePageModule
       ),
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'transactions',
+    loadChildren: () => import('./pages/transactions/transactions.module').then( m => m.TransactionsPageModule)
   }
 ];
 

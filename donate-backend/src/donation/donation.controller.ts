@@ -1,7 +1,9 @@
 import {
   Body,
   Controller,
+  Get,
   HttpStatus,
+  Param,
   Post,
   Req,
   Res,
@@ -35,6 +37,27 @@ export class DonationController {
     } catch (e) {
       return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
         msg: 'Error registering donation method',
+      });
+    }
+  }
+
+  @UseGuards(AuthGuard())
+  @Get('/methods/:charityId')
+  async getPaymentMethods(@Req() request, @Res() res, @Param('charityId') charityId) {
+    const user = request.user;
+    try {
+      const donationMethods = await this.donationService.getDonationMethods(
+        user._id,
+        charityId,
+      );
+      return res.status(HttpStatus.OK).json({
+        msg: 'Donations methods successfully retrieved',
+        donationMethods,
+      });
+    } catch (e) {
+      return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
+        msg: 'This user has no donation methods',
+        donationMethods: [],
       });
     }
   }

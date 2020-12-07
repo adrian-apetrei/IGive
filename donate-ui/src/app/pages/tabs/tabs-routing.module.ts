@@ -67,6 +67,14 @@ const routes: Routes = [
           ),
         canActivate: [AuthGuard],
       },
+      {
+        path: "transactions",
+        loadChildren: () =>
+          import("../transactions/transactions.module").then(
+            (m) => m.TransactionsPageModule
+          ),
+        canActivate: [AuthGuard],
+      },
     ],
   },
 ];

@@ -17,4 +17,10 @@ export class DonationService {
     const newDonationMethod = await new this.DonationModel(createDonationMethod);
     return newDonationMethod.save();
   }
+
+  // GET Donation method
+  async getDonationMethods(userID, charityID): Promise<DonationMethod[]> {
+    const donationMethod = await this.DonationModel.find({ charityId: charityID, userId: userID }).exec();
+    return donationMethod;
+  }
 }

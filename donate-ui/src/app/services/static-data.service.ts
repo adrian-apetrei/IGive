@@ -38,86 +38,96 @@ export class StaticDataService {
   }
 
   getData(id) {
-    return this.data[id];
+    return this.data[id] || this.storage.get(id);
   }
 
   getTransactions() {
     return [{
       "id": 1,
-      "charity": "COVID-19 Solidarity",
-      "transactionType": "United States",
+      "charityName": "COVID-19 Solidarity Response Fund (WHO)",
+      "charityId": "5fba3a4ebe854b1ca8f9f9b1",
+      "transactionType": "Purchase",
       "transactionAmount": "$82.32",
       "donatedAmount": "$9.15",
       "date": "11/19/2020",
       "currency": "USD"
     }, {
       "id": 2,
-      "charity": "COVID-19 Solidarity",
-      "transactionType": "United States",
+      "charityName": "COVID-19 Solidarity Response Fund (WHO)",
+      "charityId": "5fba3a4ebe854b1ca8f9f9b1",
+      "transactionType": "Purchase",
       "transactionAmount": "$83.14",
       "donatedAmount": "$2.04",
       "date": "6/16/2020",
       "currency": "USD"
     }, {
       "id": 3,
-      "charity": "COVID-19 Solidarity",
-      "transactionType": "United States",
+      "charityName": "COVID-19 Solidarity Response Fund (WHO)",
+      "charityId": "5fba3a4ebe854b1ca8f9f9b1",
+      "transactionType": "Purchase",
       "transactionAmount": "$137.31",
       "donatedAmount": "$9.06",
       "date": "8/30/2020",
       "currency": "USD"
     }, {
       "id": 4,
-      "charity": "COVID-19 Solidarity",
-      "transactionType": "United States",
+      "charityName": "COVID-19 Solidarity Response Fund (WHO)",
+      "charityId": "5fba3a4ebe854b1ca8f9f9b1",
+      "transactionType": "Purchase",
       "transactionAmount": "$34.15",
       "donatedAmount": "$3.81",
       "date": "3/25/2020",
       "currency": "USD"
     }, {
       "id": 5,
-      "charity": "COVID-19 Solidarity",
-      "transactionType": "United States",
+      "charityName": "COVID-19 Solidarity Response Fund (WHO)",
+      "charityId": "5fba3a4ebe854b1ca8f9f9b1",
+      "transactionType": "Purchase",
       "transactionAmount": "$21.98",
       "donatedAmount": "$9.81",
       "date": "3/23/2020",
       "currency": "USD"
     }, {
       "id": 6,
-      "charity": "UNESCO World Heritage",
-      "transactionType": "United States",
+      "charityName": "UNESCO World Heritage Center",
+      "charityId": "5fba3a4ebe854b1ca8f9f9ac",
+      "transactionType": "Purchase",
       "transactionAmount": "$80.46",
       "donatedAmount": "$1.57",
       "date": "3/9/2020",
       "currency": "USD"
     }, {
       "id": 7,
-      "charity": "UNESCO World Heritage",
-      "transactionType": "United States",
+      "charityName": "UNESCO World Heritage Center",
+      "charityId": "5fba3a4ebe854b1ca8f9f9ac",
+      "transactionType": "Purchase",
       "transactionAmount": "$80.29",
       "donatedAmount": "$5.36",
       "date": "8/9/2020",
       "currency": "USD"
     }, {
       "id": 8,
-      "charity": "UNESCO World Heritage",
-      "transactionType": "United States",
+      "charityName": "UNESCO World Heritage Center",
+      "charityId": "5fba3a4ebe854b1ca8f9f9ac",
+      "transactionType": "Purchase",
       "transactionAmount": "$71.13",
       "donatedAmount": "$2.17",
       "date": "6/9/2020",
       "currency": "USD"
     }, {
       "id": 9,
-      "charity": "UNESCO World Heritage",
-      "transactionType": "United States",
+      "charityName": "UNESCO World Heritage Center",
+      "charityId": "5fba3a4ebe854b1ca8f9f9ac",
+      "transactionType": "Purchase",
       "transactionAmount": "$27.49",
       "donatedAmount": "$0.61",
       "date": "3/5/2020",
       "currency": "USD"
     }, {
       "id": 10,
-      "charity": "UNESCO World Heritage",
-      "transactionType": "United States",
+      "charityName": "UNESCO World Heritage Center",
+      "charityId": "5fba3a4ebe854b1ca8f9f9ac",
+      "transactionType": "Purchase",
       "transactionAmount": "$151.11",
       "donatedAmount": "$1.78",
       "date": "11/7/2020",

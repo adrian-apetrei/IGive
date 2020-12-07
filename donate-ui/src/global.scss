@@ -47,6 +47,7 @@
 @import "./app/pages/register/register.theme";
 @import "./app/pages/user-profile/user-profile.page.scss";
 @import "./app/pages/user-profile/profile/profile.component.scss";
+@import "./app/pages/transactions/transactions.page.scss";
 
 :root {
   --ion-background-color: white !important;
@@ -131,5 +132,6 @@ $custom-typography: mat-typography-config(
   @include app-topic-list($theme);
   @include app-user-profile-page($theme);
   @include app-user-profile($theme);
+  @include app-transaction-page($theme);
 }
 @include app-theme($uxg-light-theme);

@@ -14,7 +14,13 @@
     <h1 class="title">{{ topic }}</h1>
     <mat-form-field appearance="fill" class="donation-search">
       <mat-icon color="accent" matPrefix>search</mat-icon>
-      <input matInput placeholder="search" autocomplete="off" />
+
+      <input
+        matInput
+        placeholder="search"
+        autocomplete="off"
+        (input)="term$.next($event.target.value)"
+      />
     </mat-form-field>
     <ng-container *ngFor="let charity of charities">
       <ion-card class="charity-card" (click)="goToCharityDetails(charity)">

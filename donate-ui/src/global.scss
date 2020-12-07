@@ -48,6 +48,7 @@
 @import "./app/pages/user-profile/user-profile.page.scss";
 @import "./app/pages/user-profile/profile/profile.component.scss";
 @import "./app/pages/transactions/transactions.page.scss";
+@import "./app/pages/tabs/tabs.theme";
 
 :root {
   --ion-background-color: white !important;
@@ -71,7 +72,7 @@ ion-header::after {
   .subtitle {
     font-size: 14px;
   }
-  
+
   &.large {
     background: url("/assets/svg/xtallheader.svg");
     height: 40%;
@@ -133,5 +134,6 @@ $custom-typography: mat-typography-config(
   @include app-user-profile-page($theme);
   @include app-user-profile($theme);
   @include app-transaction-page($theme);
+  @include app-tabs($theme);
 }
 @include app-theme($uxg-light-theme);

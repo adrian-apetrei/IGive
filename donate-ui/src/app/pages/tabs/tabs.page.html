@@ -1,33 +1,52 @@
 <ion-content>
   <ion-tabs #tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="home">
-        <ion-icon name="home-outline"></ion-icon>
+    <ion-tab-bar slot="bottom" class="tab-bar" selectedTab="browse">
+      <ion-tab-button
+        tab="home"
+        class="tab-button"
+        (click)="openTab('home', $event)"
+      >
+        <i class="ri-home-2-line tab-icon"></i>
       </ion-tab-button>
 
-      <ion-tab-button tab="browse" (click)="openTab('browse', $event)">
-        <ion-icon name="hand-right-outline"></ion-icon>
+      <ion-tab-button
+        selectedTab
+        tab="browse"
+        (click)="openTab('browse', $event)"
+        class="tab-button"
+      >
+        <i class="ri-hand-heart-line tab-icon"></i>
       </ion-tab-button>
 
       <ion-tab-button> </ion-tab-button>
 
-      <ion-tab-button tab="transactions">
-        <ion-icon name="cash-outline"></ion-icon>
+      <ion-tab-button
+        tab="transactions"
+        class="tab-button"
+        (click)="openTab('transactions', $event)"
+      >
+        <i class="ri-money-dollar-box-line tab-icon"></i>
       </ion-tab-button>
 
-      <ion-tab-button tab="profile">
-        <ion-icon name="person-circle-outline"></ion-icon>
+      <ion-tab-button
+        tab="profile"
+        class="tab-button"
+        (click)="openTab('profile', $event)"
+      >
+        <i class="ri-user-3-line tab-icon"></i>
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
 </ion-content>
 <ion-fab
+  class="add-button"
   vertical="bottom"
   horizontal="center"
   slot="fixed"
+  [ngClass]="{'selected': isActive}"
   (click)="goToRegisterDonation()"
 >
   <ion-fab-button>
-    <ion-icon name="add"></ion-icon>
+    <i class="ri-add-circle-line icon"></i>
   </ion-fab-button>
 </ion-fab>

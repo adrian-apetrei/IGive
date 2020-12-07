@@ -1,0 +1,28 @@
+@mixin app-tabs($theme) {
+  $primary: map-get($theme, primary);
+
+  .tab-button {
+    --color: black;
+    .tab-icon {
+      font-size: 32px;
+    }
+  }
+  .add-button {
+    ion-fab-button {
+      --background: white !important;
+      --box-shadow: none;
+      --color: black;
+    }
+    &.selected {
+      ion-fab-button {
+        --color: #26d07c;
+      }
+    }
+    height: 60px;
+    border-radius: 40%;
+
+    .icon {
+      font-size: 48px;
+    }
+  }
+}

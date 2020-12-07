@@ -5,7 +5,12 @@
 <div class="content add-donation-container">
   <mat-form-field appearance="fill" class="donation-search">
     <mat-icon color="accent" matPrefix>search</mat-icon>
-    <input matInput placeholder="search" autocomplete="off" />
+    <input
+      matInput
+      placeholder="search"
+      autocomplete="off"
+      (input)="term$.next($event.target.value)"
+    />
   </mat-form-field>
 
   <ng-container *ngFor="let item of data | keyvalue">

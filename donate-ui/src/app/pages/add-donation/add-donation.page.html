@@ -2,21 +2,39 @@
   <h2 class="title">Add a Donation</h2>
   <p class="subtitle">Select the cause you want to support</p>
 </ion-header>
-<div class="content add-donation-container">
-  <mat-form-field appearance="fill" class="donation-search">
-    <mat-icon color="accent" matPrefix>search</mat-icon>
-    <input
-      matInput
-      placeholder="search"
-      autocomplete="off"
-      (input)="term$.next($event.target.value)"
-    />
-  </mat-form-field>
 
-  <ng-container *ngFor="let item of data | keyvalue">
-    <app-topic-card
-      [topic]="item.key"
-      [charities]="item.value"
-    ></app-topic-card>
-  </ng-container>
-</div>
+<ion-content>
+  <div class="content add-donation-container">
+    <mat-form-field appearance="fill" class="donation-search">
+      <mat-icon color="accent" matPrefix>search</mat-icon>
+      <input
+        matInput
+        placeholder="search"
+        autocomplete="off"
+        (input)="term$.next($event.target.value)"
+      />
+    </mat-form-field>
+
+    <button mat-icon-button (click)="presentModal()" class="filter-button">
+      <i class="ri-filter-2-line"></i>
+    </button>
+
+    <button
+      *ngIf="applyFilters"
+      mat-stroked-button
+      dense
+      (click)="clearFilters()"
+      color="primary"
+      class="clear-filters-button"
+    >
+      Clear filters
+    </button>
+
+    <ng-container *ngFor="let item of data | keyvalue">
+      <app-topic-card
+        [topic]="item.key"
+        [charities]="item.value"
+      ></app-topic-card>
+    </ng-container>
+  </div>
+</ion-content>

@@ -49,6 +49,7 @@
 @import "./app/pages/user-profile/profile/profile.component.scss";
 @import "./app/pages/transactions/transactions.page.scss";
 @import "./app/pages/tabs/tabs.theme";
+@import "./app/pages/filters/filters.theme";
 
 :root {
   --ion-background-color: white !important;
@@ -135,5 +136,6 @@ $custom-typography: mat-typography-config(
   @include app-user-profile($theme);
   @include app-transaction-page($theme);
   @include app-tabs($theme);
+  @include app-filters($theme);
 }
 @include app-theme($uxg-light-theme);

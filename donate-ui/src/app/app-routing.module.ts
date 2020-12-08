@@ -53,7 +53,11 @@ const routes: Routes = [
   {
     path: 'transactions',
     loadChildren: () => import('./pages/transactions/transactions.module').then( m => m.TransactionsPageModule)
+  },  {
+    path: 'filters',
+    loadChildren: () => import('./pages/filters/filters.module').then( m => m.FiltersPageModule)
   }
+
 ];
 
 @NgModule({

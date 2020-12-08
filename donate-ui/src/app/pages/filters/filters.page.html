@@ -1,0 +1,28 @@
+<ion-content>
+  <div fxFlex fxLayout="column" class="filters-container">
+    <button mat-icon-button (click)="dismiss()" class="close-button">
+      <i class="ri-close-line"></i>
+    </button>
+    <h3 class="title">filter by</h3>
+    <h3 class="mb-1">geographic area</h3>
+    <mat-form-field appearance="fill" class="filter-search">
+      <input
+        matInput
+        placeholder="search by city or country"
+        autocomplete="off"
+        [(ngModel)]="searchTerm"
+      />
+    </mat-form-field>
+
+    <h3 class="mt-1 mb-1">topic</h3>
+    <div class="mb-2" *ngFor="let topic of topics">
+      <mat-checkbox
+        (change)="toggle($event)"
+        color="primary"
+        [aria-label]="topic.name"
+      >
+        {{topic.name.toLowerCase()}}
+      </mat-checkbox>
+    </div>
+  </div>
+</ion-content>

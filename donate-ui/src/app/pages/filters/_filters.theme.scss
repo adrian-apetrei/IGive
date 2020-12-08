@@ -1,0 +1,22 @@
+@mixin app-filters($theme) {
+  .filters-container {
+    padding: $uxg-spacing-4 $uxg-spacing-3;
+
+    .close-button {
+      margin-left: auto;
+      font-size: 18px;
+    }
+
+    .title {
+      margin-top: -18px;
+    }
+
+    .filter-search {
+      width: 100%;
+    }
+
+    .mat-checkbox-layout {
+      white-space: initial;
+    }
+  }
+}

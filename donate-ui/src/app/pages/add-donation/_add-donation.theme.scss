@@ -6,11 +6,16 @@
   }
 
   .donation-search {
-    width: 100%;
+    width: 85%;
+  }
 
-    .mat-form-field-flex {
-      background: white !important;
-    }
+  .filter-button {
+    font-size: 24px;
+  }
+
+  .clear-filters-button {
+    margin-top: -16px !important;
+    margin-bottom: $uxg-spacing-2 !important;
   }
 
   @include app-topic-card($theme);

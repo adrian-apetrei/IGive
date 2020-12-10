@@ -21,6 +21,7 @@ export class UsersController {
 
   @Post()
   async addUser(@Res() res, @Body() createUserDto: UserDto) {
+    console.log('\nHello-World-User: ');
     try {
       const user = await this.userService.addUser(createUserDto);
       return res.status(HttpStatus.OK).json({

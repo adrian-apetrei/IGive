@@ -24,6 +24,43 @@
     >
       Support this cause
     </button>
+    <div
+      *ngIf="hasDonationMethod"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+    >
+      <div class="uxg-h3 mb-0 donated-amount">${{donatedAmount}}</div>
+      <div class="uxg-body-2 mb-4">donated</div>
+      <button
+        mat-stroked-button
+        dense
+        color="primary"
+        class="mb-2"
+        (click)="goToDonationMethod()"
+      >
+        Edit Donation Settings
+      </button>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <button
+          mat-stroked-button
+          dense
+          color="primary"
+          class="mb-2 mr-3"
+          (click)="goToTransactionsList()"
+        >
+          View Transactions
+        </button>
+        <button
+          mat-stroked-button
+          dense
+          color="primary"
+          class="mb-2"
+          (click)="goToTaxForms()"
+        >
+          Tax Form
+        </button>
+      </div>
+    </div>
   </div>
 
   <div class="charity-effort">

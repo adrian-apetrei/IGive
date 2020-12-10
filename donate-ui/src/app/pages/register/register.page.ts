@@ -14,7 +14,7 @@ export class RegisterPage implements OnInit {
     password: "",
     firstName: "",
     lastName: "",
-    displayName: ""
+    displayName: "",
   };
   constructor(
     private auth: AuthService,
@@ -28,13 +28,13 @@ export class RegisterPage implements OnInit {
   async register() {
     const loading = await this.loadingCtrl.create();
     loading.present();
-    this.credentials.displayName = `${this.credentials.firstName} ${this.credentials.lastName}`; 
+    this.credentials.displayName = `${this.credentials.firstName} ${this.credentials.lastName}`;
     this.auth
       .register(this.credentials)
       .pipe(finalize(() => loading.dismiss()))
       .subscribe(
         (res) => {
-          this.router.navigateByUrl("/user-preferences");
+          this.router.navigateByUrl("/user-preferences/welcome");
         },
         async (err) => {
           const alert = await this.alertCtrl.create({

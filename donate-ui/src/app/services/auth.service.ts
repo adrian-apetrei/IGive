@@ -18,6 +18,7 @@ export const TOKEN = "jwt-token";
 export class AuthService {
   public user: Observable<any>;
   private userData = new BehaviorSubject(null);
+  private token = new BehaviorSubject(null);
   public currentUser: Observable<User>;
 
   constructor(
@@ -40,6 +41,7 @@ export class AuthService {
         if (token) {
           const decoded = helper.decodeToken(token);
           this.userData.next(decoded);
+          this.token.next(token);
           this.currentUser = this.userData.asObservable();
           return true;
         } else {
@@ -67,12 +69,18 @@ export class AuthService {
   }
 
   register(credentials: Credentials) {
-    return this.http.post(`${environment.apiUrl}/users`, {...credentials, firstLogin: true}).pipe(
-      take(1),
-      switchMap((res) => {
-        return this.login(credentials);
-      })
-    );
+    return this.http
+      .post(`${environment.apiUrl}/users`, { ...credentials, firstLogin: true })
+      .pipe(
+        take(1),
+        switchMap((res) => {
+          return this.login(credentials);
+        })
+      );
+  }
+
+  getToken() {
+    return this.token.getValue();
   }
 
   getUserToken() {

@@ -89,7 +89,6 @@ export class PaymentController {
   @Post('/pay')
   async makePayment(@Req() request, @Res() res, @Body() payment: PaymentDto) {
     const user = request.user;
-    console.log('\nUser: ', user);
     try {
       // 1st Step: get token :)
       const token = await this.getToken();

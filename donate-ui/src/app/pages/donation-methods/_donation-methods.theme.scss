@@ -1,6 +1,7 @@
 @import "./determined/determined.theme";
 @import "./round-up/round-up.theme";
 @import "./incognito//incognito.theme";
+@import "./donation-notification/donation-notification.theme";
 
 @mixin app-donation-method($theme) {
   .donation-methods-container {
@@ -40,4 +41,5 @@
   @include app-determined($theme);
   @include app-round-up($theme);
   @include app-incognito($theme);
+  @include app-notification($theme);
 }

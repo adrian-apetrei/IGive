@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
+import { NavigationEnd, Router } from "@angular/router";
 import { NavController } from "@ionic/angular";
 import { IonTabs } from "@ionic/angular/directives/navigation/ion-tabs";
 
@@ -11,18 +11,15 @@ export class TabsPage implements OnInit {
   @ViewChild("tabs") tabs: IonTabs;
   isActive = false;
 
-  constructor(
-    private router: Router,
-    private navCtrl: NavController,
-    private route: ActivatedRoute
-  ) {}
+  constructor(private router: Router, private navCtrl: NavController) {}
 
   ngOnInit() {
     this.router.events.subscribe((event: NavigationEnd) => {
       if (event instanceof NavigationEnd) {
         if (
           event.url.includes("charity-details") ||
-          event.url.includes("donation-method")
+          event.url.includes("donation-method") ||
+          event.url.includes("register-donation")
         ) {
           this.isActive = true;
         } else {

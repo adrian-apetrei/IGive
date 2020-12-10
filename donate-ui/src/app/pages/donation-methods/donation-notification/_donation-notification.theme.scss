@@ -1,4 +1,4 @@
-@mixin app-round-up($theme) {
+@mixin app-notification($theme) {
   .round-up-container {
     padding: 12px;
 
@@ -20,6 +20,10 @@
           background: white !important;
         }
       }
+    }
+
+    .done-container {
+      text-align: center;
     }
   }
 }

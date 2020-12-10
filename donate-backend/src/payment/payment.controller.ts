@@ -126,6 +126,7 @@ export class PaymentController {
         .toPromise();
       return res.status(HttpStatus.OK).json(paymentData.data);
     } catch (e) {
+      console.log('\ne: ', e);
       return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
         msg: 'Error making a new payment',
       });

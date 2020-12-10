@@ -12,7 +12,7 @@ import { StaticDataService } from './static-data.service';
       { name: 'Topic', schema: TopicSchema },
       { name: 'Charity', schema: CharitySchema },
     ]),
-    // PassportModule.register({ defaultStrategy: 'jwt', session: false }),
+    PassportModule.register({ defaultStrategy: 'jwt', session: false }),
   ],
   providers: [StaticDataService],
   controllers: [StaticDataController],

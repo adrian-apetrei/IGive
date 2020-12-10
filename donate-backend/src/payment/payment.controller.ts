@@ -66,7 +66,7 @@ export class PaymentController {
     });
   }
 
-  @UseGuards(AuthGuard())
+  // @UseGuards(AuthGuard())
   @Get('/methods')
   async getPaymentMethods(@Req() request, @Res() res) {
     const user = request.user;
@@ -85,7 +85,7 @@ export class PaymentController {
     }
   }
 
-  @UseGuards(AuthGuard())
+  // @UseGuards(AuthGuard())
   @Post('/pay')
   async makePayment(@Req() request, @Res() res, @Body() payment: PaymentDto) {
     const user = request.user;

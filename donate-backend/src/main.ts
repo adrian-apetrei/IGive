@@ -6,13 +6,7 @@ import { ConfigReader } from 'neconfig';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     bodyParser: false,
-    cors: {
-      origin: '*',
-      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-      preflightContinue: false,
-      optionsSuccessStatus: 204,
-      credentials: true,
-    },
+    cors: true,
   });
 
   app.enableCors();

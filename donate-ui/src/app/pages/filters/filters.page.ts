@@ -36,9 +36,9 @@ export class FiltersPage implements OnInit {
   toggle(e) {
     const value = e.source.ariaLabel;
     if (e.checked) {
-      this.selectedTopics.push(value);
+      this.selectedTopics.push(value.toLocaleLowerCase());
     } else {
-      const index = this.selectedTopics.indexOf(value);
+      const index = this.selectedTopics.indexOf(value.toLocaleLowerCase());
       if (index > -1) {
         this.selectedTopics.splice(index, 1);
       }

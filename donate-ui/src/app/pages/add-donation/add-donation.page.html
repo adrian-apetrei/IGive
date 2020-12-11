@@ -11,6 +11,7 @@
         matInput
         placeholder="search"
         autocomplete="off"
+        [(ngModel)]="filters.searchByName"
         (input)="term$.next($event.target.value)"
       />
     </mat-form-field>

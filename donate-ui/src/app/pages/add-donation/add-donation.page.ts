@@ -14,6 +14,8 @@ export class AddDonationPage implements OnInit {
   data;
   term$ = new ReplaySubject<string>(1);
   applyFilters = false;
+  filteredCharities;
+  filters = { searchByName: "", searchByCountry: "", searchByTopic: [] };
 
   constructor(
     private staticDataService: StaticDataService,
@@ -23,16 +25,15 @@ export class AddDonationPage implements OnInit {
   ngOnInit() {
     this.staticDataService.getCharities().subscribe((charities) => {
       this.charities = charities;
+      this.filteredCharities = charities;
       this.mapData(this.charities);
     });
 
     this.term$
       .pipe(debounceTime(400), distinctUntilChanged())
       .subscribe((query) => {
-        const filteredCharities = this.charities.filter((charity) =>
-          charity.name.toLocaleLowerCase().includes(query.toLocaleLowerCase())
-        );
-        this.mapData(filteredCharities);
+        this.filters = { ...this.filters, searchByName: query };
+        this.applyFiltersMethod();
       });
   }
 
@@ -56,29 +57,47 @@ export class AddDonationPage implements OnInit {
     });
     await modal.present();
     const { data } = await modal.onWillDismiss();
-    let filteredCharities = [...this.charities];
     if (data.searchTerm) {
-      filteredCharities = filteredCharities.filter((charity) =>
-        charity.country
-          .toLocaleLowerCase()
-          .includes(data.searchTerm.toLocaleLowerCase())
-      );
-    }
-    if (data.selectedTopics && data.selectedTopics.length !== 0) {
-      filteredCharities = filteredCharities.filter((charity) =>
-        data.selectedTopics.includes(charity.topic)
-      );
-    }
-
-    if (filteredCharities.length < this.charities.length) {
       this.applyFilters = true;
+      this.filters = { ...this.filters, searchByCountry: data.searchTerm };
     }
-
-    this.mapData(filteredCharities);
+    if (data.selectedTopics) {
+      this.applyFilters = true;
+      this.filters = { ...this.filters, searchByTopic: data.selectedTopics };
+      this.applyFiltersMethod();
+    }
   }
 
   clearFilters() {
+    this.filters = { searchByName: "", searchByCountry: "", searchByTopic: [] };
     this.applyFilters = false;
-    this.mapData(this.charities);
+    this.applyFiltersMethod();
+  }
+
+  applyFiltersMethod() {
+    this.filteredCharities = [...this.charities];
+    // search by name
+    if (this.filters.searchByName) {
+      this.filteredCharities = this.filteredCharities.filter((charity) =>
+        charity.name
+          .toLocaleLowerCase()
+          .includes(this.filters.searchByName.toLocaleLowerCase())
+      );
+    }
+    // search by country
+    if (this.filters.searchByCountry) {
+      this.filteredCharities = this.filteredCharities.filter((charity) =>
+        charity.country
+          .toLocaleLowerCase()
+          .includes(this.filters.searchByCountry.toLocaleLowerCase())
+      );
+    }
+    // search by topic
+    if (this.filters.searchByTopic && this.filters.searchByTopic.length !== 0) {
+      this.filteredCharities = this.filteredCharities.filter((charity) =>
+        this.filters.searchByTopic.includes(charity.topic.toLocaleLowerCase())
+      );
+    }
+    this.mapData(this.filteredCharities);
   }
 }

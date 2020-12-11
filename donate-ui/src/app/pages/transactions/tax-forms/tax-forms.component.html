@@ -1,14 +1,30 @@
 <ion-header class="short-header">
   <ion-buttons slot="start" class="back-btn-container">
     <ion-back-button
-      class="back-btn"
       defaultHref=""
+      class="back-btn"
       text=""
       icon="arrow-back-circle-outline"
+      (click)="back()"
     ></ion-back-button>
   </ion-buttons>
 </ion-header>
 
 <ion-content>
-  <p>tax-forms works!</p>
+  <ion-item lines="none">
+    <h2 class="mt-3">Tax Forms</h2>
+  </ion-item>
+  <ion-item lines="none">
+    <p class="subtitle">{{ charity.taxFormDesc }}</p>
+  </ion-item>
+  <div
+    *ngIf="!taxForms.length"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    class="no-tax-form"
+  >
+    <i class="ri-eye-close-line"></i>
+    <p>There's no forms to see here!</p>
+    <p>Try checking again at the end of the calendar year</p>
+  </div>
 </ion-content>

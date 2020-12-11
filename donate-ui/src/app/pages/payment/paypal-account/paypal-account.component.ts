@@ -48,10 +48,11 @@ export class PaypalAccountComponent implements OnInit {
     if (this.mode === "ADD") {
       this.auth.addPaymentMethod(this.paypalDetails).subscribe();
       if (this.firstLogin) {
-        this.router.navigateByUrl(`/tabs/home`);
+        this.router.navigateByUrl(`/app-tour`);
         this.auth.updateUser({ firstLogin: false }).subscribe();
+      } else {
+        this.router.navigateByUrl(`/tabs/profile`);
       }
-      this.router.navigateByUrl(`/tabs/profile`);
       this.notifications.show("Payment method successfully added");
     } else {
       this.auth

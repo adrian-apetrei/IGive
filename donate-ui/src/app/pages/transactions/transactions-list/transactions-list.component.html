@@ -1,14 +1,35 @@
 <ion-header class="short-header">
   <ion-buttons slot="start" class="back-btn-container">
     <ion-back-button
-      class="back-btn"
       defaultHref=""
+      class="back-btn"
       text=""
       icon="arrow-back-circle-outline"
+      (click)="back()"
     ></ion-back-button>
   </ion-buttons>
 </ion-header>
 
 <ion-content>
-  <p>transactions-list works!</p>
+  <ion-item lines="none">
+    <h2 class="mt-3">Transactions</h2>
+  </ion-item>
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <div class="uxg-h3 mb-0 donated-amount">${{ totalDonatedAmount }}</div>
+    <div class="uxg-body-2 mb-4">total donated</div>
+  </div>
+  <div *ngFor="let transaction of transactions">
+    <ion-item>
+      <div fxLayout="column" class="pb1 pt1">
+        <div class="uxg-subtitle-2">{{ transaction.charityName }}</div>
+        <div class="uxg-body-2">
+          {{ transaction.transactionType }}: {{ transaction.transactionAmount }}
+        </div>
+        <div class="uxg-body-2">{{ transaction.date }}</div>
+      </div>
+      <div class="uxg-h6 ml-4 donated-amount">
+        {{ transaction.donatedAmount }}
+      </div>
+    </ion-item>
+  </div>
 </ion-content>

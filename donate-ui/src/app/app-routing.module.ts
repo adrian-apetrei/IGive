@@ -56,6 +56,10 @@ const routes: Routes = [
   },  {
     path: 'filters',
     loadChildren: () => import('./pages/filters/filters.module').then( m => m.FiltersPageModule)
+  },
+  {
+    path: 'app-tour',
+    loadChildren: () => import('./pages/app-tour/app-tour.module').then( m => m.AppTourPageModule)
   }
 
 ];

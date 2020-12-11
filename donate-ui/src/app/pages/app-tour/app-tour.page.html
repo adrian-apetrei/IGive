@@ -1,0 +1,8 @@
+<ion-content>
+  <ion-slides pager="false" [options]="slideOpts">
+    <ion-slide *ngFor="let step of apptour">
+      <div class="end-tour" (click)="skipTour()"></div>
+      <img [alt]="'Step' + step" [src]="'../../../assets/png/'+step+'.png'" />
+    </ion-slide>
+  </ion-slides>
+</ion-content>

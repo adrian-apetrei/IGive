@@ -1,9 +1,10 @@
 @mixin app-welcome-page($theme) {
   .welcome {
-    padding: 0 $uxg-spacing-2;
+    padding: 0 $uxg-spacing-3;
 
     .title {
       text-align: center;
+      margin-top: $uxg-spacing-3;
     }
 
     .subtitle {
@@ -14,19 +15,21 @@
     }
 
     .description {
-      margin-top: $uxg-spacing-2;
+      margin-bottom: $uxg-spacing-3;
+
+      .ri-checkbox-circle-line {
+        font-size: 32px;
+        color: #26d07c;
+        margin-right: 8px;
+      }
+
+      .welcome-description {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 0;
+      }
     }
 
-    .welcome-description {
-      font-size: 18px;
-      line-height: 24px;
-    }
-
-    .checkmark {
-      width: 24px;
-      height: 24px;
-      margin-right: $uxg-spacing-3;
-    }
     .start-btn {
       position: absolute;
       bottom: 5rem;

@@ -64,7 +64,7 @@ ion-header::after {
   height: 16%;
   background-repeat: no-repeat;
   padding: $uxg-spacing-4 $uxg-spacing-3 $uxg-spacing-3;
-  background-size: contain;
+  background-size: 100% 100%;
 
   .title {
     margin-bottom: 0;
@@ -78,7 +78,7 @@ ion-header::after {
     background: url("/assets/svg/xtallheader.svg");
     height: 40%;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
   }
 }
 
@@ -94,7 +94,7 @@ span,
   background: url("/assets/svg/shortheader.svg");
   background-repeat: no-repeat;
   padding: $uxg-spacing-2 $uxg-spacing-2 0;
-  background-size: contain;
+  background-size: 100% 100%;
   min-height: 9%;
 
   .back-btn-container {

@@ -22,7 +22,9 @@ export class CharityDetailsPage implements OnInit {
     private dataService: StaticDataService
   ) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  ionViewWillEnter() {
     if (this.route.snapshot.data["charity"]) {
       this.charity = this.route.snapshot.data["charity"];
     }

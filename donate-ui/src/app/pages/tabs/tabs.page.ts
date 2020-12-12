@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, OnChanges, OnInit, ViewChild } from "@angular/core";
 import { NavigationEnd, Router } from "@angular/router";
 import { NavController } from "@ionic/angular";
 import { IonTabs } from "@ionic/angular/directives/navigation/ion-tabs";
+import { Plugins, KeyboardInfo, Capacitor } from "@capacitor/core";
 
 @Component({
   selector: "app-tabs",
@@ -10,8 +11,21 @@ import { IonTabs } from "@ionic/angular/directives/navigation/ion-tabs";
 export class TabsPage implements OnInit {
   @ViewChild("tabs") tabs: IonTabs;
   isActive = false;
+  hideFabButton = false;
+  keyboard;
 
-  constructor(private router: Router, private navCtrl: NavController) {}
+  constructor(private router: Router, private navCtrl: NavController) {
+    if (Capacitor.platform !== "web") {
+      this.keyboard = Plugins.Keyboard;
+
+      this.keyboard.addListener("keyboardWillShow", (info: KeyboardInfo) => {
+        this.hideFabButton = true;
+      });
+      this.keyboard.addListener("keyboardWillHide", () => {
+        this.hideFabButton = false;
+      });
+    }
+  }
 
   ngOnInit() {
     this.router.events.subscribe((event: NavigationEnd) => {

@@ -42,8 +42,7 @@
   class="add-button"
   vertical="bottom"
   horizontal="center"
-  slot="fixed"
-  [ngClass]="{'selected': isActive}"
+  [ngClass]="{'selected': isActive,  'hide': hideFabButton}"
   (click)="goToRegisterDonation()"
 >
   <ion-fab-button>

@@ -1,6 +1,9 @@
 @mixin app-tabs($theme) {
   $primary: map-get($theme, primary);
 
+  .tab-container {
+    position: absolute;
+  }
   .tab-button {
     --color: black;
     .tab-icon {
@@ -17,6 +20,9 @@
       ion-fab-button {
         --color: #26d07c;
       }
+    }
+    &.hide {
+      display: none !important;
     }
     height: 60px;
     border-radius: 40%;

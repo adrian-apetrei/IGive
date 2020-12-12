@@ -21,6 +21,13 @@ export class HomePage implements OnInit, OnDestroy {
     this.subscriptions.push(
       this.staticDataService.getCharities().subscribe((charities) => {
         this.charities = charities;
+        this.charities.sort((a, b) => {
+          if (a.topic < b.topic) {
+            return -1;
+          } else if (a.topic > b.topic) {
+            return 1;
+          } else return 0;
+        });
       }),
       this.authService.currentUser.subscribe((user) => {
         this.currentUser = user;

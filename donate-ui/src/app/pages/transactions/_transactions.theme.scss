@@ -1,0 +1,18 @@
+@mixin app-transaction-page($theme) {
+  $primary: map-get($theme, primary);
+
+  .donated-amount {
+    color: mat-color($primary, default);
+  }
+  .donated-amount-container {
+    color: mat-color($primary, default);
+    width: 20%;
+    margin: 0;
+  }
+  .data-container {
+    width: 80%;
+  }
+  .charity-donation {
+    cursor: pointer;
+  }
+}

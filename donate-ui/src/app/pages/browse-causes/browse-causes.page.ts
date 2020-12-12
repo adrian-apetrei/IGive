@@ -19,7 +19,12 @@ export class BrowseCausesPage implements OnInit {
   ngOnInit() {
     this.staticDataService.getCharities().subscribe((charities) => {
       this.charities = charities;
-      this.trending = this.getTrending(charities, 10);
+      const trendingNow = this.charities.filter(
+        (charity) =>
+          charity.topic.toLowerCase() === "covid" ||
+          charity.topic.toLowerCase() === "education"
+      );
+      this.trending = this.getTrending(trendingNow, 10);
     });
     this.staticDataService.getTopics().subscribe((topics) => {
       this.topics = topics;
@@ -38,7 +43,10 @@ export class BrowseCausesPage implements OnInit {
   }
 
   goToTopicList(topic) {
-    this.dataService.setData(topic.name, this.filterByTopic(this.charities, topic.name));
+    this.dataService.setData(
+      topic.name,
+      this.filterByTopic(this.charities, topic.name)
+    );
     this.router.navigateByUrl(`/tabs/browse/topic/${topic.name}`);
   }
 }

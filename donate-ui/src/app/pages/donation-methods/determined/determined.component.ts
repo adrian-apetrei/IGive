@@ -26,6 +26,15 @@ export class DeterminedComponent implements OnInit {
     if (this.route.snapshot.params["id"]) {
       this.charity = this.dataService.getData(this.route.snapshot.params["id"]);
     }
+    this.donationService
+      .getDonationMethods(this.charity._id)
+      .subscribe((data: any) => {
+        if (data.donationMethods.length) {
+          const determinedData = data.donationMethods[0].paymentMethod;
+          this.amount = determinedData.donationAmount;
+          this.period = determinedData.period;
+        }
+      });
   }
 
   back() {
@@ -36,7 +45,7 @@ export class DeterminedComponent implements OnInit {
     const donationMethod = {
       charityId: this.charity._id,
       donationMethod: "DETERMINED",
-      determinedMethod: {
+      paymentMethod: {
         donationAmount: this.amount,
         period: this.period,
       },

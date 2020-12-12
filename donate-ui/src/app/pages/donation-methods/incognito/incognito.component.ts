@@ -33,7 +33,7 @@ export class IncognitoComponent implements OnInit {
       .getDonationMethods(this.charity._id)
       .subscribe((data: any) => {
         if (data.donationMethods.length) {
-          const incognitoData = data.donationMethods[0].incognitoMethod;
+          const incognitoData = data.donationMethods[0].paymentMethod;
           this.amount = incognitoData.donationAmount;
           this.when = incognitoData.when;
           this.donationLimit = incognitoData.donationLimit;
@@ -50,7 +50,7 @@ export class IncognitoComponent implements OnInit {
     const donationMethod = {
       charityId: this.charity._id,
       donationMethod: "INCOGNITO",
-      incognitoMethod: {
+      paymentMethod: {
         donationAmount: this.amount,
         when: this.when,
         donationLimit: this.donationLimit,

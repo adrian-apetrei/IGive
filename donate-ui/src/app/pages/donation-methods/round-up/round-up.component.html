@@ -10,56 +10,54 @@
   </ion-buttons>
 </ion-header>
 
-<ion-content>
-  <div class="round-up-container">
-    <h2 class="title">Round Up</h2>
-    <p>
-      App will round up to the nearest dollar on every purchase made using your
-      bank card and donate that money to the cause
-      <br />
-      <br />
+<div class="content round-up-container">
+  <h2 class="title">Round Up</h2>
+  <p>
+    App will round up to the nearest dollar on every purchase made using your
+    bank card and donate that money to the cause
+    <br />
+    <br />
 
-      eg if you spent $4,80, iGive will donate 20c to round up the total to $5
-    </p>
+    eg if you spent $4,80, iGive will donate 20c to round up the total to $5
+  </p>
 
-    <mat-radio-group [(ngModel)]="method" class="round-up-radio-group">
-      <mat-radio-button value="donate-goal" class="round-up-radio-btns"
-        >Donate until the goal is met</mat-radio-button
-      >
-      <mat-radio-button value="donate-date" class="round-up-radio-btns"
-        >Donate until a specific date</mat-radio-button
-      >
+  <mat-radio-group [(ngModel)]="method" class="round-up-radio-group">
+    <mat-radio-button value="donate-goal" class="round-up-radio-btns"
+      >Donate until the goal is met</mat-radio-button
+    >
+    <mat-radio-button value="donate-date" class="round-up-radio-btns"
+      >Donate until a specific date</mat-radio-button
+    >
 
-      <mat-form-field appearance="fill" dense class="round-up-field">
-        <input
-          matInput
-          [matDatepicker]="picker"
-          placeholder="select date"
-          autocomplete="off"
-          [(ngModel)]="date"
-        />
-        <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
+    <mat-form-field appearance="fill" dense class="round-up-field">
+      <input
+        matInput
+        [matDatepicker]="picker"
+        placeholder="select date"
+        autocomplete="off"
+        [(ngModel)]="date"
+      />
+      <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
 
-      <mat-radio-button value="donate-limit" class="round-up-radio-btns"
-        >Donate until reach a limit of</mat-radio-button
-      >
+    <mat-radio-button value="donate-limit" class="round-up-radio-btns"
+      >Donate until reach a limit of</mat-radio-button
+    >
 
-      <mat-form-field appearance="fill" dense class="round-up-field">
-        <mat-icon color="accent" matPrefix>attach_money</mat-icon>
-        <input
-          matInput
-          placeholder="amount"
-          type="number"
-          autocomplete="off"
-          [(ngModel)]="amount"
-        />
-      </mat-form-field>
-    </mat-radio-group>
+    <mat-form-field appearance="fill" dense class="round-up-field">
+      <mat-icon color="accent" matPrefix>attach_money</mat-icon>
+      <input
+        matInput
+        placeholder="amount"
+        type="number"
+        autocomplete="off"
+        [(ngModel)]="amount"
+      />
+    </mat-form-field>
+  </mat-radio-group>
 
-    <button mat-flat-button color="primary" class="pay-btn" (click)="pay()">
-      Pay
-    </button>
-  </div>
-</ion-content>
+  <button mat-flat-button color="primary" class="pay-btn" (click)="pay()">
+    Pay
+  </button>
+</div>

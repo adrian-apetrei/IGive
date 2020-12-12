@@ -25,7 +25,5 @@ export class DonationMethodDto {
   readonly userId: string;
   readonly charityId: string;
   readonly donationMethod: string;
-  readonly roundUpMethod: RoundUpMethod;
-  readonly incognitoMethod: IncognitoMethod;
-  readonly determinedMethod: DeterminedMethod;
+  readonly paymentMethod: RoundUpMethod | IncognitoMethod | DeterminedMethod;
 }

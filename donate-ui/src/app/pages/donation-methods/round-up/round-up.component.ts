@@ -27,6 +27,20 @@ export class RoundUpComponent implements OnInit {
     if (this.route.snapshot.params["id"]) {
       this.charity = this.dataService.getData(this.route.snapshot.params["id"]);
     }
+    this.donationService
+      .getDonationMethods(this.charity._id)
+      .subscribe((data: any) => {
+        if (data.donationMethods.length) {
+          const roundUpMethod = data.donationMethods[0].paymentMethod;
+          this.amount = roundUpMethod.donationLimit;
+          this.date = roundUpMethod.donationDate;
+          this.method = roundUpMethod.donateUntilGoal
+            ? "donate-goal"
+            : roundUpMethod.donateUntilDate
+            ? "donate-date"
+            : "donate-limit";
+        }
+      });
   }
 
   back() {
@@ -37,7 +51,7 @@ export class RoundUpComponent implements OnInit {
     const donationMethod = {
       charityId: this.charity._id,
       donationMethod: "ROUND_UP",
-      roundUpMethod: {
+      paymentMethod: {
         donateUntilGoal: this.method === "donate-goal",
         donateUntilDate: this.method === "donate-date",
         donateUntilLimit: this.method === "donate-limit",

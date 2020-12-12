@@ -10,40 +10,38 @@
   </ion-buttons>
 </ion-header>
 
-<ion-content>
-  <div class="determined-container">
-    <h2 class="title">Determined</h2>
-    <p>
-      Carefully select how much you want to donate to which charities, when you
-      want to donate
-      <br />
-      <br />
-      eg donate $25 each month to the charity of your choice
-    </p>
+<div class="content determined-container">
+  <h2 class="title">Determined</h2>
+  <p>
+    Carefully select how much you want to donate to which charities, when you
+    want to donate
+    <br />
+    <br />
+    eg donate $25 each month to the charity of your choice
+  </p>
 
-    <h3 class="title">I want to donate</h3>
-    <mat-form-field appearance="fill" dense class="determined-fields">
-      <mat-icon color="accent" matPrefix>attach_money</mat-icon>
-      <input
-        matInput
-        placeholder="amount"
-        type="number"
-        autocomplete="off"
-        [(ngModel)]="amount"
-      />
-    </mat-form-field>
+  <h3 class="title">I want to donate</h3>
+  <mat-form-field appearance="fill" dense class="determined-fields">
+    <mat-icon color="accent" matPrefix>attach_money</mat-icon>
+    <input
+      matInput
+      placeholder="amount"
+      type="number"
+      autocomplete="off"
+      [(ngModel)]="amount"
+    />
+  </mat-form-field>
 
-    <h3 class="title">to {{ charity?.name }} every</h3>
-    <mat-form-field appearance="fill" dense class="determined-fields">
-      <mat-select [(ngModel)]="period">
-        <mat-option value="week">week</mat-option>
-        <mat-option value="month">month</mat-option>
-        <mat-option value="year">year</mat-option>
-      </mat-select>
-    </mat-form-field>
+  <h3 class="title">to {{ charity?.name }} every</h3>
+  <mat-form-field appearance="fill" dense class="determined-fields">
+    <mat-select [(ngModel)]="period">
+      <mat-option value="week">week</mat-option>
+      <mat-option value="month">month</mat-option>
+      <mat-option value="year">year</mat-option>
+    </mat-select>
+  </mat-form-field>
 
-    <button mat-flat-button color="primary" class="pay-btn" (click)="pay()">
-      Pay
-    </button>
-  </div>
-</ion-content>
+  <button mat-flat-button color="primary" class="pay-btn" (click)="pay()">
+    Pay
+  </button>
+</div>

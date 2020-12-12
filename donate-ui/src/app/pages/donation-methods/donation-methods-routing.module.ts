@@ -13,7 +13,7 @@ const routes: Routes = [
     component: DonationMethodsPage,
   },
   {
-    path: "round-up",
+    path: "round_up",
     component: RoundUpComponent,
   },
   {

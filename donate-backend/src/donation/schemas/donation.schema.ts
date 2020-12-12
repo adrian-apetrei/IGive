@@ -1,24 +1,20 @@
 import * as mongoose from 'mongoose';
 
-export const DonationMethodsSchema = new mongoose.Schema({
-  userId: String,
-  charityId: String,
-  donationMethod: String,
-  roundUpMethod: {
-    donateUntilGoal: Boolean,
-    donateUntilDate: Boolean,
-    donationDate: Date,
-    donateUntilLimit: Boolean,
-    donationLimit: Number,
+export const DonationMethodsSchema = new mongoose.Schema(
+  {
+    userId: String,
+    charityId: String,
+    donationMethod: String,
+    paymentMethod: {
+      donateUntilGoal: Boolean,
+      donateUntilDate: Boolean,
+      donationDate: Date,
+      donateUntilLimit: Boolean,
+      donationLimit: Number,
+      donationAmount: Number,
+      when: String,
+      period: String,
+    },
   },
-  incognitoMethod: {
-    donationAmount: Number,
-    when: String,
-    donationLimit: Number,
-    period: String,
-  },
-  determinedMethod: {
-    donationAmount: Number,
-    when: String,
-  },
-});
+  { timestamps: { createdAt: 'created_at' } },
+);

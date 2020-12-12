@@ -2,36 +2,31 @@
   <h2 class="title">Browse Causes</h2>
 </ion-header>
 
-<ion-content>
-  <div class="browse-container">
-    <mat-form-field appearance="fill" class="browse-search">
-      <mat-icon color="accent" matPrefix>search</mat-icon>
-      <input matInput placeholder="search" autocomplete="off" />
-    </mat-form-field>
+<div class="content browse-container">
+  <mat-form-field appearance="fill" class="browse-search">
+    <mat-icon color="accent" matPrefix>search</mat-icon>
+    <input matInput placeholder="search" autocomplete="off" />
+  </mat-form-field>
 
-    <app-topic-card
-      topic="Trending Now"
-      [charities]="trending"
-    ></app-topic-card>
+  <app-topic-card topic="Trending Now" [charities]="trending"></app-topic-card>
 
-    <h3 class="section-title">By Topic</h3>
+  <h3 class="section-title">By Topic</h3>
 
-    <div fxLayout="row wrap" fxLayoutAlign="center start">
-      <div
-        fxFlex="40"
-        *ngFor="let topic of topics"
-        class="browse-card"
-        (click)="goToTopicList(topic)"
-      >
-        <ion-card-content>
-          <img
-            class="topic-icon"
-            [alt]="topic.icon"
-            [src]="'./../../../assets/svg/'+ topic.icon +'.svg'"
-          />
-          <p class="topic-title">{{ topic.name }}</p>
-        </ion-card-content>
-      </div>
+  <div fxLayout="row wrap" fxLayoutAlign="center start">
+    <div
+      fxFlex="40"
+      *ngFor="let topic of topics"
+      class="browse-card"
+      (click)="goToTopicList(topic)"
+    >
+      <ion-card-content>
+        <img
+          class="topic-icon"
+          [alt]="topic.icon"
+          [src]="'./../../../assets/svg/'+ topic.icon +'.svg'"
+        />
+        <p class="topic-title">{{ topic.name }}</p>
+      </ion-card-content>
     </div>
   </div>
-</ion-content>
+</div>

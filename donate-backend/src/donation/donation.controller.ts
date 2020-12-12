@@ -67,12 +67,8 @@ export class DonationController {
   }
 
   @UseGuards(AuthGuard())
-  @Get('/methods')
-  async getPaymentMethods(
-    @Req() request,
-    @Res() res,
-    @Param('charityId') charityId,
-  ) {
+  @Get('methods')
+  async getPaymentMethods(@Req() request, @Res() res) {
     const user = request.user;
     try {
       const donationMethods = await this.donationService.getDonationMethods(

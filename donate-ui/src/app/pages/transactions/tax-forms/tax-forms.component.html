@@ -30,12 +30,13 @@
     </div>
     <div *ngIf="taxForms.length">
       <ion-item
+        class="pdf-file"
         *ngFor="let form of taxForms"
         lines="none"
         (click)="downloadPDF(form)"
       >
-        <label>{{ form.name }}</label>
-        <mat-icon>get_app</mat-icon>
+        <label class="file-label">{{ form.name }}</label>
+        <mat-icon>visibility</mat-icon>
       </ion-item>
     </div>
   </ng-container>

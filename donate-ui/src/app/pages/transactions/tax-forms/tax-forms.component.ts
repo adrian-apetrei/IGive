@@ -40,6 +40,7 @@ export class TaxFormsComponent implements OnInit {
   }
 
   back() {
+    this.viewPdf = false;
     this.router.navigateByUrl(`tabs/charity-details/${this.charity._id}`);
   }
 

@@ -43,15 +43,43 @@ export class DonationController {
 
   @UseGuards(AuthGuard())
   @Get('/methods/:charityId')
-  async getPaymentMethods(@Req() request, @Res() res, @Param('charityId') charityId) {
+  async getCharityPaymentMethods(
+    @Req() request,
+    @Res() res,
+    @Param('charityId') charityId,
+  ) {
     const user = request.user;
     try {
-      const donationMethods = await this.donationService.getDonationMethods(
+      const donationMethods = await this.donationService.getCharityDonationMethods(
         user._id,
         charityId,
       );
       return res.status(HttpStatus.OK).json({
-        msg: 'Donations methods successfully retrieved',
+        msg: 'Charity Donations methods successfully retrieved',
+        donationMethods,
+      });
+    } catch (e) {
+      return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
+        msg: 'This user has no donation methods for this charity',
+        donationMethods: [],
+      });
+    }
+  }
+
+  @UseGuards(AuthGuard())
+  @Get('/methods')
+  async getPaymentMethods(
+    @Req() request,
+    @Res() res,
+    @Param('charityId') charityId,
+  ) {
+    const user = request.user;
+    try {
+      const donationMethods = await this.donationService.getDonationMethods(
+        user._id,
+      );
+      return res.status(HttpStatus.OK).json({
+        msg: 'User Donations methods successfully retrieved',
         donationMethods,
       });
     } catch (e) {

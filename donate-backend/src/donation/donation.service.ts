@@ -7,20 +7,37 @@ import { DonationMethod } from './interfaces/donation.interface';
 @Injectable()
 export class DonationService {
   constructor(
-    @InjectModel('Donation-Method') private readonly DonationModel: Model<DonationMethod>,
+    @InjectModel('Donation-Method')
+    private readonly DonationModel: Model<DonationMethod>,
   ) {}
 
   // CREATE Donation method
   async addDonationMethod(
     createDonationMethod: DonationMethodDto,
   ): Promise<DonationMethod> {
-    const newDonationMethod = await new this.DonationModel(createDonationMethod);
+    const newDonationMethod = await new this.DonationModel(
+      createDonationMethod,
+    );
     return newDonationMethod.save();
   }
 
-  // GET Donation method
-  async getDonationMethods(userID, charityID): Promise<DonationMethod[]> {
-    const donationMethod = await this.DonationModel.find({ charityId: charityID, userId: userID }).exec();
+  // GET Charity Donation methods
+  async getCharityDonationMethods(
+    userID,
+    charityID,
+  ): Promise<DonationMethod[]> {
+    const donationMethod = await this.DonationModel.find({
+      charityId: charityID,
+      userId: userID,
+    }).exec();
+    return donationMethod;
+  }
+
+  // GET User Donation methods
+  async getDonationMethods(userID): Promise<DonationMethod[]> {
+    const donationMethod = await this.DonationModel.find({
+      userId: userID,
+    }).exec();
     return donationMethod;
   }
 }

@@ -21,14 +21,16 @@
   <div *ngFor="let transaction of transactions">
     <ion-item>
       <div fxLayout="column" class="pb1 pt1 data-container">
-        <div class="uxg-subtitle-2">{{ transaction.charityName }}</div>
-        <div class="uxg-body-2">
+        <div class="uxg-subtitle-2">{{ charity.name }}</div>
+        <!-- <div class="uxg-body-2">
           {{ transaction.transactionType }}: {{ transaction.transactionAmount }}
+        </div> -->
+        <div class="uxg-body-2">
+          {{ transaction.created_at | date: "short" }}
         </div>
-        <div class="uxg-body-2">{{ transaction.date }}</div>
       </div>
       <div class="uxg-h6 ml-4 donated-amount-container">
-        {{ transaction.donatedAmount }}
+        ${{ transaction.paymentMethod.donationAmount }}
       </div>
     </ion-item>
   </div>

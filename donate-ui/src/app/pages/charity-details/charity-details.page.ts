@@ -29,22 +29,20 @@ export class CharityDetailsPage implements OnInit {
       this.charity = this.route.snapshot.data["charity"];
     }
     this.donations
-      .getDonationMethods(this.charity._id)
+      .getCharityDonationMethods(this.charity._id)
       .subscribe((data: any) => {
         if (data.donationMethods.length) {
           this.hasDonationMethod = true;
           this.donationMethodName = data.donationMethods[0].donationMethod.toLowerCase();
+          const transactions = data.donationMethods.filter(
+            (d) => !!d.paymentMethod.donationAmount
+          );
+          this.donatedAmount = transactions.reduce(
+            (acc, val) => acc + val.paymentMethod.donationAmount,
+            0
+          );
         }
       });
-    const transactions = this.dataService.getTransactions().filter((item) => {
-      return item.charityId === this.charity._id;
-    });
-    if (transactions) {
-      this.donatedAmount = transactions.reduce(
-        (acc, val) => acc + Number(val.donatedAmount.substring(1)),
-        0
-      );
-    }
   }
 
   goToDonationMethods() {

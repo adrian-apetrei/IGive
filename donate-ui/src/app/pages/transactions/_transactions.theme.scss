@@ -6,11 +6,10 @@
   }
   .donated-amount-container {
     color: mat-color($primary, default);
-    width: 20%;
     margin: 0;
   }
   .data-container {
-    width: 80%;
+    flex: auto;
   }
   .charity-donation {
     cursor: pointer;

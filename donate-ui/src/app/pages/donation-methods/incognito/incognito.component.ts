@@ -30,7 +30,7 @@ export class IncognitoComponent implements OnInit {
       this.charity = this.dataService.getData(this.route.snapshot.params["id"]);
     }
     this.donationService
-      .getDonationMethods(this.charity._id)
+      .getCharityDonationMethods(this.charity._id)
       .subscribe((data: any) => {
         if (data.donationMethods.length) {
           const incognitoData = data.donationMethods[0].paymentMethod;

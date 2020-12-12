@@ -11,20 +11,46 @@
 </ion-header>
 
 <ion-content>
-  <ion-item lines="none">
-    <h2 class="mt-3">Tax Forms</h2>
-  </ion-item>
-  <ion-item lines="none">
-    <p class="subtitle">{{ charity.taxFormDesc }}</p>
-  </ion-item>
-  <div
-    *ngIf="!taxForms.length"
-    fxLayout="column"
-    fxLayoutAlign="center center"
-    class="no-tax-form"
-  >
-    <i class="ri-eye-close-line"></i>
-    <p>There's no forms to see here!</p>
-    <p>Try checking again at the end of the calendar year</p>
+  <ng-container *ngIf="!viewPdf">
+    <ion-item lines="none">
+      <h2 class="mt-3">Tax Forms</h2>
+    </ion-item>
+    <ion-item lines="none">
+      <p class="subtitle">{{ charity.taxFormDesc }}</p>
+    </ion-item>
+    <div
+      *ngIf="!taxForms.length"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      class="no-tax-form"
+    >
+      <i class="ri-eye-close-line"></i>
+      <p>There's no forms to see here!</p>
+      <p>Try checking again at the end of the calendar year</p>
+    </div>
+    <div *ngIf="taxForms.length">
+      <ion-item
+        *ngFor="let form of taxForms"
+        lines="none"
+        (click)="downloadPDF(form)"
+      >
+        <label>{{ form.name }}</label>
+        <mat-icon>get_app</mat-icon>
+      </ion-item>
+    </div>
+  </ng-container>
+  <div *ngIf="viewPdf" class="pdf-container">
+    <button
+      mat-stroked-button
+      dense
+      (click)="closePdf()"
+      color="primary"
+      class="close"
+    >
+      Close
+    </button>
+    <iframe
+      src="../../../../assets/pdf/COVID-19 Solidarity Response Fund Certificate.pdf"
+    ></iframe>
   </div>
 </ion-content>

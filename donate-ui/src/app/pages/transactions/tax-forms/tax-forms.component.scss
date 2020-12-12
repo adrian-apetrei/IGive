@@ -11,3 +11,17 @@
     margin-bottom: 16px;
   }
 }
+.pdf-container {
+  height: 100%;
+  width: 100%;
+
+  .close {
+    margin: 8px 16px !important;
+    float: right;
+  }
+
+  iframe {
+    height: calc(100% - 48px);
+    width: 100%;
+  }
+}

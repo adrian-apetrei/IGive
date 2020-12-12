@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="375px" height="178px" viewBox="0 0 375 178" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="178" version="1.1"><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
     <title>Rectangle</title>
-    <g id="Set-Up-Donation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Charity-Profile" transform="translate(0.000000, -210.000000)" fill="#C9F3DE">
-            <polygon id="Rectangle" points="0 223 307.079199 210.660173 376 223 376 369 56.2584219 387.283096 0 375.039063"></polygon>
+    
+<g class="currentLayer" style=""><title>Layer 1</title><g id="Set-Up-Donation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Charity-Profile" fill="#C9F3DE">
+            <polygon id="Rectangle" points="0,13 307.0791931152344,0.6601715087890625 376,13 376,159 56.2584228515625,177.2830810546875 0,165.0390625 "/>
         </g>
-    </g>
-</svg>
+    </g></g></svg>

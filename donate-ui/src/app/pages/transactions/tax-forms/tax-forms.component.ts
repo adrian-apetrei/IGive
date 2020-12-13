@@ -1,14 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
-import {
-  Downloader,
-  DownloadRequest,
-  NotificationVisibility,
-} from "@ionic-native/downloader/ngx";
-import {
-  DocumentViewer,
-  DocumentViewerOptions,
-} from "@ionic-native/document-viewer/ngx";
 
 @Component({
   selector: "app-tax-forms",

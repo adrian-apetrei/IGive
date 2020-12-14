@@ -59,6 +59,10 @@ ion-header::after {
   background: none !important;
 }
 
+ion-content::part(scroll) {
+  padding-bottom: initial;
+}
+
 .tall-header {
   background: url("/assets/svg/tallheader.svg");
   background-repeat: no-repeat;

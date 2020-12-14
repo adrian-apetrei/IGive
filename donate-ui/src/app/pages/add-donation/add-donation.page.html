@@ -32,7 +32,8 @@
 
   <ng-container *ngFor="let item of data | keyvalue">
     <app-topic-card
-      [topic]="item.key"
+      *ngIf="item.value"
+      [topic]="displayedTopics[item.key]"
       [charities]="item.value"
     ></app-topic-card>
   </ng-container>

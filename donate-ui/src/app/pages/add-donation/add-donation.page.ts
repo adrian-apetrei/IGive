@@ -4,7 +4,7 @@ import { ReplaySubject } from "rxjs";
 import { debounceTime, distinctUntilChanged, filter } from "rxjs/operators";
 import { StaticDataService } from "src/app/services/static-data.service";
 import { FiltersPage } from "../filters/filters.page";
-
+import { TOPICS, DISPLAYED_TOPICS } from "./topics-initial-data";
 @Component({
   selector: "app-add-donation",
   templateUrl: "./add-donation.page.html",
@@ -16,6 +16,9 @@ export class AddDonationPage implements OnInit {
   applyFilters = false;
   filteredCharities;
   filters = { searchByName: "", searchByCountry: "", searchByTopic: [] };
+
+  topics = TOPICS;
+  displayedTopics = DISPLAYED_TOPICS;
 
   constructor(
     private staticDataService: StaticDataService,
@@ -40,13 +43,20 @@ export class AddDonationPage implements OnInit {
   mapData(charities) {
     this.data = {};
     charities.forEach((element) => {
-      const topic = element.topic;
+      const topic = this.topics[element.topic];
       if (this.data[topic]) {
         this.data[topic].push(element);
       } else {
         this.data[topic] = [];
         this.data[topic].push(element);
       }
+    });
+
+    //sort by order field (important for covid charities order)
+    Object.keys(this.data).forEach((key) => {
+      this.data[key].sort((a, b) => {
+        return a.order - b.order;
+      });
     });
   }
 

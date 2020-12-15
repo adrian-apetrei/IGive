@@ -90,6 +90,17 @@ export class PaymentController {
   async makePayment(@Req() request, @Res() res, @Body() payment: PaymentDto) {
     const user = request.user;
     try {
+      //get user data
+      const data = await this.paymentService.getPaymentMethods(user.id);
+      const bankAccount = data.find(
+        (payment) => payment.paymentMethod === 'BANK_ACCOUNT',
+      );
+
+      let accountNumber = '';
+      accountNumber = bankAccount
+        ? bankAccount.accountNumber
+        : 'GB33BUKB20201555555555';
+
       // 1st Step: get token :)
       const token = await this.getToken();
 
@@ -112,7 +123,7 @@ export class PaymentController {
                 currency_code: 'EUR',
                 amount: payment.amount.toString(),
                 description: payment.description,
-                creditor_iban: 'GB33BUKB20201555555555',
+                creditor_iban: accountNumber,
                 mode: 'normal',
               },
             },

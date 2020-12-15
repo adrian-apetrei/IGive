@@ -26,6 +26,19 @@ IGive is a alternative to the regular donation systems that allows users to choo
 
 - Option to download Donation Certificate for further tax return purpose
 
+## Installation
+
+1 Clone this repository
+
+```bash
+ git clone https://github.com/adrian-apetrei/IGive.git
+```
+
+2 Follow the installation instructions found in the readme file of these folders:
+
+IGive-backend <br>
+IGive-ui
+
 ## Links
 
 [IGive on DEVPOST](https://devpost.com/software/igive) <br>

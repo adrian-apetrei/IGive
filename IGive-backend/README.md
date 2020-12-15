@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/adrian-apetrei/donate" target="blank"><img src="../donate-ui/src/assets/png/logolarge.png" width="150" alt="IGive logo" /></a>
+  <a href="https://github.com/adrian-apetrei/IGive" target="blank"><img src="../IGive-ui/src/assets/png/logolarge.png" width="150" alt="IGive logo" /></a>
 </p>
 
 ## Description

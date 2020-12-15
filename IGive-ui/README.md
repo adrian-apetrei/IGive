@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/adrian-apetrei/donate" target="blank"><img src="../donate-ui/src/assets/png/logolarge.png" width="150" alt="IGive logo" /></a>
+  <a href="https://github.com/adrian-apetrei/IGive" target="blank"><img src="./src/assets/png/logolarge.png" width="150" alt="IGive logo" /></a>
 </p>
 
 ## Description
@@ -17,6 +17,8 @@ IGive application was build with [Ionic](https://ionicframework.com/) framework 
 npm install
 ```
 
+Set `apiUrl` in `src/environment.ts`
+
 ## Running the app
 
 Install the Ionic CLI with npm:
@@ -32,6 +34,6 @@ Run application
 $ ionic serve -l
 ```
 
-For running the application on android or ios you can find the guides here:
+For running the application on android or ios you can find the detailed guides here:
 1 [Android](https://ionicframework.com/docs/developing/android#running-with-capacitor)
 2 [IOS](https://ionicframework.com/docs/developing/ios)

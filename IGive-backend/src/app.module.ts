@@ -9,6 +9,8 @@ import { NeconfigModule } from 'neconfig';
 import { StaticDataModule } from './static-data/static-data.module';
 import { PaymentModule } from './payment/payment.module';
 import { DonationModule } from './donation/donation.module';
+import { ServeStaticModule } from '@nestjs/serve-static/dist/serve-static.module';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -29,6 +31,9 @@ import { DonationModule } from './donation/donation.module';
     }),
     AuthModule,
     DonationModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'public'),
+    }),
   ],
   controllers: [],
   providers: [],

@@ -4,9 +4,13 @@
   <div class="round-up-container">
     <h2 class="title">Awesome!</h2>
     <p>Your donation to {{ charity.name }} has been successfully set up!</p>
+    <a>Edit donation</a>
 
     <div class="done-container">
-      <img [src]="'../../../../assets/png/done.png'" />
+      <div class="heart">
+        <img [src]="'../../../../assets/svg/chat-heart-line.svg'" />
+      </div>
+      <p class="message">Thanks for making a difference</p>
     </div>
   </div>
 </ion-content>

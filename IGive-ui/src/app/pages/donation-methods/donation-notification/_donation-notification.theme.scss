@@ -24,6 +24,23 @@
 
     .done-container {
       text-align: center;
+      margin-top: $uxg-spacing-5;
+
+      .heart {
+        height: 128px;
+        width: 128px;
+        padding: $uxg-spacing-4;
+        border-radius: 50%;
+        background-color: #92e7bd;
+        margin: auto;
+        margin-bottom: $uxg-spacing-4;
+      }
+
+      .message {
+        font-size: 16px;
+        opacity: 0.6;
+        font-weight: bold;
+      }
     }
   }
 }

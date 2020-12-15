@@ -115,7 +115,7 @@ export class PaymentController {
               show_consent_confirmation: true,
               template_identifier: 'SEPA',
               return_to:
-                'https://www.nao.org.uk/graduateblog/wp-content/uploads/sites/19/2014/07/job-done.jpg',
+                'http://35.158.56.222:5000/job-done.png',
               payment_attributes: {
                 end_to_end_id: '#123123123',
                 customer_ip_address: '10.0.0.1',

@@ -10,10 +10,7 @@ export class TaxFormsComponent implements OnInit {
   charity;
   taxForms = [];
   viewPdf = false;
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute // private document: DocumentViewer // private downloader: Downloader,
-  ) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
     if (this.route.snapshot.data["charity"]) {
@@ -40,29 +37,5 @@ export class TaxFormsComponent implements OnInit {
   }
   downloadPDF(form) {
     this.viewPdf = true;
-    // const options: DocumentViewerOptions = {
-    //   title: form.name,
-    // };
-    // this.document.viewDocument(
-    //   `../../../assets/pdf/${form.name}.pdf`,
-    //   "application/pdf",
-    //   options
-    // );
-    // const request: DownloadRequest = {
-    //   uri: "./",
-    //   title: form.name,
-    //   description: "",
-    //   mimeType: "",
-    //   visibleInDownloadsUi: true,
-    //   notificationVisibility: NotificationVisibility.VisibleNotifyCompleted,
-    //   destinationInExternalFilesDir: {
-    //     dirType: "Downloads",
-    //     subPath: "app-debug.apk",
-    //   },
-    // };
-    // this.downloader
-    //   .download(request)
-    //   .then((location: string) => console.log("File downloaded at:" + location))
-    //   .catch((error: any) => console.error(error));
   }
 }

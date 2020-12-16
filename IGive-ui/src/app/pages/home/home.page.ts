@@ -28,6 +28,7 @@ export class HomePage implements OnInit, OnDestroy {
             return 1;
           } else return 0;
         });
+        this.charities.shift();
       }),
       this.authService.currentUser.subscribe((user) => {
         this.currentUser = user;

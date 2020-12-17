@@ -33,11 +33,8 @@
     </div>
     <div *ngFor="let transaction of transactions">
       <ion-item>
-        <div fxLayout="column" class="pb1 pt1 data-container">
-          <div class="uxg-subtitle-2">{{transaction.charityName}}</div>
-          <!-- <div class="uxg-body-2">
-            {{transaction.transactionType}}: {{transaction.transactionAmount}}
-          </div> -->
+        <div fxLayout="column" class="pb-1 pt-1 data-container">
+          <div class="uxg-h6 mb-2">{{transaction.charityName}}</div>
           <div class="uxg-body-2">
             {{transaction.created_at | date:'short' }}
           </div>

@@ -28,7 +28,10 @@ export class HomePage implements OnInit, OnDestroy {
             return 1;
           } else return 0;
         });
-        this.charities.shift();
+        const index = this.charities.findIndex(
+          (el) => el.name === "PM-CARES Fund"
+        );
+        this.charities.splice(index, 1);
       }),
       this.authService.currentUser.subscribe((user) => {
         this.currentUser = user;

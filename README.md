@@ -42,4 +42,5 @@ IGive-ui
 ## Links
 
 [IGive on DEVPOST](https://devpost.com/software/igive) <br>
-[Hack to the Future 2020](https://fintech.devpost.com/)
+[Hack to the Future 2020](https://fintech.devpost.com/) <br>
+[Android Application](http://35.158.56.222:5000/igive.apk)
